@@ -1,0 +1,47 @@
+{
+  "id": "8c4f74a4-0a23-4aad-beb3-4866129fb8d8",
+  "version": "2.0",
+  "name": "multiSuite",
+  "url": "https://www.youtube.com",
+  "tests": [{
+    "id": "5f364c23-f0d9-437f-a4bb-0ca7b7c8ee9a",
+    "name": "test1",
+    "commands": []
+  }, {
+    "id": "813e8979-f355-4f51-b6df-a1ce076aa898",
+    "name": "test2",
+    "commands": []
+  }, {
+    "id": "ccb56a79-da81-4d9e-a032-50ca0770e453",
+    "name": "test3",
+    "commands": []
+  }, {
+    "id": "ff80375e-bce8-49bd-8fdd-acd79711b37f",
+    "name": "test4",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "5c70df53-e8a3-41a3-8371-932841b97d59",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5f364c23-f0d9-437f-a4bb-0ca7b7c8ee9a", "813e8979-f355-4f51-b6df-a1ce076aa898", "ccb56a79-da81-4d9e-a032-50ca0770e453", "ff80375e-bce8-49bd-8fdd-acd79711b37f"]
+  }, {
+    "id": "4cbb2e33-a86c-4e95-b4da-1705aa72acb3",
+    "name": "suite1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5f364c23-f0d9-437f-a4bb-0ca7b7c8ee9a", "ccb56a79-da81-4d9e-a032-50ca0770e453"]
+  }, {
+    "id": "eea6d42b-983a-4c49-9a9b-e040e19d25f7",
+    "name": "suite2",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["813e8979-f355-4f51-b6df-a1ce076aa898", "ccb56a79-da81-4d9e-a032-50ca0770e453"]
+  }],
+  "urls": ["https://www.youtube.com/"],
+  "plugins": []
+}
