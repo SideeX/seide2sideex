@@ -1,7 +1,7 @@
 import { openCommandFunc } from "./recordCommand/openCommandFun";
+import { Record } from "./struct/sideexStruct";
+import { Command } from "./struct/seleniumStruct";
 
-export const caseToFunc: { [key: string]: any } = {
+export const caseToFunc: { [key: string]: (p: Command) => Record } = {
     open: openCommandFunc,
-    setWindowSize: (a: string) => { console.log(a) },
-    dragAndDropToObject: (a: string) => { console.log(a) },
 }
