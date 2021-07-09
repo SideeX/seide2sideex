@@ -1,6 +1,6 @@
 import { Test } from "./struct/seleniumStruct";
 import { Case, Record } from "./struct/sideexStruct";
-import { openCommandFunc } from "./recordCommand/openCommandFun";
+import { caseToFunc } from "./caseToFunc";
 
 export function testToCase(seleniumTest: Test): Case {
     console.log("testName");
@@ -12,17 +12,10 @@ export function testToCase(seleniumTest: Test): Case {
         records: [], // later will push some value inside
     };
     seleniumTest.commands.forEach((command) => {
-        switch (command.command) {
-            case "open":
-                sideexCase.records.push(openCommandFunc(command));
-                console.log("open");
-                break;
-            case "clickAt":
-                console.log("clickAt");
-                break;
-            default:
-                break;
-        }
+        console.log(command.command);
+        const convertFunc = caseToFunc[command.command];
+        sideexCase.records.push(convertFunc(command));
+        console.log(sideexCase.records);
     });
 
     return sideexCase;
