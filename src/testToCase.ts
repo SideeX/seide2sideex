@@ -1,6 +1,6 @@
 import { Test, Command } from './struct/seleniumStruct';
 import { Case, Record } from './struct/sideexStruct';
-import { caseToFunc } from './caseToFunc';
+import { commandFunc } from './caseToFunc';
 
 /**
  * return Created Sideex case object
@@ -40,7 +40,7 @@ export function testToCase(seleniumTest: Test): Case {
         if (isCommandComment) {
             command.command = command.command.substring(2);
         }
-        const convertFunc = caseToFunc[command.command];
+        const convertFunc = commandFunc[command.command];
         sideexCase.records.push(convertFunc(command, isCommandComment));
         console.log(sideexCase.records);
     });
