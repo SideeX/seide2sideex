@@ -13,8 +13,19 @@ export function testToCase(seleniumTest: Test): Case {
     };
     seleniumTest.commands.forEach((command) => {
         console.log(command.command);
+
+        let commentBool = false;
+        // check command is disable or not (Ex: '//open' means this command have benn disable, will not execute)
+        if (command.command.substring(0, 2) == '//') {
+            console.log('command now: ', command.command);
+            commentBool = true; // if detected have comment, then comment will be true, vice versa.
+            const tempCommand = command.command;
+            command.command = tempCommand.substring(2); // remove the "//"
+            console.log(command.command, ' are disable');
+        }
+
         const convertFunc = caseToFunc[command.command];
-        sideexCase.records.push(convertFunc(command));
+        sideexCase.records.push(convertFunc(command, commentBool));
         console.log(sideexCase.records);
     });
 
