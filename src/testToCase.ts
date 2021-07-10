@@ -1,31 +1,47 @@
-import { Test } from './struct/seleniumStruct';
+import { Test, Command } from './struct/seleniumStruct';
 import { Case, Record } from './struct/sideexStruct';
 import { caseToFunc } from './caseToFunc';
 
-export function testToCase(seleniumTest: Test): Case {
-    console.log('testName');
-    console.log(seleniumTest.name);
+/**
+ * return Created Sideex case object
+ * @param testName test name
+ * @returns {SideexCase} sideex case
+ */
+function createSideexCase(testName: string) {
     const sideexCase: Case = {
-        title: seleniumTest.name,
-        enableOnPlaying: true, // always true?
-        networkSpeed: 55.33, // random?
-        records: [], // later will push some value inside
+        title: testName,
+        enableOnPlaying: true,
+        networkSpeed: 55.33,
+        records: [],
     };
+    return sideexCase;
+}
+/**
+ * check command is disable or not
+ * @param command
+ * @returns {boolean} isComment
+ */
+function checkIfComment(command: Command) {
+    let isCommandComment = false;
+    if (command.command.substring(0, 2) === '//') {
+        isCommandComment = true;
+    }
+
+    return isCommandComment;
+}
+
+export function testToCase(seleniumTest: Test): Case {
+    const sideexCase: Case = createSideexCase(seleniumTest.name);
+
+    //Convert each commands to records
     seleniumTest.commands.forEach((command) => {
-        console.log(command.command);
-
-        let commentBool = false;
-        // check command is disable or not (Ex: '//open' means this command have benn disable, will not execute)
-        if (command.command.substring(0, 2) == '//') {
-            console.log('command now: ', command.command);
-            commentBool = true; // if detected have comment, then comment will be true, vice versa.
-            const tempCommand = command.command;
-            command.command = tempCommand.substring(2); // remove the "//"
-            console.log(command.command, ' are disable');
+        //Check if comman is comment
+        let isCommandComment = checkIfComment(command);
+        if (isCommandComment) {
+            command.command = command.command.substring(2);
         }
-
         const convertFunc = caseToFunc[command.command];
-        sideexCase.records.push(convertFunc(command, commentBool));
+        sideexCase.records.push(convertFunc(command, isCommandComment));
         console.log(sideexCase.records);
     });
 

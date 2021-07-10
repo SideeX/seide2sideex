@@ -53,6 +53,7 @@ function createSideexJson() {
 /**
  * return Created Sideex suite object
  * @param suiteName suite name
+ * @returns {SideexSuite} sideex suite
  */
 function createSideexSuite(suiteName: string) {
     const sideexSuite: SideexSuite = {
