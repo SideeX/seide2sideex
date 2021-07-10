@@ -1,18 +1,18 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
 
-export function openCommandFunc(
+export function assertPromptCommandFunc(
     seleniumCommand: Command,
     boolOrNot: boolean,
 ): Record {
     const sideexRecord: Record = {
-        name: seleniumCommand.command,
+        name: "assertPrompt",
         target: {
             usedIndex: 0,
             options: [
                 {
-                    type: 'tempType',
-                    value: 'tempValue',
+                    type: 'other',
+                    value: seleniumCommand.target,
                 },
             ],
             tac: '',
@@ -21,8 +21,8 @@ export function openCommandFunc(
             usedIndex: 0,
             options: [
                 {
-                    type: 'tempType',
-                    value: 'tempValue',
+                    type: 'other',
+                    value: '',
                 },
             ],
             tac: '',

@@ -8,26 +8,26 @@ export function defaultFunc(
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {
-            usedIndex: 1,
+            usedIndex: 0,
             options: [
                 {
                     type: 'tempType',
                     value: 'tempValue',
                 },
             ],
-            tac: 'tempTac',
+            tac: '',
         },
         value: {
-            usedIndex: 1,
+            usedIndex: 0,
             options: [
                 {
                     type: 'tempType',
                     value: 'tempValue',
                 },
             ],
-            tac: 'tempTac',
+            tac: '',
         },
-        pwt: { temp: 1 },
+        pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
         comment: boolOrNot,
     };
     return sideexRecord;

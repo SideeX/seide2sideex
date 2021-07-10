@@ -1,0 +1,196 @@
+{
+  "time": 1625641417262,
+  "version": {
+    "sideex": [
+      3,
+      5,
+      3
+    ],
+    "format": [
+      2,
+      0,
+      0
+    ]
+  },
+  "suites": [
+    {
+      "title": "answerOnNextPrompt",
+      "enableOnPlaying": true,
+      "cases": [
+        {
+          "title": "answerOnNextPrompt",
+          "enableOnPlaying": true,
+          "networkSpeed": 13.97,
+          "records": [
+            {
+              "name": "open",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "https://ui.vision/demo/storeeval"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "setViewportSize",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "1366,657"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "answerOnNextPrompt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "Happy Hello World!!!!"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(Prompt)"
+                  },
+                  {
+                    "type": "xpath:idRelative",
+                    "value": "//div[@id='content']/div[2]/div[1]/p[3]/button[3]"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[3]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//button[@onclick='myFunction3()']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=button:nth-child(3)"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAATXYBeAORRsYBFjDCAuhy7cATHM48CcmtwDMcgEYBXMGGzaZFEBjDMaSDAFsaVyhgh5QkAOYA5CHYTMDI2xzbCgAGzQoAGtmOwBPADN9LCgwTCwtAAoASnMwjCh6dIB5JHZkZi0QAF9nKDo3cAhvX398GjyCouxS8qRKmrqbRs8fPwDDYxxnFIjo2MTk1PTFHM7CtJ6yivxFQYsoHFwsfTCwuqg8bhk6q3wxLAS0JDsAAiRkgCsIOAgUKCQaEcaCw6HKjAQdmgthqQA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "42,14"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "assertPrompt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "Please enter your name"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

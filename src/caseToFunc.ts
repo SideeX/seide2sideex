@@ -1,4 +1,6 @@
 import { openCommandFunc } from './recordCommand/openCommandFunc';
+import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromptCommandFunc';
+import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -9,7 +11,7 @@ export const commandFunc: {
 } = {
     open: openCommandFunc,
     addSelection: defaultFunc,
-    answerOnNext: defaultFunc,
+    answerOnNextPrompt: answerOnNextPromptCommandFunc,
     assert: defaultFunc,
     assertAlert: defaultFunc,
     asserChecked: defaultFunc,
@@ -19,7 +21,7 @@ export const commandFunc: {
     assertElementNotPresent: defaultFunc,
     assertNotChecked: defaultFunc,
     assertNotSelectedValue: defaultFunc,
-    assertPrompt: defaultFunc,
+    assertPrompt: assertPromptCommandFunc,
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
     assertText: defaultFunc,
