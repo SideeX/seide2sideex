@@ -1,5 +1,5 @@
-import { Command } from "../struct/seleniumStruct";
-import { Record } from "../struct/sideexStruct";
+import { Command } from '../struct/seleniumStruct';
+import { Record } from '../struct/sideexStruct';
 
 export function openCommandFunc(seleniumCommand: Command): Record {
     const sideexRecord: Record = {
@@ -8,21 +8,21 @@ export function openCommandFunc(seleniumCommand: Command): Record {
             usedIndex: 1,
             options: [
                 {
-                    type: "tempType",
-                    value: "tempValue",
+                    type: 'tempType',
+                    value: 'tempValue',
                 },
             ],
-            tac: "tempTac",
+            tac: 'tempTac',
         },
         value: {
             usedIndex: 1,
             options: [
                 {
-                    type: "tempType",
-                    value: "tempValue",
+                    type: 'tempType',
+                    value: 'tempValue',
                 },
             ],
-            tac: "tempTac",
+            tac: 'tempTac',
         },
         pwt: { temp: 1 },
         comment: true,

@@ -1,9 +1,9 @@
-import { Test } from "./struct/seleniumStruct";
-import { Case, Record } from "./struct/sideexStruct";
-import { caseToFunc } from "./caseToFunc";
+import { Test } from './struct/seleniumStruct';
+import { Case, Record } from './struct/sideexStruct';
+import { caseToFunc } from './caseToFunc';
 
 export function testToCase(seleniumTest: Test): Case {
-    console.log("testName");
+    console.log('testName');
     console.log(seleniumTest.name);
     const sideexCase: Case = {
         title: seleniumTest.name,
