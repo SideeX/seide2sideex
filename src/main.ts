@@ -10,7 +10,6 @@ import { testToCase } from './testToCase';
 import fse from 'fs-extra';
 
 const seleniumFile: SeleniumSide = getSample('dragAndDropToObject');
-console.log(seleniumFile);
 
 const seleniumSuites = seleniumFile.suites;
 const seleniumSuitesLength = seleniumSuites.length;
@@ -20,42 +19,56 @@ const seleniumTests = seleniumFile.tests;
 const seleniumTestsLength: number = seleniumTests.length;
 console.log('seleniumTestsLength: ', seleniumTestsLength);
 
+//Dictionary for saving selenium tests
 const dictforSeleniumTests: { [testId: string]: number } = {};
-// do a dictionary of tescase id
 for (let i = 0; i < seleniumTestsLength; i++) {
     const testId: string = seleniumTests[i].id;
     dictforSeleniumTests[testId] = i;
 }
 
-// main file start here
+//Check if there are more than one suite
 if (seleniumSuitesLength > 1) {
-    // console.log("This file more than one suite");
     seleniumSuites.forEach((suite) => {
-        // console.log("next test suite coming", suite);
         doConvert(suite);
     });
 } else {
-    // console.log("This file just one suite only");
-    // call function do it
-    doConvert(seleniumSuites[0]); // 0 would be the index of Selenium suite array index.
+    doConvert(seleniumSuites[0]);
 }
-
-function createSideexObject(/* id_nums: Array<string>*/) {
+/**
+ * return Created Sideex Json file object
+ * @returns {SideexJson} sideex Json
+ */
+function createSideexJson() {
     const sideexJson: SideexJson = {
-        time: 12364893, // time format = ?
+        time: 12364893,
         version: {
-            sideex: [3, 5, 3], // version = 3.5.2; format = 2.0.0 ?
+            sideex: [3, 5, 3],
             format: [2, 0, 0],
         },
-        suites: [], //empty
+        suites: [],
     };
 
     return sideexJson;
 }
+/**
+ * return Created Sideex suite object
+ * @param suiteName suite name
+ */
+function createSideexSuite(suiteName: string) {
+    const sideexSuite: SideexSuite = {
+        title: suiteName,
+        enableOnPlaying: true,
+        cases: [],
+    };
+    return sideexSuite;
+}
 
+/**
+ * Generate sideex Json to output
+ * @param sideexJson sideex Json
+ * @param suiteName suite name
+ */
 function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
-    // new way: generate file will store on folder
-    // var fse = require('fs-extra'); // using fs-extra power, but not use @types's fs-extra
     const fileName = suiteName + '.json'; // file name
     const dir = './output/' + fileName;
     const dictString = JSON.stringify(sideexJson, null, '  ');
@@ -64,8 +77,6 @@ function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
     async function generateJsonFileFunc(f: string) {
         try {
             await fse.outputFile(f, dictString);
-            //const data = await fse.readFile(f, 'utf8')
-            //console.log(data) // => print out whole json file
         } catch (err) {
             console.error(err);
         }
@@ -74,46 +85,32 @@ function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
     generateJsonFileFunc(dir);
 }
 
+/**
+ * Convert selenium suite to sideex suite and output
+ * @param suite selenium suite
+ */
 function doConvert(suite: SeleniumSuite) {
     const testOfSuite: string[] = suite.tests;
 
+    const suiteName = suite.name;
+    const sideexJson = createSideexJson();
+    const sideexSuite = createSideexSuite(suiteName);
+
     // console.log(testOfSuite);
-    // find test id
-    // console.log("testOfSuite length: ", testOfSuite.length);
 
-    const suiteName = suite.name; //suites->title name
-    // console.log("suite name: ", suiteName);
-
-    //declare obj
-    const sideexJson = createSideexObject();
-
-    //let push_suite_1: Suite;
-    const sideexSuite: SideexSuite = {
-        title: suiteName,
-        enableOnPlaying: true, // ??
-        cases: [], // case have records
-    };
-    console.log(testOfSuite);
-    // selenium: tests -> sideex: cases
-    // do each test one by one
-    for (let j = 0; j < testOfSuite.length; j++) {
-        // console.log("process each test case");
-        const testId = testOfSuite[j];
-        // console.log("value of tests array id: ", dictforSeleniumTests[testId]);
+    //convert each tests to case
+    for (let i = 0; i < testOfSuite.length; i++) {
+        const testId = testOfSuite[i];
         const testIndex = dictforSeleniumTests[testId];
-        // get test array
         const seleniumTest = seleniumTests[testIndex];
-        // console.log("call analyze_tests_to_cases");
 
         const sideexCase: Case = testToCase(seleniumTest);
 
-        // push the test
+        // push the sideex case
         sideexSuite.cases.push(sideexCase);
-
-        // push the suite into sideex json file
     }
+    // push sideex suite into sideex json file
     sideexJson.suites.push(sideexSuite);
-    // call generate file fuction
-    // parse the obj(Sideex json file structure) and i(what number of suite) now
+    // generate siddex json file
     generateSideexJson(sideexJson, suiteName);
 }
