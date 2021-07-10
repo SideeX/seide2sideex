@@ -3,21 +3,22 @@ import {
     SeleniumSuite,
     Test,
     Command,
-} from "./struct/seleniumStruct";
-import { SideexJson, SideexSuite, Case, Record } from "./struct/sideexStruct";
-import { getSample } from "./getSample/getSampleFunc";
-import { testToCase } from "./testToCase";
+} from './struct/seleniumStruct';
+import { SideexJson, SideexSuite, Case, Record } from './struct/sideexStruct';
+import { getSample } from './getSample/getSampleFunc';
+import { testToCase } from './testToCase';
+import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample("dragAndDropToObject");
+const seleniumFile: SeleniumSide = getSample('dragAndDropToObject');
 console.log(seleniumFile);
 
 const seleniumSuites = seleniumFile.suites;
 const seleniumSuitesLength = seleniumSuites.length;
-console.log("seleniumSuitesLength: ", seleniumSuitesLength);
+console.log('seleniumSuitesLength: ', seleniumSuitesLength);
 
 const seleniumTests = seleniumFile.tests;
 const seleniumTestsLength: number = seleniumTests.length;
-console.log("seleniumTestsLength: ", seleniumTestsLength);
+console.log('seleniumTestsLength: ', seleniumTestsLength);
 
 const dictforSeleniumTests: { [testId: string]: number } = {};
 // do a dictionary of tescase id
@@ -55,10 +56,9 @@ function createSideexObject(/* id_nums: Array<string>*/) {
 function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
     // new way: generate file will store on folder
     // var fse = require('fs-extra'); // using fs-extra power, but not use @types's fs-extra
-    const fse = require("fs-extra");
-    const fileName = suiteName + ".json"; // file name
-    const dir = "./output/" + fileName;
-    const dictString = JSON.stringify(sideexJson, null, "  ");
+    const fileName = suiteName + '.json'; // file name
+    const dir = './output/' + fileName;
+    const dictString = JSON.stringify(sideexJson, null, '  ');
 
     // With async/await:
     async function generateJsonFileFunc(f: string) {
