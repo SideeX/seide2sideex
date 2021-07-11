@@ -7,7 +7,6 @@ export function openCommandFunc(
     urlArr?: string[],
 ): Record {
     // console.log(seleniumCommand);
-    console.log(urlArr);
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {

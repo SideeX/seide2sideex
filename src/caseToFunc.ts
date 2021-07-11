@@ -1,5 +1,6 @@
 import { openCommandFunc } from './recordCommand/openCommandFunc';
 import { addSelectionFunc } from './recordCommand/addSelectionFunc';
+import { removeSelectionFunc } from './recordCommand/removeSelectionFunc';
 import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromptCommandFunc';
 import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
@@ -58,7 +59,7 @@ export const commandFunc: {
     mouseUp: defaultFunc,
     mouseUpAt: defaultFunc,
     pause: defaultFunc,
-    removeSelection: defaultFunc,
+    removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
     run: defaultFunc,
     runScript: defaultFunc,

@@ -4,4 +4,5 @@ export const SamplePath: { [key: string]: string } = {
     multiSuite: './seleniumSamples/multisuite.side',
     addSelection: './seleniumSamples/addSelection.side',
     answerOnNextPrompt: './seleniumSamples/answerOnNextPrompt.side',
+    removeSelection: './seleniumSamples/removeSelection.side',
 };
