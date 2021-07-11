@@ -11,6 +11,8 @@ import fse from 'fs-extra';
 
 const seleniumFile: SeleniumSide = getSample('addSelection');
 
+const seleniumUrls: string[] = seleniumFile.urls;
+
 const seleniumSuites = seleniumFile.suites;
 const seleniumSuitesLength = seleniumSuites.length;
 console.log('seleniumSuitesLength: ', seleniumSuitesLength);
@@ -29,10 +31,10 @@ for (let i = 0; i < seleniumTestsLength; i++) {
 //Check if there are more than one suite
 if (seleniumSuitesLength > 1) {
     seleniumSuites.forEach((suite) => {
-        doConvert(suite);
+        doConvert(suite, seleniumUrls);
     });
 } else {
-    doConvert(seleniumSuites[0]);
+    doConvert(seleniumSuites[0], seleniumUrls);
 }
 /**
  * return Created Sideex Json file object
@@ -78,6 +80,7 @@ function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
     async function generateJsonFileFunc(f: string) {
         try {
             await fse.outputFile(f, dictString);
+            console.log('Take a look at ' + dir);
         } catch (err) {
             console.error(err);
         }
@@ -90,13 +93,12 @@ function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
  * Convert selenium suite to sideex suite and output
  * @param suite selenium suite
  */
-function doConvert(suite: SeleniumSuite) {
+function doConvert(suite: SeleniumSuite, urlArr: string[]) {
     const testOfSuite: string[] = suite.tests;
 
     const suiteName = suite.name;
     const sideexJson = createSideexJson();
     const sideexSuite = createSideexSuite(suiteName);
-
     // console.log(testOfSuite);
 
     //convert each tests to case
@@ -105,7 +107,7 @@ function doConvert(suite: SeleniumSuite) {
         const testIndex = dictforSeleniumTests[testId];
         const seleniumTest = seleniumTests[testIndex];
 
-        const sideexCase: Case = testToCase(seleniumTest);
+        const sideexCase: Case = testToCase(seleniumTest, urlArr);
 
         // push the sideex case
         sideexSuite.cases.push(sideexCase);

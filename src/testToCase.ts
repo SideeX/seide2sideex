@@ -30,9 +30,8 @@ function checkIfComment(command: Command) {
     return isCommandComment;
 }
 
-export function testToCase(seleniumTest: Test): Case {
+export function testToCase(seleniumTest: Test, urlArr: string[]): Case {
     const sideexCase: Case = createSideexCase(seleniumTest.name);
-
     //Convert each commands to records
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
@@ -41,7 +40,7 @@ export function testToCase(seleniumTest: Test): Case {
             command.command = command.command.substring(2);
         }
         const convertFunc = commandFunc[command.command];
-        sideexCase.records.push(convertFunc(command, isCommandComment));
+        sideexCase.records.push(convertFunc(command, isCommandComment, urlArr));
     });
 
     return sideexCase;

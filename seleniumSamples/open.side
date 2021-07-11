@@ -1,0 +1,28 @@
+{
+  "id": "3bae0e5b-f0ff-43ae-9a18-4c04bcffa971",
+  "version": "2.0",
+  "name": "open",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "9d5d7fc0-dc34-41a9-b99e-aab8de8638bc",
+    "name": "open",
+    "commands": [{
+      "id": "0ecc0b77-917f-4108-8d19-8f03777c6b64",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/select-multiple-option.html",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ad20f456-f8af-4119-87a4-28b1f69c1766",
+    "name": "open",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9d5d7fc0-dc34-41a9-b99e-aab8de8638bc"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

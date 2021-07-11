@@ -4,15 +4,21 @@ import { Record } from '../struct/sideexStruct';
 export function openCommandFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    urlArr?: string[],
 ): Record {
+    // console.log(seleniumCommand);
+    console.log(urlArr);
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {
             usedIndex: 0,
             options: [
                 {
-                    type: 'tempType',
-                    value: 'tempValue',
+                    type: 'other',
+                    value:
+                        urlArr === undefined
+                            ? seleniumCommand.target
+                            : urlArr[0] + seleniumCommand.target,
                 },
             ],
             tac: '',
@@ -21,8 +27,8 @@ export function openCommandFunc(
             usedIndex: 0,
             options: [
                 {
-                    type: 'tempType',
-                    value: 'tempValue',
+                    type: 'other',
+                    value: '',
                 },
             ],
             tac: '',

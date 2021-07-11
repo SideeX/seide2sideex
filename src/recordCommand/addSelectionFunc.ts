@@ -7,7 +7,7 @@ export function addSelectionFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
 ): Record {
-    console.log(seleniumCommand);
+    // console.log(seleniumCommand);
 
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,
