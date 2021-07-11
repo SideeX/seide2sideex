@@ -3,7 +3,8 @@ import { addSelectionFunc } from './recordCommand/addSelectionFunc';
 import { removeSelectionFunc } from './recordCommand/removeSelectionFunc';
 import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromptCommandFunc';
 import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
-import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc'
+import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc';
+import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -69,7 +70,7 @@ export const commandFunc: {
     selectWindow: defaultFunc,
     sendKeys: defaultFunc,
     setSpeed: defaultFunc,
-    setWindowSize: defaultFunc,
+    setWindowSize: setWindowSizeFunc,
     store: defaultFunc,
     storeAttribute: defaultFunc,
     storeJson: defaultFunc,
