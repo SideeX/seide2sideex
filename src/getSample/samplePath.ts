@@ -7,4 +7,5 @@ export const SamplePath: { [key: string]: string } = {
     open: './seleniumSamples/open.side',
     openWithSlashSymbol: './seleniumSamples/openWithSlashSymbol.side',
     removeSelection: './seleniumSamples/removeSelection.side',
+    click: './seleniumSamples/click.side',
 };

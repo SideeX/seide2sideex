@@ -8,6 +8,7 @@ import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
+import { clickFunc } from './recordCommand/clickFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -39,7 +40,7 @@ export const commandFunc: {
     chooseCancelOnNextConfirmation: defaultFunc,
     chooseCancelOnNextPrompt: defaultFunc,
     chooseOkOnNextConfirmation: defaultFunc,
-    click: defaultFunc,
+    click: clickFunc,
     clickAt: defaultFunc,
     close: defaultFunc,
     debugger: defaultFunc,
