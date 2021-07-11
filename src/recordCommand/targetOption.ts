@@ -4,7 +4,7 @@ import { Option } from '../struct/sideexStruct';
  * @param commandTargets selenium targets of command
  * @returns {Option[]} sideex Option array
  */
-export function targetToOptionFunc(commandTargets: Array<string[]>): Option[] {
+export function targetOptionFunc(commandTargets: Array<string[]>): Option[] {
     let recordOptionArr: Option[] = [];
 
     commandTargets.forEach((target) => {
