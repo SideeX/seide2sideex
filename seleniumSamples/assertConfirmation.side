@@ -1,0 +1,103 @@
+{
+  "id": "8d5fdc85-1db0-4eb2-a166-9db10dfd2c7b",
+  "version": "2.0",
+  "name": "assertConfirmation",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "c77b6fd8-28cb-426e-86d9-8ff52e8a6629",
+    "name": "assertConfirmation",
+    "commands": [{
+      "id": "8999f854-1aef-4891-aa38-d24f017f29d8",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-show-confirmation.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e57cd017-7c4a-4979-838f-491222359a8b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "976x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70ae3e16-d861-4846-83ef-e6ba692dcccd",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a26d3233-40ca-495e-8dea-10326d4ffa45",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click button to call the confirmation')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a8819bd-11fc-4ec5-8e9b-cd519126d100",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Do you want to leave?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1d9a9a2-c2dc-4b0b-9af0-af6e0736b724",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df6511d8-ed96-47f1-84df-8b748e7101d3",
+      "comment": "",
+      "command": "chooseCancelOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a71502d9-e4ec-41c2-9eb1-3b3960bb0a3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click button to call the confirmation')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90265220-8c25-4122-8f83-1794f8019421",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Do you want to leave?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8000c1f9-09db-4d39-ae93-4a021c202498",
+      "comment": "",
+      "command": "webdriverChooseCancelOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2114f297-1e90-4745-994d-56b6578457fa",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c77b6fd8-28cb-426e-86d9-8ff52e8a6629"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

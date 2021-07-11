@@ -1,0 +1,42 @@
+{
+  "id": "47bdf954-5ab5-4b56-89e4-59a9e88a170a",
+  "version": "2.0",
+  "name": "assertText",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "22a8556a-7643-4b33-803d-a4ba8d4c1591",
+    "name": "assertText",
+    "commands": [{
+      "id": "05c04a84-0081-4016-b953-8c89b407b56a",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/noneditable-paragraph.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebed1f07-6555-4480-93ef-0031e1929de0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "976x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d089163e-c5c9-4ec4-b364-ebf51de28c3b",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"text\"]",
+      "targets": [],
+      "value": "Hello SideeX!!!"
+    }]
+  }],
+  "suites": [{
+    "id": "4945de95-52ac-48ae-8bb2-8444052b29e9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["22a8556a-7643-4b33-803d-a4ba8d4c1591"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

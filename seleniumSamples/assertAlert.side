@@ -1,0 +1,55 @@
+{
+  "id": "ec950d37-84ca-4683-b169-422b63fac387",
+  "version": "2.0",
+  "name": "assertAlert",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "1a3ddefd-556f-44ce-aec2-4e8d93c4f46d",
+    "name": "assertAlert",
+    "commands": [{
+      "id": "172f8ff6-6008-420e-9e18-49332911f96f",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-show-alert.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e19d4fc4-de17-481d-b628-26afd5ef7e71",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "976x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2e5c599-0ed0-4a13-a990-c86833d541f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me to call the alert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "625c7f2b-823c-4449-9578-fcd2aca365ce",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Hi",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9f17f23e-3bcb-4ae3-9f4b-9af102eb7641",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1a3ddefd-556f-44ce-aec2-4e8d93c4f46d"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
