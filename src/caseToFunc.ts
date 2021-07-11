@@ -3,6 +3,7 @@ import { addSelectionFunc } from './recordCommand/addSelectionFunc';
 import { removeSelectionFunc } from './recordCommand/removeSelectionFunc';
 import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromptCommandFunc';
 import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
+import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc'
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -43,7 +44,7 @@ export const commandFunc: {
     debugger: defaultFunc,
     doubleClick: defaultFunc,
     coubleClickAt: defaultFunc,
-    dragAndDropToObject: defaultFunc,
+    dragAndDropToObject: dragAndDropToObjectFunc,
     echo: defaultFunc,
     editContent: defaultFunc,
     else: defaultFunc,
