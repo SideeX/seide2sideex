@@ -3,10 +3,10 @@ import { Record } from '../struct/sideexStruct';
 
 export function answerOnNextPromptCommandFunc(
     seleniumCommand: Command,
-    boolOrNot: boolean,
+    isCommandComment: boolean,
 ): Record {
     const sideexRecord: Record = {
-        name: "answerOnNextPrompt",
+        name: 'answerOnNextPrompt',
         target: {
             usedIndex: 0,
             options: [
@@ -28,7 +28,7 @@ export function answerOnNextPromptCommandFunc(
             tac: '',
         },
         pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
-        comment: boolOrNot,
+        comment: isCommandComment,
     };
     return sideexRecord;
 }
