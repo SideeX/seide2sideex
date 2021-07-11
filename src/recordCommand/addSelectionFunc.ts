@@ -3,20 +3,67 @@ import { Record } from '../struct/sideexStruct';
 
 export function addSelectionFunc(
     seleniumCommand: Command,
-    boolOrNot: boolean,
+    isCommandComment: boolean,
 ): Record {
     console.log(seleniumCommand);
+    // {
+    //     "name": "addSelection",
+    //     "target": {
+    //       "usedIndex": 0,
+    //       "options": [
+    //         {
+    //           "type": "id",
+    //           "value": "id=fruits"
+    //         },
+    //         {
+    //           "type": "name",
+    //           "value": "name=fruits"
+    //         },
+    //         {
+    //           "type": "xpath:position",
+    //           "value": "//select[1]"
+    //         },
+    //         {
+    //           "type": "xpath:attributes",
+    //           "value": "//select[@id='fruits']"
+    //         },
+    //         {
+    //           "type": "css:position",
+    //           "value": "css=#fruits"
+    //         }
+    //       ],
+    //       "tac": ""
+    //     },
+    //     "value": {
+    //       "usedIndex": 0,
+    //       "options": [
+    //         {
+    //           "type": "other",
+    //           "value": "Peach"
+    //         }
+    //       ],
+    //       "tac": ""
+    //     },
+    //     "pwt": {
+    //       "pbw": 0,
+    //       "paw": 0,
+    //       "prw": 0,
+    //       "pdw": 0
+    //     },
+    //     "comment": false
+    //   }
+
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {
-            usedIndex: 1,
+            usedIndex: 0,
             options: [
                 {
                     type: 'tempType',
                     value: 'tempValue',
                 },
             ],
-            tac: 'tempTac',
+            tac: '',
         },
         value: {
             usedIndex: 1,
@@ -26,10 +73,15 @@ export function addSelectionFunc(
                     value: 'tempValue',
                 },
             ],
-            tac: 'tempTac',
+            tac: '',
         },
-        pwt: { temp: 1 },
-        comment: boolOrNot,
+        pwt: {
+            pbw: 0,
+            paw: 0,
+            prw: 0,
+            pdw: 0,
+        },
+        comment: isCommandComment,
     };
     return sideexRecord;
 }
