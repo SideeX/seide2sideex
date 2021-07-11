@@ -8,6 +8,14 @@ export function openCommandFunc(
 ): Record {
     // console.log(seleniumCommand);
     console.log(urlArr);
+    let targetUrl = seleniumCommand.target;
+    if (targetUrl == '/' && typeof urlArr !== 'undefined') {
+        console.log('have / !!!!!!!!!');
+        targetUrl = urlArr[0];
+    }
+    if (targetUrl[0] === '/' && typeof urlArr !== 'undefined') {
+        targetUrl = urlArr[0] + targetUrl;
+    }
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {
@@ -15,10 +23,7 @@ export function openCommandFunc(
             options: [
                 {
                     type: 'other',
-                    value:
-                        urlArr === undefined
-                            ? seleniumCommand.target
-                            : urlArr[0] + seleniumCommand.target,
+                    value: targetUrl,
                 },
             ],
             tac: '',
