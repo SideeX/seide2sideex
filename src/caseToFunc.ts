@@ -1,4 +1,5 @@
 import { openCommandFunc } from './recordCommand/openCommandFunc';
+import { addSelectionFunc } from './recordCommand/addSelectionFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -8,7 +9,7 @@ export const commandFunc: {
     [key: string]: (command: Command, isCommandComment: boolean) => Record;
 } = {
     open: openCommandFunc,
-    addSelection: defaultFunc,
+    addSelection: addSelectionFunc,
     answerOnNext: defaultFunc,
     assert: defaultFunc,
     assertAlert: defaultFunc,
@@ -98,6 +99,5 @@ export const commandFunc: {
     webdriverChooseCancelOnVisibleConfirmation: defaultFunc,
     webdriverChooseCancelOnVisiblePrompt: defaultFunc,
     webdriverChooseOkOnVisibleConfirmation: defaultFunc,
-    while: defaultFunc
-
+    while: defaultFunc,
 };
