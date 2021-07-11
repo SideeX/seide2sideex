@@ -8,4 +8,5 @@ export const SamplePath: { [key: string]: string } = {
     openWithSlashSymbol: './seleniumSamples/openWithSlashSymbol.side',
     removeSelection: './seleniumSamples/removeSelection.side',
     click: './seleniumSamples/click.side',
+    assertAlert: './seleniumSamples/assertAlert.side',
 };

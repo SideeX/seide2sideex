@@ -5,6 +5,7 @@ import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromp
 import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
 import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc';
 import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
+import { assertAlertFunc } from './recordCommand/assertAlertFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -22,7 +23,7 @@ export const commandFunc: {
     addSelection: addSelectionFunc,
     answerOnNextPrompt: answerOnNextPromptCommandFunc,
     assert: defaultFunc,
-    assertAlert: defaultFunc,
+    assertAlert: assertAlertFunc,
     asserChecked: defaultFunc,
     assertConfirmation: defaultFunc,
     assertEditable: defaultFunc,

@@ -9,7 +9,7 @@ import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('click');
+const seleniumFile: SeleniumSide = getSample('assertAlert');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
