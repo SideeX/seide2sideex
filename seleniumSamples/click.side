@@ -1,0 +1,138 @@
+{
+  "id": "2e8f76ff-6ac3-464c-889d-2b04e2599189",
+  "version": "2.0",
+  "name": "clickAt",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "5db8223c-2802-4659-bcef-dc65587639f5",
+    "name": "click",
+    "commands": [{
+      "id": "a5581e39-aaa8-447d-aca1-4f5e38a05edc",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca2c8bce-c01d-4ea4-a2dd-74e1f3561cf6",
+      "comment": "",
+      "command": "click",
+      "target": "id=demoClickAtButton",
+      "targets": [
+        ["id=demoClickAtButton", "id"],
+        ["css=#demoClickAtButton", "css:finder"],
+        ["xpath=//button[@id='demoClickAtButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me to increase the size of button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "500b414a-ce4f-4498-92f8-d19b94952958",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(1)", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fa8ea8b-9282-4d7e-bbfd-7433d0138cb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd546958-9562-4fff-9540-03342be2f8d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff5a7935-98c5-45a7-a885-cb87638893ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(1)", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "147c1f3d-c8dd-406f-9a4e-44f3ec76d6c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(1)", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82571781-af37-46bf-b443-246a8a639781",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "736035b9-0fe7-4f5b-8756-db98483ea1e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.center",
+      "targets": [
+        ["css=.center", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'SideeX Commands Demonstration')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63656f11-0139-4588-ad43-2ede961bc10a",
+      "comment": "",
+      "command": "click",
+      "target": "id=demoClickAtButton",
+      "targets": [
+        ["id=demoClickAtButton", "id"],
+        ["css=#demoClickAtButton", "css:finder"],
+        ["xpath=//button[@id='demoClickAtButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'You click 2 times')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2de79bde-ecd0-4f95-8362-b152f8f28291",
+      "comment": "",
+      "command": "click",
+      "target": "id=demoClickAtButton",
+      "targets": [
+        ["id=demoClickAtButton", "id"],
+        ["css=#demoClickAtButton", "css:finder"],
+        ["xpath=//button[@id='demoClickAtButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'You click 1 times')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a89e6b7d-25a8-4405-85f9-ae94acd47c04",
+    "name": "click",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5db8223c-2802-4659-bcef-dc65587639f5"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
