@@ -10,7 +10,9 @@ export function targetOptionFunc(commandTargets: Array<string[]>): Option[] {
     commandTargets.forEach((target) => {
         const recordOption: Option = {
             type: target[1],
-            value: target[0],
+            value: target[0].includes('xpath')
+                ? target[0].slice(target[0].indexOf('=') + 1, target[0].length)
+                : target[0],
         };
         recordOptionArr.push(recordOption);
     });

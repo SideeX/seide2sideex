@@ -9,7 +9,7 @@ import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('dragAndDropToObject');
+const seleniumFile: SeleniumSide = getSample('removeSelection');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
