@@ -42,7 +42,6 @@ export function testToCase(seleniumTest: Test): Case {
         }
         const convertFunc = commandFunc[command.command];
         sideexCase.records.push(convertFunc(command, isCommandComment));
-        console.log(sideexCase.records);
     });
 
     return sideexCase;

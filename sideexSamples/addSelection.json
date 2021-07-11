@@ -1,0 +1,152 @@
+{
+  "time": 1625980962105,
+  "version": {
+    "sideex": [
+      3,
+      5,
+      3
+    ],
+    "format": [
+      2,
+      0,
+      0
+    ]
+  },
+  "suites": [
+    {
+      "title": "addSelection",
+      "enableOnPlaying": true,
+      "cases": [
+        {
+          "title": "addSelection",
+          "enableOnPlaying": true,
+          "networkSpeed": 6.86,
+          "records": [
+            {
+              "name": "open",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "https://sideex.github.io/example/webpage_under_test/select-multiple-option.html"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "addSelection",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=fruits"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=fruits"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//select[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//select[@id='fruits']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#fruits"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "Peach"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "addSelection",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=fruits"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=fruits"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//select[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//select[@id='fruits']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#fruits"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "Banana"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

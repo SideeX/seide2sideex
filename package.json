@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "doconvert": "node build/main.js",
-    "lint": "eslint 'src/**/*.{js,ts}' --fix"
+    "lint": "eslint 'src/**/*.{js,ts}' --fix",
+    "start": "npm run build && npm run doconvert"
   },
   "author": "",
   "license": "ISC",

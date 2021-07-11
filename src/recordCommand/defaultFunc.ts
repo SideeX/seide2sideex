@@ -3,7 +3,7 @@ import { Record } from '../struct/sideexStruct';
 
 export function defaultFunc(
     seleniumCommand: Command,
-    boolOrNot: boolean,
+    isCommandComment: boolean,
 ): Record {
     const sideexRecord: Record = {
         name: seleniumCommand.command,
@@ -28,7 +28,7 @@ export function defaultFunc(
             tac: '',
         },
         pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
-        comment: boolOrNot,
+        comment: isCommandComment,
     };
     return sideexRecord;
 }

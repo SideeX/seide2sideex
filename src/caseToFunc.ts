@@ -1,4 +1,5 @@
 import { openCommandFunc } from './recordCommand/openCommandFunc';
+import { addSelectionFunc } from './recordCommand/addSelectionFunc';
 import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromptCommandFunc';
 import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
@@ -10,7 +11,7 @@ export const commandFunc: {
     [key: string]: (command: Command, isCommandComment: boolean) => Record;
 } = {
     open: openCommandFunc,
-    addSelection: defaultFunc,
+    addSelection: addSelectionFunc,
     answerOnNextPrompt: answerOnNextPromptCommandFunc,
     assert: defaultFunc,
     assertAlert: defaultFunc,
@@ -100,6 +101,5 @@ export const commandFunc: {
     webdriverChooseCancelOnVisibleConfirmation: defaultFunc,
     webdriverChooseCancelOnVisiblePrompt: defaultFunc,
     webdriverChooseOkOnVisibleConfirmation: defaultFunc,
-    while: defaultFunc
-
+    while: defaultFunc,
 };
