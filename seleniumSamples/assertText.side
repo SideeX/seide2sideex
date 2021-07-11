@@ -31,7 +31,7 @@
   }],
   "suites": [{
     "id": "4945de95-52ac-48ae-8bb2-8444052b29e9",
-    "name": "Default Suite",
+    "name": "assertText",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,

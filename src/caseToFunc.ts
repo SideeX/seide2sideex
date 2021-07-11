@@ -6,6 +6,11 @@ import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc
 import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc';
 import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
 import { assertAlertFunc } from './recordCommand/assertAlertFunc';
+import { assertConfirmationFunc } from './recordCommand/assertConfirmationFunc';
+import { assertElementPresentFunc } from './recordCommand/assertElementPresentFunc';
+import { assertTextFunc } from './recordCommand/assertTextFunc';
+import { assertTitleFunc } from './recordCommand/assertTitleFunc';
+import { assertValueFunc } from './recordCommand/assertValueFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -25,18 +30,18 @@ export const commandFunc: {
     assert: defaultFunc,
     assertAlert: assertAlertFunc,
     asserChecked: defaultFunc,
-    assertConfirmation: defaultFunc,
+    assertConfirmation: assertConfirmationFunc,
     assertEditable: defaultFunc,
-    assertElementPresent: defaultFunc,
+    assertElementPresent: assertElementPresentFunc,
     assertElementNotPresent: defaultFunc,
     assertNotChecked: defaultFunc,
     assertNotSelectedValue: defaultFunc,
     assertPrompt: assertPromptCommandFunc,
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
-    assertText: defaultFunc,
-    assertTitle: defaultFunc,
-    assertValue: defaultFunc,
+    assertText: assertTextFunc ,
+    assertTitle: assertTitleFunc,
+    assertValue: assertValueFunc,
     check: defaultFunc,
     chooseCancelOnNextConfirmation: defaultFunc,
     chooseCancelOnNextPrompt: defaultFunc,

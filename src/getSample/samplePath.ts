@@ -9,4 +9,9 @@ export const SamplePath: { [key: string]: string } = {
     removeSelection: './seleniumSamples/removeSelection.side',
     click: './seleniumSamples/click.side',
     assertAlert: './seleniumSamples/assertAlert.side',
+    assertConfirmation: './seleniumSamples/assertConfirmation.side',
+    assertElementPresent: './seleniumSamples/assertElementPresent.side',
+    assertTest: './seleniumSamples/assertTest.side',
+    assertTitle: './seleniumSamples/assertTitle.side',
+    assertValue: './seleniumSamples/assertValue.side',
 };
