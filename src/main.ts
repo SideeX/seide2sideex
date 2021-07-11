@@ -9,7 +9,7 @@ import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('removeSelection');
+const seleniumFile: SeleniumSide = getSample('open');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
