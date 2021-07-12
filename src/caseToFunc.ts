@@ -17,6 +17,7 @@ import { Command } from './struct/seleniumStruct';
 import { clickFunc } from './recordCommand/clickFunc';
 import { echoFunc } from './recordCommand/echoFunc';
 import { storeFunc } from './recordCommand/storeFunc';
+import { closeFunc } from './recordCommand/closeFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -34,23 +35,23 @@ export const commandFunc: {
     asserChecked: defaultFunc,
     assertConfirmation: assertConfirmationFunc,
     assertEditable: defaultFunc,
- //   assertElementPresent: assertElementPresentFunc,
+    //   assertElementPresent: assertElementPresentFunc,
     assertElementNotPresent: defaultFunc,
     assertNotChecked: defaultFunc,
     assertNotSelectedValue: defaultFunc,
     assertPrompt: assertPromptCommandFunc,
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
- //   assertText: assertTextFunc ,
+    //   assertText: assertTextFunc ,
     assertTitle: assertTitleFunc,
- //   assertValue: assertValueFunc,
+    //   assertValue: assertValueFunc,
     check: defaultFunc,
     chooseCancelOnNextConfirmation: defaultFunc,
     chooseCancelOnNextPrompt: defaultFunc,
     chooseOkOnNextConfirmation: defaultFunc,
     click: clickFunc,
     clickAt: defaultFunc,
-    close: defaultFunc,
+    close: closeFunc,
     debugger: defaultFunc,
     doubleClick: defaultFunc,
     coubleClickAt: defaultFunc,

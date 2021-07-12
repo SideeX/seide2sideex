@@ -17,4 +17,5 @@ export const SamplePath: { [key: string]: string } = {
     setWindowSize: './seleniumSamples/setWindowSize.side',
     echo: './seleniumSamples/echo.side',
     store: './seleniumSamples/store.side',
+    close: './seleniumSamples/close.side'
 };
