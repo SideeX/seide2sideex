@@ -6,13 +6,19 @@ import { Option } from '../struct/sideexStruct';
  */
 export function targetOptionFunc(commandTargets: Array<string[]>): Option[] {
     let recordOptionArr: Option[] = [];
-
     commandTargets.forEach((target) => {
+        let typeStr = target[1];
+        let valueStr = target[0];
+        if (typeStr == 'linkText') {
+            typeStr = 'link';
+            const valueLast = valueStr.split('=')[1];
+            valueStr = typeStr + '=' + valueLast;
+        }
         const recordOption: Option = {
-            type: target[1],
-            value: target[0].includes('xpath')
-                ? target[0].slice(target[0].indexOf('=') + 1, target[0].length)
-                : target[0],
+            type: typeStr,
+            value: valueStr.includes('xpath')
+                ? valueStr.slice(valueStr.indexOf('=') + 1, valueStr.length)
+                : valueStr,
         };
         recordOptionArr.push(recordOption);
     });
