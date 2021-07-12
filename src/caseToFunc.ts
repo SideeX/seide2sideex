@@ -15,6 +15,7 @@ import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
 import { clickFunc } from './recordCommand/clickFunc';
+import { echoFunc } from './recordCommand/echoFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -53,7 +54,7 @@ export const commandFunc: {
     doubleClick: defaultFunc,
     coubleClickAt: defaultFunc,
     dragAndDropToObject: dragAndDropToObjectFunc,
-    echo: defaultFunc,
+    echo: echoFunc,
     editContent: defaultFunc,
     else: defaultFunc,
     end: defaultFunc,
