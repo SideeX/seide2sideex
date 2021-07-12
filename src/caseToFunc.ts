@@ -9,7 +9,7 @@ import { assertAlertFunc } from './recordCommand/assertAlertFunc';
 import { assertConfirmationFunc } from './recordCommand/assertConfirmationFunc';
 //import { assertElementPresentFunc } from './recordCommand/assertElementPresentFunc';
 //import { assertTextFunc } from './recordCommand/assertTextFunc';
-//import { assertTitleFunc } from './recordCommand/assertTitleFunc';
+import { assertTitleFunc } from './recordCommand/assertTitleFunc';
 //import { assertValueFunc } from './recordCommand/assertValueFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
@@ -40,7 +40,7 @@ export const commandFunc: {
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
  //   assertText: assertTextFunc ,
- //   assertTitle: assertTitleFunc,
+    assertTitle: assertTitleFunc,
  //   assertValue: assertValueFunc,
     check: defaultFunc,
     chooseCancelOnNextConfirmation: defaultFunc,
