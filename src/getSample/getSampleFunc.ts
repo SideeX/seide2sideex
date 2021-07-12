@@ -3,7 +3,7 @@ import { SeleniumSide } from '../struct/seleniumStruct';
 import { SamplePath } from './samplePath';
 
 export const getSample = (command: string): SeleniumSide => {
-    const file = readFileSync(SamplePath[command], 'utf-8');
+    const file = readFileSync(SamplePath(command), 'utf-8');
     return JSON.parse(file);
 };
 
