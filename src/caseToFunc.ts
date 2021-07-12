@@ -16,6 +16,7 @@ import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
 import { clickFunc } from './recordCommand/clickFunc';
 import { echoFunc } from './recordCommand/echoFunc';
+import { storeFunc } from './recordCommand/storeFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -79,7 +80,7 @@ export const commandFunc: {
     sendKeys: defaultFunc,
     setSpeed: defaultFunc,
     setWindowSize: setWindowSizeFunc,
-    store: defaultFunc,
+    store: storeFunc,
     storeAttribute: defaultFunc,
     storeJson: defaultFunc,
     storeText: defaultFunc,
