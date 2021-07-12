@@ -14,4 +14,6 @@ export const SamplePath: { [key: string]: string } = {
     assertTest: './seleniumSamples/assertTest.side',
     assertTitle: './seleniumSamples/assertTitle.side',
     assertValue: './seleniumSamples/assertValue.side',
+    setWindowSize: './seleniumSamples/setWindowSize.side',
+    echo: './seleniumSamples/echo.side',
 };
