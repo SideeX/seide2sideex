@@ -21,6 +21,7 @@ import { closeFunc } from './recordCommand/closeFunc';
 import { doubleClickAtFunc } from './recordCommand/doubleClickAtFunc';
 import { sendKeysFunc } from './recordCommand/sendKeysFunc';
 import { storeTextFunc } from './recordCommand/storeTextFunc';
+import { storeTitleFunc } from './recordCommand/storeTitleFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -45,7 +46,7 @@ export const commandFunc: {
     assertPrompt: assertPromptCommandFunc,
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
-    assertText: assertTextFunc ,
+    assertText: assertTextFunc,
     assertTitle: assertTitleFunc,
     assertValue: assertValueFunc,
     check: defaultFunc,
@@ -88,7 +89,7 @@ export const commandFunc: {
     storeAttribute: defaultFunc,
     storeJson: defaultFunc,
     storeText: storeTextFunc,
-    storeTitle: defaultFunc,
+    storeTitle: storeTitleFunc,
     storeValue: storeTextFunc, //same as storeTextFunc
     storeWindowHandle: defaultFunc,
     storeXpathCount: defaultFunc,
