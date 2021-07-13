@@ -89,7 +89,7 @@ export const commandFunc: {
     storeJson: defaultFunc,
     storeText: storeTextFunc,
     storeTitle: defaultFunc,
-    storeValue: defaultFunc,
+    storeValue: storeTextFunc, //same as storeTextFunc
     storeWindowHandle: defaultFunc,
     storeXpathCount: defaultFunc,
     submit: defaultFunc,
