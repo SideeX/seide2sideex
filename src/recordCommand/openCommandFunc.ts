@@ -9,6 +9,9 @@ export function openCommandFunc(
     // console.log(seleniumCommand);
     console.log(urlArr);
     let targetUrl = seleniumCommand.target;
+    if (targetUrl == '' && typeof urlArr !== 'undefined') {
+        targetUrl = "https://sideex.io/"
+    }
     if (targetUrl == '/' && typeof urlArr !== 'undefined') {
         console.log('have / !!!!!!!!!');
         targetUrl = urlArr[0];

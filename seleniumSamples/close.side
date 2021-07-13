@@ -1,27 +1,27 @@
 {
-  "id": "6137d129-0fa6-41a5-ba93-cfa82862e926",
+  "id": "0f3c6503-0d5c-4f83-9d70-9cc8aa65c9e1",
   "version": "2.0",
   "name": "close",
   "url": "",
   "tests": [{
-    "id": "e815eb50-717f-4bc8-9f08-60bf2922a3aa",
+    "id": "16314da2-003a-4a08-8900-2e4604accbfb",
     "name": "Untitled",
     "commands": [{
-      "id": "e6a3ff44-51b2-4219-a19e-8d8dd0208f16",
+      "id": "ba644f51-002b-4dd1-8bb7-dae49edaeb85",
       "comment": "",
       "command": "open",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "60af78c1-0789-4fe2-b39a-a9ee49671580",
+      "id": "a2220992-304a-43ad-affc-93c318a9188e",
       "comment": "",
       "command": "setWindowSize",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "0e05f21a-db39-4a30-9391-1e6eedacebc6",
+      "id": "d8d644b7-5b50-47c6-aab0-8eefc359a77d",
       "comment": "",
       "command": "close",
       "target": "",
@@ -30,12 +30,12 @@
     }]
   }],
   "suites": [{
-    "id": "6e421ce4-c720-4592-9ea4-2becd5441bc4",
+    "id": "e912e693-0772-4b1c-ad24-ee19cfb8708a",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["e815eb50-717f-4bc8-9f08-60bf2922a3aa"]
+    "tests": ["16314da2-003a-4a08-8900-2e4604accbfb"]
   }],
   "urls": [],
   "plugins": []
