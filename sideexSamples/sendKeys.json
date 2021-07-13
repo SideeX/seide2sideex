@@ -1,0 +1,366 @@
+{
+  "time": 1626160598263,
+  "version": {
+    "sideex": [
+      3,
+      5,
+      3
+    ],
+    "format": [
+      2,
+      0,
+      0
+    ]
+  },
+  "suites": [
+    {
+      "title": "sendKeys",
+      "enableOnPlaying": true,
+      "cases": [
+        {
+          "title": "sendKeys",
+          "enableOnPlaying": true,
+          "networkSpeed": 7.13,
+          "records": [
+            {
+              "name": "open",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "https://sideex.github.io/example/webpage_under_test/input-form-for-personal-data.html"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "COMMENT",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "The sendKeys command can fill in input boxes with given values"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=account"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=account"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@id='account']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#account"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "sideex_test"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=password"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=password"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//input[2]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@id='password']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#password"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "testing"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=email"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=email"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//input[3]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@id='email']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#email"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "sideex@testing"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=url"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=url"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//input[4]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@id='url']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#url"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "https://sideex.io"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=tel"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=tel"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//input[5]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@id='tel']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#tel"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "01-11111111"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=number"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=number"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//input[6]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@id='number']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#number"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "40"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

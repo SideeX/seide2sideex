@@ -1,0 +1,101 @@
+{
+  "id": "0b584b2c-38e0-4a46-a178-7c534bc7d9a8",
+  "version": "2.0",
+  "name": "sendKeys",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "35192bb5-6d42-4ee3-a6aa-822f10c96732",
+    "name": "sendKeysTest",
+    "commands": [{
+      "id": "0db884a4-a9bc-4fb5-a374-10cf69f7ada0",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/input-form-for-personal-data.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a61803b-ec06-4adc-8edc-bd16dc1dd2ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1030x774",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71698971-20e3-4a5a-a345-d7e5005b1aa6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=account",
+      "targets": [],
+      "value": "acc"
+    }, {
+      "id": "1fc4c344-de95-42a5-ace6-c2478288b6f0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "pss123"
+    }, {
+      "id": "ffa1554d-27a4-473b-b22c-44509a1bbca2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "sideex@testing"
+    }, {
+      "id": "6556d12a-7126-4bc8-bbf3-5a2d611f9bea",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=url",
+      "targets": [
+        ["id=url", "id"],
+        ["name=url", "name"],
+        ["css=#url", "css:finder"],
+        ["xpath=//input[@id='url']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "https://sideex.io"
+    }, {
+      "id": "95e19887-f220-4e0a-844e-d1d09032a61b",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=tel",
+      "targets": [
+        ["id=tel", "id"],
+        ["name=tel", "name"],
+        ["css=#tel", "css:finder"],
+        ["xpath=//input[@id='tel']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "01-11111111"
+    }, {
+      "id": "261bfd86-016c-478f-9ce6-34a6c965f1b8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=number",
+      "targets": [],
+      "value": "29"
+    }]
+  }],
+  "suites": [{
+    "id": "1c3dba95-9f17-44f6-a98a-53f000020a63",
+    "name": "sendKeys",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["35192bb5-6d42-4ee3-a6aa-822f10c96732"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

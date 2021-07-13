@@ -19,6 +19,7 @@ import { echoFunc } from './recordCommand/echoFunc';
 import { storeFunc } from './recordCommand/storeFunc';
 import { closeFunc } from './recordCommand/closeFunc';
 import { doubleClickAtFunc } from './recordCommand/doubleClickAtFunc';
+import { sendKeysFunc } from './recordCommand/sendKeysFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -79,7 +80,7 @@ export const commandFunc: {
     select: defaultFunc,
     selectFrame: defaultFunc,
     selectWindow: defaultFunc,
-    sendKeys: defaultFunc,
+    sendKeys: sendKeysFunc,
     setSpeed: defaultFunc,
     setWindowSize: setWindowSizeFunc,
     store: storeFunc,
