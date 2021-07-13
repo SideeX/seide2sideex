@@ -14,7 +14,7 @@ import { assertTitleFunc } from './recordCommand/assertTitleFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
-import { clickFunc } from './recordCommand/clickFunc';
+import { clickAtFunc } from './recordCommand/clickAtFunc';
 import { echoFunc } from './recordCommand/echoFunc';
 import { storeFunc } from './recordCommand/storeFunc';
 import { closeFunc } from './recordCommand/closeFunc';
@@ -49,8 +49,8 @@ export const commandFunc: {
     chooseCancelOnNextConfirmation: defaultFunc,
     chooseCancelOnNextPrompt: defaultFunc,
     chooseOkOnNextConfirmation: defaultFunc,
-    click: clickFunc,
-    clickAt: defaultFunc,
+    click: clickAtFunc,
+    clickAt: clickAtFunc,
     close: closeFunc,
     debugger: defaultFunc,
     doubleClick: defaultFunc,
