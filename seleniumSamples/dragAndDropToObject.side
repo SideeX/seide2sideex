@@ -1,7 +1,7 @@
 {
   "id": "4c63d2d9-eee7-4327-a3a1-e7b38b02ecf7",
   "version": "2.0",
-  "name": "a",
+  "name": "dargAndDropToObject",
   "url": "https://sideex.github.io",
   "tests": [{
     "id": "0f807beb-d9a1-4fcd-9fac-ae20d12fc8b9",
@@ -24,9 +24,9 @@
       "id": "2a9c902a-ca34-4373-b16a-dab22c5969f0",
       "comment": "",
       "command": "dragAndDropToObject",
-      "target": "xpath=(//div[@id='div1'])[2]",
+      "target": "id=drag1",
       "targets": [],
-      "value": "id=drag1"
+      "value": "xpath=(//div[@id='div1'])[2]"
     }]
   }],
   "suites": [{
