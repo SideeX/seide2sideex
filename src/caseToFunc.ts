@@ -10,7 +10,7 @@ import { assertConfirmationFunc } from './recordCommand/assertConfirmationFunc';
 //import { assertElementPresentFunc } from './recordCommand/assertElementPresentFunc';
 import { assertTextFunc } from './recordCommand/assertTextFunc';
 import { assertTitleFunc } from './recordCommand/assertTitleFunc';
-//import { assertValueFunc } from './recordCommand/assertValueFunc';
+import { assertValueFunc } from './recordCommand/assertValueFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
 import { Command } from './struct/seleniumStruct';
@@ -41,7 +41,7 @@ export const commandFunc: {
     assertSelectedLabel: defaultFunc,
     assertText: assertTextFunc ,
     assertTitle: assertTitleFunc,
- //   assertValue: assertValueFunc,
+    assertValue: assertValueFunc,
     check: defaultFunc,
     chooseCancelOnNextConfirmation: defaultFunc,
     chooseCancelOnNextPrompt: defaultFunc,
