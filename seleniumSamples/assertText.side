@@ -24,7 +24,7 @@
       "id": "d089163e-c5c9-4ec4-b364-ebf51de28c3b",
       "comment": "",
       "command": "assertText",
-      "target": "//*[@id=\"text\"]",
+      "target": "id=text",
       "targets": [],
       "value": "Hello SideeX!!!"
     }]
