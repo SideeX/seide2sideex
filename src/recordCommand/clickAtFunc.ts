@@ -1,9 +1,8 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
-import { valueOptionFunc } from './valueOption';
 
-export function clickFunc(
+export function clickAtFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
 ): Record {
@@ -24,7 +23,7 @@ export function clickFunc(
             options: [
                 {
                     type: 'other',
-                    value: '',
+                    value: seleniumCommand.value,
                 },
             ],
             tac: '',

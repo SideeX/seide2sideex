@@ -1,0 +1,48 @@
+{
+  "id": "4d6c41d6-b8c4-46f0-a56e-2a95de4f219b",
+  "version": "2.0",
+  "name": "clickAt",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "37538c89-8a75-4e8d-b517-7a253d7029a6",
+    "name": "clickAt",
+    "commands": [{
+      "id": "39faa26f-19bf-4aaf-9f0f-660ad4073127",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2a09cf8-3e92-4aac-9ef7-ef6776b308f2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1420x855",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcf33127-0e5c-4543-b932-2bec06319fb8",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=demoClickAtButton",
+      "targets": [
+        ["id=demoClickAtButton", "id"],
+        ["css=#demoClickAtButton", "css:finder"],
+        ["xpath=//button[@id='demoClickAtButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me to increase the size of button')]", "xpath:innerText"]
+      ],
+      "value": "10,20"
+    }]
+  }],
+  "suites": [{
+    "id": "f0005415-b265-4e58-a032-1e22c095c326",
+    "name": "clickAt",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["37538c89-8a75-4e8d-b517-7a253d7029a6"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
