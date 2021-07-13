@@ -9,7 +9,7 @@ import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('clickAt');
+const seleniumFile: SeleniumSide = getSample('All_Click');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
