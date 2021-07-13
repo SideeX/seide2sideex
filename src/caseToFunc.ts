@@ -20,6 +20,7 @@ import { storeFunc } from './recordCommand/storeFunc';
 import { closeFunc } from './recordCommand/closeFunc';
 import { doubleClickAtFunc } from './recordCommand/doubleClickAtFunc';
 import { sendKeysFunc } from './recordCommand/sendKeysFunc';
+import { storeTextFunc } from './recordCommand/storeTextFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -86,7 +87,7 @@ export const commandFunc: {
     store: storeFunc,
     storeAttribute: defaultFunc,
     storeJson: defaultFunc,
-    storeText: defaultFunc,
+    storeText: storeTextFunc,
     storeTitle: defaultFunc,
     storeValue: defaultFunc,
     storeWindowHandle: defaultFunc,
