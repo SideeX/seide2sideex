@@ -1,0 +1,55 @@
+{
+  "id": "1f244314-2098-4552-9f32-acbb47dfe753",
+  "version": "2.0",
+  "name": "storeText",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "a83ef7db-42bb-402a-aec2-7cb2102a391d",
+    "name": "storeTextTest",
+    "commands": [{
+      "id": "778d6d9f-a98a-4938-9ea0-cb7c1b788ccb",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-change-color.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21e69ed0-cd71-4ba7-879a-401b7969b377",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "167d7da6-e082-4ac6-83d1-8a950921f7c5",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me to change color')]", "xpath:innerText"]
+      ],
+      "value": "buttonText"
+    }, {
+      "id": "2502e8f4-a6de-4dc0-a558-f3dd9e8f19ee",
+      "comment": "",
+      "command": "echo",
+      "target": "${buttonText}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d70c08bf-a39d-4286-88ca-7e93f17d1f23",
+    "name": "storeText",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a83ef7db-42bb-402a-aec2-7cb2102a391d"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
