@@ -1,0 +1,44 @@
+{
+  "id": "f4e23f42-8c32-407a-9f93-bc678d8ddb60",
+  "version": "2.0",
+  "name": "selectFrame",
+  "url": "https://nba.udn.com",
+  "tests": [{
+    "id": "271d9921-34d9-4072-bdf7-0d0acceba203",
+    "name": "selectFrame",
+    "commands": [{
+      "id": "4d9d3174-827c-4435-9757-41a73d09ceff",
+      "comment": "",
+      "command": "open",
+      "target": "/nba/index?gr=www",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab55180d-1c25-4053-be7b-79ac83f93447",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35add334-9b75-4bfc-85c2-fcd18e12b6d1",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4ee1db2a-d1fc-4b8a-aece-5c0221f281f1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["271d9921-34d9-4072-bdf7-0d0acceba203"]
+  }],
+  "urls": ["https://nba.udn.com/"],
+  "plugins": []
+}
