@@ -18,6 +18,7 @@ import { clickAtFunc } from './recordCommand/clickAtFunc';
 import { echoFunc } from './recordCommand/echoFunc';
 import { storeFunc } from './recordCommand/storeFunc';
 import { closeFunc } from './recordCommand/closeFunc';
+import { doubleClickAtFunc } from './recordCommand/doubleClickAtFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -53,8 +54,8 @@ export const commandFunc: {
     clickAt: clickAtFunc,
     close: closeFunc,
     debugger: defaultFunc,
-    doubleClick: defaultFunc,
-    coubleClickAt: defaultFunc,
+    doubleClick: doubleClickAtFunc,
+    doubleClickAt: doubleClickAtFunc,
     dragAndDropToObject: dragAndDropToObjectFunc,
     echo: echoFunc,
     editContent: defaultFunc,
