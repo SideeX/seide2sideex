@@ -1,0 +1,128 @@
+{
+  "id": "4723c5e1-5390-49a2-b549-7b6364bd89f9",
+  "version": "2.0",
+  "name": "mouse",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "a187345e-340b-4299-bcfb-1434eba20b50",
+    "name": "mouseOver_mouseOut",
+    "commands": [{
+      "id": "4527982d-3ae0-47ef-845b-057e957068b6",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/mouseover-to-change-opacity.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac80d9df-7f40-4fa3-99db-0d0fdb9534db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1420x855",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b03f488-278e-4439-9e4d-6ca3a71cc97b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=opacity",
+      "targets": [
+        ["id=opacity", "id"],
+        ["css=#opacity", "css:finder"],
+        ["xpath=//img[@id='opacity']", "xpath:attributes"],
+        ["xpath=//div[3]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f70ef60-180b-4b39-88fe-c02bf3b5300d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=opacity",
+      "targets": [
+        ["id=opacity", "id"],
+        ["css=#opacity", "css:finder"],
+        ["xpath=//img[@id='opacity']", "xpath:attributes"],
+        ["xpath=//div[4]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8fc26fab-116b-494c-a762-229f021dbda8",
+    "name": "mouseDown_mouseUp",
+    "commands": [{
+      "id": "81c1dbf9-06bb-403f-aacf-0ca3791de83c",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/mouseover-to-change-opacity.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3449fc8-9f6d-4a21-90dc-cfd76e9e73d0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1420x855",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd017817-9655-4b7e-ad52-1d70a1a0cda6",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "412,356"
+    }, {
+      "id": "32caebf4-ea5b-40d7-982f-0bf7639b0a73",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "412,356"
+    }, {
+      "id": "cb9ffdb1-88fb-466c-b280-ae3b387613a0",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "id=opacity",
+      "targets": [
+        ["id=opacity", "id"],
+        ["css=#opacity", "css:finder"],
+        ["xpath=//img[@id='opacity']", "xpath:attributes"],
+        ["xpath=//div[3]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "965d4b32-32b6-4e44-b683-7bd66a74e4dc",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=opacity",
+      "targets": [
+        ["id=opacity", "id"],
+        ["css=#opacity", "css:finder"],
+        ["xpath=//img[@id='opacity']", "xpath:attributes"],
+        ["xpath=//div[4]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4567df43-530e-434a-9eb3-5305559c8f02",
+    "name": "mouseOver_mouseOut",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a187345e-340b-4299-bcfb-1434eba20b50"]
+  }, {
+    "id": "70564c0c-d316-41d6-aaed-ba4888b98104",
+    "name": "mouseDown_mouseUp",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8fc26fab-116b-494c-a762-229f021dbda8"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
