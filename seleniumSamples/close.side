@@ -31,7 +31,7 @@
   }],
   "suites": [{
     "id": "e912e693-0772-4b1c-ad24-ee19cfb8708a",
-    "name": "Default Suite",
+    "name": "close",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
