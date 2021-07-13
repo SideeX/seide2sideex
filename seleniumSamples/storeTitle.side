@@ -1,0 +1,49 @@
+{
+  "id": "4ea94ea0-ea5c-4de6-96f0-bdcef5a6dc66",
+  "version": "2.0",
+  "name": "storeTitle",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "f4a8e027-8348-4ba4-8c1c-a1661e673691",
+    "name": "storeTtitleTest",
+    "commands": [{
+      "id": "2e20db56-0583-468b-9e87-b7af26928757",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-change-color.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea27d566-b4d0-4a85-8e86-0c69187a9c4f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd4771c1-30f2-45d3-82f9-7d5fb4111edc",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "pageTitle"
+    }, {
+      "id": "91069e28-b502-494c-9470-9035a1d2ba65",
+      "comment": "",
+      "command": "echo",
+      "target": "${pageTitle}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7d8f2523-9c19-4869-b056-d1be01a8c8d9",
+    "name": "storeTitle",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f4a8e027-8348-4ba4-8c1c-a1661e673691"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
