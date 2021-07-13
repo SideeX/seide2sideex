@@ -8,7 +8,7 @@ export function assertTextFunc(
     // console.log(seleniumCommand);
 
     const sideexRecord: Record = {
-        name: seleniumCommand.command,
+        name: "assertText",
         target: {
             usedIndex: 0,
             options: [

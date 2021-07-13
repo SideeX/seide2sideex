@@ -1,13 +1,14 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 
-export function assertValueFunc(
+export function assertElementPresentFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
 ): Record {
     // console.log(seleniumCommand);
+
     const sideexRecord: Record = {
-        name: "assertValue",
+        name: "assertElement",
         target: {
             usedIndex: 0,
             options: [

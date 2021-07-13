@@ -7,7 +7,7 @@ import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc
 import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
 import { assertAlertFunc } from './recordCommand/assertAlertFunc';
 import { assertConfirmationFunc } from './recordCommand/assertConfirmationFunc';
-//import { assertElementPresentFunc } from './recordCommand/assertElementPresentFunc';
+import { assertElementPresentFunc } from './recordCommand/assertElementPresentFunc';
 import { assertTextFunc } from './recordCommand/assertTextFunc';
 import { assertTitleFunc } from './recordCommand/assertTitleFunc';
 import { assertValueFunc } from './recordCommand/assertValueFunc';
@@ -32,7 +32,7 @@ export const commandFunc: {
     asserChecked: defaultFunc,
     assertConfirmation: assertConfirmationFunc,
     assertEditable: defaultFunc,
- //   assertElementPresent: assertElementPresentFunc,
+    assertElementPresent: assertElementPresentFunc,
     assertElementNotPresent: defaultFunc,
     assertNotChecked: defaultFunc,
     assertNotSelectedValue: defaultFunc,
