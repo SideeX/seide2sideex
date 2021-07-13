@@ -23,7 +23,7 @@ export function setWindowSizeFunc(
             options: [
                 {
                     type: 'other',
-                    value: target,
+                    value: (target != "") ? target : "1420,855",
                 },
             ],
             tac: '',
