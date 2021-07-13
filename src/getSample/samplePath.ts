@@ -11,7 +11,7 @@ export const SamplePath: { [key: string]: string } = {
     assertAlert: './seleniumSamples/assertAlert.side',
     assertConfirmation: './seleniumSamples/assertConfirmation.side',
     assertElementPresent: './seleniumSamples/assertElementPresent.side',
-    assertTest: './seleniumSamples/assertTest.side',
+    assertText: './seleniumSamples/assertText.side',
     assertTitle: './seleniumSamples/assertTitle.side',
     assertValue: './seleniumSamples/assertValue.side',
 };

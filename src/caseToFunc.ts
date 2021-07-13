@@ -8,7 +8,7 @@ import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
 import { assertAlertFunc } from './recordCommand/assertAlertFunc';
 import { assertConfirmationFunc } from './recordCommand/assertConfirmationFunc';
 //import { assertElementPresentFunc } from './recordCommand/assertElementPresentFunc';
-//import { assertTextFunc } from './recordCommand/assertTextFunc';
+import { assertTextFunc } from './recordCommand/assertTextFunc';
 import { assertTitleFunc } from './recordCommand/assertTitleFunc';
 //import { assertValueFunc } from './recordCommand/assertValueFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
@@ -39,7 +39,7 @@ export const commandFunc: {
     assertPrompt: assertPromptCommandFunc,
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
- //   assertText: assertTextFunc ,
+    assertText: assertTextFunc ,
     assertTitle: assertTitleFunc,
  //   assertValue: assertValueFunc,
     check: defaultFunc,
