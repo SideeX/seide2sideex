@@ -14,7 +14,10 @@ export function sendKeysFunc(
         name: 'sendKeys',
         target: {
             usedIndex: 0,
-            options: sideexTargetOptions,
+            options:
+                sideexTargetOptions.length === 0
+                    ? [{ type: 'other', value: seleniumCommand.target }]
+                    : sideexTargetOptions,
             tac: '',
         },
         value: {
