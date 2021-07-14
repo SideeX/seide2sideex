@@ -30,7 +30,11 @@ function checkIfComment(command: Command) {
     return isCommandComment;
 }
 
-export function testToCase(seleniumTest: Test, urlArr: string[]): Case {
+export function testToCase(
+    seleniumTest: Test,
+    urlArr: string[],
+    libWindowHandle: string[],
+): Case {
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
     seleniumTest.commands.forEach((command) => {
@@ -39,8 +43,11 @@ export function testToCase(seleniumTest: Test, urlArr: string[]): Case {
         if (isCommandComment) {
             command.command = command.command.substring(2);
         }
+        //console.log('testtocase: ', libWindowHandle);
         const convertFunc = commandFunc[command.command];
-        sideexCase.records.push(convertFunc(command, isCommandComment, urlArr));
+        sideexCase.records.push(
+            convertFunc(command, isCommandComment, urlArr, libWindowHandle),
+        );
     });
 
     return sideexCase;
