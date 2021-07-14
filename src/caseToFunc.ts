@@ -23,13 +23,14 @@ import { sendKeysFunc } from './recordCommand/sendKeysFunc';
 import { storeTextFunc } from './recordCommand/storeTextFunc';
 import { storeTitleFunc } from './recordCommand/storeTitleFunc';
 import { selectFrameFunc } from './recordCommand/selectFrameFunc';
-
+import { selectWindowFunc } from './recordCommand/selectWindowFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
         command: Command,
         isCommandComment: boolean,
         urlArr?: string[],
+        libWindowHandle?: string[],
     ) => Record;
 } = {
     open: openCommandFunc,
@@ -82,7 +83,7 @@ export const commandFunc: {
     runScript: defaultFunc,
     select: defaultFunc,
     selectFrame: selectFrameFunc,
-    selectWindow: defaultFunc,
+    selectWindow: selectWindowFunc,
     sendKeys: sendKeysFunc,
     setSpeed: defaultFunc,
     setWindowSize: setWindowSizeFunc,

@@ -7,9 +7,10 @@ import {
 import { SideexJson, SideexSuite, Case, Record } from './struct/sideexStruct';
 import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
+import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('All_Click');
+const seleniumFile: SeleniumSide = getSample('selectWindow');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
@@ -106,9 +107,13 @@ function doConvert(suite: SeleniumSuite, urlArr: string[]) {
         const testId = testOfSuite[i];
         const testIndex = dictforSeleniumTests[testId];
         const seleniumTest = seleniumTests[testIndex];
-
-        const sideexCase: Case = testToCase(seleniumTest, urlArr);
-
+        const libWindowHandle = libWindowHandleFunc(seleniumTest);
+        console.log('libWindowHandle: ', libWindowHandle);
+        const sideexCase: Case = testToCase(
+            seleniumTest,
+            urlArr,
+            libWindowHandle,
+        );
         // push the sideex case
         sideexSuite.cases.push(sideexCase);
     }
