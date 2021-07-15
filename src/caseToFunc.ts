@@ -24,6 +24,8 @@ import { storeTextFunc } from './recordCommand/storeTextFunc';
 import { storeTitleFunc } from './recordCommand/storeTitleFunc';
 import { selectFrameFunc } from './recordCommand/selectFrameFunc';
 import { selectWindowFunc } from './recordCommand/selectWindowFunc';
+import { typeFunc } from './recordCommand/typeFunc';
+
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
@@ -97,7 +99,7 @@ export const commandFunc: {
     storeXpathCount: defaultFunc,
     submit: defaultFunc,
     times: defaultFunc,
-    type: defaultFunc,
+    type: typeFunc,
     uncheckLocator: defaultFunc,
     verify: defaultFunc,
     verifyChecked: defaultFunc,
