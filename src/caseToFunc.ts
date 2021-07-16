@@ -25,6 +25,7 @@ import { storeTitleFunc } from './recordCommand/storeTitleFunc';
 import { selectFrameFunc } from './recordCommand/selectFrameFunc';
 import { selectWindowFunc } from './recordCommand/selectWindowFunc';
 import { typeFunc } from './recordCommand/typeFunc';
+import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -68,7 +69,7 @@ export const commandFunc: {
     editContent: defaultFunc,
     else: defaultFunc,
     end: defaultFunc,
-    executeScript: defaultFunc,
+    executeScript: executeScriptFunc,
     executeAsyncScript: defaultFunc,
     if: defaultFunc,
     mouseDown: defaultFunc,
