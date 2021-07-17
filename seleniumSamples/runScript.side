@@ -1,0 +1,56 @@
+{
+  "id": "25511566-68c4-4775-9a80-5051e9e810c8",
+  "version": "2.0",
+  "name": "runScript",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "7811e5fa-25e9-400e-a6ce-72fe075c597b",
+    "name": "runScriptTest",
+    "commands": [{
+      "id": "fd7e3bea-4821-4a62-8535-00a45f01ce61",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-change-color.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dffb87b0-f764-4c7d-9822-7a68c8747583",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a58f3be-3605-47f2-a676-2b9d839430ce",
+      "comment": "",
+      "command": "runScript",
+      "target": "console.log('hello world')",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd4628f6-cbb2-4a92-a878-a683308bea15",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.getElementById('Button').style.backgroundColor = \"green\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c467342-dcc0-47c3-87f0-4d7b0335840e",
+      "comment": "",
+      "command": "runScript",
+      "target": "alert('done!');",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "40b71ba4-f1ab-4374-889a-6f30fd3bb426",
+    "name": "runScript",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7811e5fa-25e9-400e-a6ce-72fe075c597b"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

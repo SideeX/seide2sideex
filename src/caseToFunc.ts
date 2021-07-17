@@ -26,6 +26,7 @@ import { selectFrameFunc } from './recordCommand/selectFrameFunc';
 import { selectWindowFunc } from './recordCommand/selectWindowFunc';
 import { typeFunc } from './recordCommand/typeFunc';
 import { executeScriptFunc } from './recordCommand/executeScriptFunc';
+import { runScriptFunc } from './recordCommand/runScriptFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -83,7 +84,7 @@ export const commandFunc: {
     removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
     run: defaultFunc,
-    runScript: defaultFunc,
+    runScript: runScriptFunc,
     select: defaultFunc,
     selectFrame: selectFrameFunc,
     selectWindow: selectWindowFunc,
