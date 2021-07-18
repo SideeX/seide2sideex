@@ -7,7 +7,7 @@ export function assertValueFunc(
 ): Record {
     // console.log(seleniumCommand);
     const sideexRecord: Record = {
-        name: "assertValue",
+        name: 'assertValue',
         target: {
             usedIndex: 0,
             options: [

@@ -8,7 +8,7 @@ export function assertElementPresentFunc(
     // console.log(seleniumCommand);
 
     const sideexRecord: Record = {
-        name: "assertElement",
+        name: 'assertElement',
         target: {
             usedIndex: 0,
             options: [

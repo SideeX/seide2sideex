@@ -7,9 +7,7 @@
 
 export const SamplePath = (commandName: string): string => {
     return `./seleniumSamples/${commandName}.side`;
-}
-
-
+};
 
 // export const SamplePath: { [key: string]: string } = {
 //     dragAndDropToObject: './seleniumSamples/dargAndDropToObject.side',

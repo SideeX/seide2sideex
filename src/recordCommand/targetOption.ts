@@ -5,7 +5,7 @@ import { Option } from '../struct/sideexStruct';
  * @returns {Option[]} sideex Option array
  */
 export function targetOptionFunc(commandTargets: Array<string[]>): Option[] {
-    let recordOptionArr: Option[] = [];
+    const recordOptionArr: Option[] = [];
     commandTargets.forEach((target) => {
         let typeStr = target[1];
         let valueStr = target[0];

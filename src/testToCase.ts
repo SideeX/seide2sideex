@@ -39,7 +39,7 @@ export function testToCase(
     //Convert each commands to records
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
-        let isCommandComment = checkIfComment(command);
+        const isCommandComment = checkIfComment(command);
         if (isCommandComment) {
             command.command = command.command.substring(2);
         }

@@ -27,11 +27,11 @@ export function assertTitleFunc(
             ],
             tac: '',
         },
-        pwt: { 
-            pbw: 0, 
-            paw: 0, 
-            prw: 0, 
-            pdw: 0 
+        pwt: {
+            pbw: 0,
+            paw: 0,
+            prw: 0,
+            pdw: 0,
         },
         comment: isCommandComment,
     };
