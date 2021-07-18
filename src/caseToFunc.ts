@@ -27,6 +27,7 @@ import { selectWindowFunc } from './recordCommand/selectWindowFunc';
 import { typeFunc } from './recordCommand/typeFunc';
 import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
+import { pauseFunc } from './recordCommand/pauseFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -80,7 +81,7 @@ export const commandFunc: {
     mouseOver: defaultFunc,
     mouseUp: defaultFunc,
     mouseUpAt: defaultFunc,
-    pause: defaultFunc,
+    pause: pauseFunc,
     removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
     run: defaultFunc,
