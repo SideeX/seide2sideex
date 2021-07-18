@@ -12,7 +12,7 @@ export function closeFunc(
             options: [
                 {
                     type: 'other',
-                    value: "win_ser_local",
+                    value: 'win_ser_local',
                 },
             ],
             tac: '',
@@ -31,7 +31,7 @@ export function closeFunc(
             pbw: 0,
             paw: 0,
             prw: 0,
-            pdw: 0
+            pdw: 0,
         },
         comment: isCommandComment,
     };

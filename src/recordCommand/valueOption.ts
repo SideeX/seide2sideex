@@ -5,8 +5,8 @@ import { Option } from '../struct/sideexStruct';
  * @returns {Option[]} sideex Option array
  */
 export function valueOptionFunc(commandValues: string): Option[] {
-    let recordOptionArr: Option[] = [];
-    let splitValueString: string[] = commandValues.split('=');
+    const recordOptionArr: Option[] = [];
+    const splitValueString: string[] = commandValues.split('=');
     const recordOption: Option = {
         type: splitValueString[0] === 'label' ? 'other' : 'other',
         value: splitValueString[1],

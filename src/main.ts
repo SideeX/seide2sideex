@@ -10,7 +10,7 @@ import { testToCase } from './testToCase';
 import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('executeScript');
+const seleniumFile: SeleniumSide = getSample('pause');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 

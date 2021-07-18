@@ -1,12 +1,12 @@
-import { Command } from "../struct/seleniumStruct";
-import { Record } from "../struct/sideexStruct";
+import { Command } from '../struct/seleniumStruct';
+import { Record } from '../struct/sideexStruct';
 
 export function executeScriptFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
 ): Record {
     let targetStr = seleniumCommand.target;
-    targetStr = targetStr.replace('return','');
+    targetStr = targetStr.replace('return', '');
     const sideexRecord: Record = {
         name: 'storeEval',
         target: {
@@ -30,10 +30,10 @@ export function executeScriptFunc(
             tac: '',
         },
         pwt: {
-            pbw: 0, 
-            paw: 0, 
-            prw: 0, 
-            pdw: 0 
+            pbw: 0,
+            paw: 0,
+            prw: 0,
+            pdw: 0,
         },
         comment: isCommandComment,
     };
