@@ -1,6 +1,5 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
-import { targetOptionFunc } from './targetOption';
 
 export function chooseCancelOnNextConfirmationFunc(
     seleniumCommand: Command,

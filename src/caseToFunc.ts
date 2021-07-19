@@ -36,6 +36,8 @@ import { mouseDownAtFunc } from './recordCommand/mouseDownAtFunc';
 import { mouseMoveAtFunc } from './recordCommand/mouseMoveAtFunc';
 import { chooseCancelOnNextConfirmationFunc } from './recordCommand/chooseCancelOnNextConfirmationFunc';
 import { chooseCancelOnNextPromptFunc } from './recordCommand/chooseCancelOnNextPromptFunc';
+import { chooseOkOnNextConfirmationFunc } from './recordCommand/chooseOkOnNextConfirmationFunc';
+
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
@@ -79,7 +81,7 @@ export const commandFunc: {
     check: defaultFunc,
     chooseCancelOnNextConfirmation: chooseCancelOnNextConfirmationFunc,
     chooseCancelOnNextPrompt: chooseCancelOnNextPromptFunc,
-    chooseOkOnNextConfirmation: defaultFunc,
+    chooseOkOnNextConfirmation: chooseOkOnNextConfirmationFunc,
     click: clickAtFunc,
     clickAt: clickAtFunc,
     close: closeFunc,

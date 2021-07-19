@@ -1,12 +1,12 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 
-export function chooseCancelOnNextPromptFunc(
+export function chooseOkOnNextConfirmationFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
 ): Record {
     const sideexRecord: Record = {
-        name: 'chooseCancelOnNextPrompt',
+        name: 'chooseOkOnNextConfirmation',
         target: {
             usedIndex: 0,
             options: [
