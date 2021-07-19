@@ -4,6 +4,7 @@ import { Record } from '../struct/sideexStruct';
 export function openCommandFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _libWindowHandle?: string[],
     urlArr?: string[],
 ): Record {
     // console.log(seleniumCommand);
@@ -13,7 +14,6 @@ export function openCommandFunc(
         targetUrl = 'https://sideex.io/';
     }
     if (targetUrl == '/' && typeof urlArr !== 'undefined') {
-        console.log('have / !!!!!!!!!');
         targetUrl = urlArr[0];
     }
     if (targetUrl[0] === '/' && typeof urlArr !== 'undefined') {

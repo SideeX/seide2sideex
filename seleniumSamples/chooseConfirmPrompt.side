@@ -5,7 +5,7 @@
   "url": "https://sideex.github.io/",
   "tests": [{
     "id": "bbd61505-5a79-4e81-8f42-8a247b52f764",
-    "name": "chooseCancelOnNextConfirmation",
+    "name": "chooseOkOnNextConfirmation",
     "commands": [{
       "id": "13712414-a4e2-4a0f-8855-70fafb4f94d9",
       "comment": "",
@@ -109,7 +109,7 @@
     }]
   }, {
     "id": "6c6d3d21-54f0-4fa5-a7d6-dd9d2c7e0afe",
-    "name": "chooseOkOnNextConfirmation",
+    "name": "chooseCancelOnNextConfirmation",
     "commands": [{
       "id": "ccb55630-e334-4370-8f7c-0f7f45319956",
       "comment": "",
@@ -158,13 +158,6 @@
       "target": "",
       "targets": [],
       "value": ""
-    }, {
-      "id": "4c2fb38e-c3d4-4542-aa47-1735ae2c7be2",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }],
   "suites": [{
@@ -173,7 +166,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["bbd61505-5a79-4e81-8f42-8a247b52f764"]
+    "tests": ["6c6d3d21-54f0-4fa5-a7d6-dd9d2c7e0afe"]
   }, {
     "id": "5bc1c8bb-16ea-4baa-a3c2-4323520e0962",
     "name": "chooseCancelOnNextPrompt",
@@ -187,7 +180,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["6c6d3d21-54f0-4fa5-a7d6-dd9d2c7e0afe"]
+    "tests": ["bbd61505-5a79-4e81-8f42-8a247b52f764"]
   }],
   "urls": ["https://sideex.github.io/"],
   "plugins": []

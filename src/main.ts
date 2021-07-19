@@ -10,7 +10,7 @@ import { testToCase } from './testToCase';
 import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('mouse');
+const seleniumFile: SeleniumSide = getSample('chooseConfirmPrompt');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
@@ -108,7 +108,7 @@ function doConvert(suite: SeleniumSuite, urlArr: string[]) {
         const testIndex = dictforSeleniumTests[testId];
         const seleniumTest = seleniumTests[testIndex];
         const libWindowHandle = libWindowHandleFunc(seleniumTest);
-        console.log('libWindowHandle: ', libWindowHandle);
+        // console.log('libWindowHandle: ', libWindowHandle);
         const sideexCase: Case = testToCase(
             seleniumTest,
             urlArr,
