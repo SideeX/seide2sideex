@@ -10,15 +10,13 @@ export function openCommandFunc(
     // console.log(seleniumCommand);
     // console.log(urlArr);
     let targetUrl = seleniumCommand.target;
-    if (targetUrl == '' && typeof urlArr !== 'undefined') {
+    if (targetUrl == '' && urlArr !== undefined) {
         targetUrl = 'https://sideex.io/';
     }
-    if (targetUrl == '/' && typeof urlArr !== 'undefined') {
-        targetUrl = urlArr[0];
-    }
-    if (targetUrl[0] === '/' && typeof urlArr !== 'undefined') {
+    if (!targetUrl.includes('https://') && urlArr !== undefined) {
         targetUrl = urlArr[0] + targetUrl;
     }
+
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {
