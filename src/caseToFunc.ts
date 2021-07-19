@@ -29,11 +29,14 @@ import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
 import { pauseFunc } from './recordCommand/pauseFunc';
 import { verifyTextFunc } from './recordCommand/verifyTextFunc';
-import { mouseOverFunc } from './recordCommand/mouseOver';
-import { mouseUpAtFunc } from './recordCommand/mouseUpAt';
-import { mouseOutFunc } from './recordCommand/mouseOut';
-import { mouseDownAtFunc } from './recordCommand/mouseDownAt';
-import { mouseMoveAtFunc } from './recordCommand/mouseMoveAt';
+import { mouseOverFunc } from './recordCommand/mouseOverFunc';
+import { mouseUpAtFunc } from './recordCommand/mouseUpAtFunc';
+import { mouseOutFunc } from './recordCommand/mouseOutFunc';
+import { mouseDownAtFunc } from './recordCommand/mouseDownAtFunc';
+import { mouseMoveAtFunc } from './recordCommand/mouseMoveAtFunc';
+import { chooseCancelOnNextConfirmationFunc } from './recordCommand/chooseCancelOnNextConfirmationFunc';
+import { chooseCancelOnNextPromptFunc } from './recordCommand/chooseCancelOnNextPromptFunc';
+import { chooseOkOnNextConfirmationFunc } from './recordCommand/chooseOkOnNextConfirmationFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -76,9 +79,9 @@ export const commandFunc: {
     assertTitle: assertTitleFunc,
     assertValue: assertValueFunc,
     check: defaultFunc,
-    chooseCancelOnNextConfirmation: defaultFunc,
-    chooseCancelOnNextPrompt: defaultFunc,
-    chooseOkOnNextConfirmation: defaultFunc,
+    chooseCancelOnNextConfirmation: chooseCancelOnNextConfirmationFunc,
+    chooseCancelOnNextPrompt: chooseCancelOnNextPromptFunc,
+    chooseOkOnNextConfirmation: chooseOkOnNextConfirmationFunc,
     click: clickAtFunc,
     clickAt: clickAtFunc,
     close: closeFunc,
