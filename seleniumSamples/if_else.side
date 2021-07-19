@@ -1,0 +1,84 @@
+{
+  "id": "3bea1849-385b-461a-812d-b40682a194df",
+  "version": "2.0",
+  "name": "if_else",
+  "url": "",
+  "tests": [{
+    "id": "ab595487-6e52-4f21-a773-6a7b485574ce",
+    "name": "if_else",
+    "commands": [{
+      "id": "978b0148-7ad8-45c8-8d70-a307d71e729b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"a\"",
+      "targets": [],
+      "value": "myVar"
+    }, {
+      "id": "f6e6b3ec-716b-419d-b60f-eec21b7dd5ab",
+      "comment": "",
+      "command": "if",
+      "target": "${myVar} === \"a\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c2113ac-2d39-4957-bc38-198c547e8711",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"a\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "c67f7032-6c26-4045-8c30-1fbc3a754a10",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${myVar} === \"b\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af3e1a67-35fe-41ce-b11d-5a7489a399a1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"b\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "7f39fad9-abdc-411d-a9c1-b20664473061",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0c09959-3861-4bf3-bd4a-ebb2ce5b3e71",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"c\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "ca1ab07e-b0cc-4db6-a402-4883250f2e36",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32100d71-5339-4ca4-987b-8aa65282a3e8",
+      "comment": "",
+      "command": "echo",
+      "target": "${output}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "61eaf68a-39b4-4ccf-94d8-51ab07ccc771",
+    "name": "if_else",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ab595487-6e52-4f21-a773-6a7b485574ce"]
+  }],
+  "urls": [],
+  "plugins": []
+}
