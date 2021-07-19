@@ -5,8 +5,23 @@ import { targetOptionFunc } from './targetOption';
 export function mouseDownAtFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _urlArr?: string[],
+    mouseCord?: {
+        StartPoint: { X: number; Y: number };
+        PrevPoint: { X: number; Y: number };
+        Movements: { TD: number; OX: number; OY: number }[];
+    },
 ): Record {
     // console.log(seleniumCommand);
+    //check mouseMove
+    const xyCord = seleniumCommand.value.split(',');
+    if (mouseCord !== undefined && xyCord[1]) {
+        mouseCord.StartPoint.X = parseInt(xyCord[0]);
+        mouseCord.StartPoint.Y = parseInt(xyCord[1]);
+        mouseCord.PrevPoint.X = parseInt(xyCord[0]);
+        mouseCord.PrevPoint.Y = parseInt(xyCord[1]);
+        mouseCord.Movements = [];
+    }
 
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,

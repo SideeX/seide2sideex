@@ -5,14 +5,19 @@ import { targetOptionFunc } from './targetOption';
 export function mouseUpAtFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _urlArr?: string[],
+    mouseCord?: {
+        StartPoint: { X: number; Y: number };
+        PrevPoint: { X: number; Y: number };
+        Movements: { TD: number; OX: number; OY: number }[];
+    },
 ): Record {
     // console.log(seleniumCommand);
-
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,
     );
     const sideexRecord: Record = {
-        name: 'mouseUpAt',
+        name: '',
         target: {
             usedIndex: 0,
             options: sideexTargetOptions,
@@ -20,12 +25,7 @@ export function mouseUpAtFunc(
         },
         value: {
             usedIndex: 0,
-            options: [
-                {
-                    type: 'other',
-                    value: seleniumCommand.value,
-                },
-            ],
+            options: [],
             tac: '',
         },
         pwt: {
@@ -36,5 +36,26 @@ export function mouseUpAtFunc(
         },
         comment: isCommandComment,
     };
+    if (
+        mouseCord !== undefined &&
+        (mouseCord.StartPoint.X !== mouseCord.PrevPoint.X ||
+            mouseCord.StartPoint.Y !== mouseCord.PrevPoint.Y)
+    ) {
+        sideexRecord.name = 'dragAndDrop';
+
+        sideexRecord.value.options.push({
+            type: 'other',
+            value: JSON.stringify({
+                StartPoint: mouseCord.StartPoint,
+                Movements: mouseCord.Movements,
+            }),
+        });
+    } else {
+        sideexRecord.name = 'mouseUpAt';
+        sideexRecord.value.options.push({
+            type: 'other',
+            value: seleniumCommand.value,
+        });
+    }
     return sideexRecord;
 }

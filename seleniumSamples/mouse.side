@@ -107,6 +107,149 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "09884002-1beb-49cd-8477-1ec72ec38587",
+    "name": "mouseMove",
+    "commands": [{
+      "id": "20abfeb7-00a1-4d66-89f3-f277903b58c1",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/canvas-to-draw.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be670760-16cc-46e4-b4fb-1033ee32451b",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "50,97"
+    }, {
+      "id": "443b1a4e-74ab-4d1c-be5f-2f86ca838c8f",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "316,97"
+    }, {
+      "id": "a23b9b1f-db2c-481a-93fa-5874b18e9566",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "316,97"
+    }, {
+      "id": "69ff7325-0620-4c40-9994-f5db720551a5",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "207,97"
+    }, {
+      "id": "353baad0-5c60-44b8-a056-a4b3d0a87aa7",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "207,330"
+    }, {
+      "id": "c5ecb838-778b-42d2-90e1-f01d14183ec3",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "207,330"
+    }, {
+      "id": "f23166cf-0e66-4ef7-afdf-a0b2b0fdddbf",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "30,30"
+    }, {
+      "id": "c36f68f0-5a1d-423e-826f-396b2f9be393",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "90,60"
+    }, {
+      "id": "c37de1fa-dd6b-446b-b47e-592067877d69",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "70,20"
+    }, {
+      "id": "d420ec04-ea3f-4e68-83b1-da93af1f0bcc",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "300,400"
+    }, {
+      "id": "dd13dadc-8969-47a8-9a51-27ca6becf61d",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=can",
+      "targets": [
+        ["id=can", "id"],
+        ["css=#can", "css:finder"],
+        ["xpath=//canvas[@id='can']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "5,200"
+    }]
   }],
   "suites": [{
     "id": "4567df43-530e-434a-9eb3-5305559c8f02",
@@ -122,6 +265,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["8fc26fab-116b-494c-a762-229f021dbda8"]
+  }, {
+    "id": "5ba9dbe9-33be-4938-b72b-aafc85c0cd6e",
+    "name": "mouseMove",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["09884002-1beb-49cd-8477-1ec72ec38587"]
   }],
   "urls": ["https://sideex.github.io/"],
   "plugins": []

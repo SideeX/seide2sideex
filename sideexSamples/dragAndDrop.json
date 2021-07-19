@@ -1,0 +1,288 @@
+{
+  "time": 1626679667346,
+  "version": {
+    "sideex": [
+      3,
+      5,
+      3
+    ],
+    "format": [
+      2,
+      0,
+      0
+    ]
+  },
+  "suites": [
+    {
+      "title": "dragAndDrop",
+      "enableOnPlaying": true,
+      "cases": [
+        {
+          "title": "dragAndDrop",
+          "enableOnPlaying": true,
+          "networkSpeed": 26.3,
+          "records": [
+            {
+              "name": "open",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "https://sideex.github.io/example/webpage_under_test/canvas-to-draw.html"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "setViewportSize",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "1440,796"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "dragAndDrop",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=can"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//canvas[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//canvas[@id='can']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#can"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "{\"StartPoint\":{\"X\":257,\"Y\":81},\"Movements\":[{\"TD\":199,\"OX\":0,\"OY\":1},{\"TD\":11,\"OX\":0,\"OY\":0},{\"TD\":6,\"OX\":0,\"OY\":1},{\"TD\":16,\"OX\":0,\"OY\":3},{\"TD\":17,\"OX\":0,\"OY\":4},{\"TD\":16,\"OX\":0,\"OY\":8},{\"TD\":25,\"OX\":0,\"OY\":17},{\"TD\":16,\"OX\":2,\"OY\":15},{\"TD\":16,\"OX\":3,\"OY\":17},{\"TD\":16,\"OX\":3,\"OY\":18},{\"TD\":16,\"OX\":2,\"OY\":18},{\"TD\":16,\"OX\":3,\"OY\":16},{\"TD\":16,\"OX\":2,\"OY\":15},{\"TD\":16,\"OX\":3,\"OY\":15},{\"TD\":16,\"OX\":2,\"OY\":15},{\"TD\":16,\"OX\":3,\"OY\":16},{\"TD\":17,\"OX\":3,\"OY\":14},{\"TD\":16,\"OX\":2,\"OY\":12},{\"TD\":17,\"OX\":3,\"OY\":11},{\"TD\":16,\"OX\":2,\"OY\":11},{\"TD\":16,\"OX\":2,\"OY\":7},{\"TD\":16,\"OX\":1,\"OY\":7},{\"TD\":17,\"OX\":1,\"OY\":4},{\"TD\":24,\"OX\":0,\"OY\":2}]}"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "dragAndDrop",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=can"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//canvas[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//canvas[@id='can']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#can"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "{\"StartPoint\":{\"X\":41,\"Y\":89},\"Movements\":[{\"TD\":87,\"OX\":0,\"OY\":0},{\"TD\":10,\"OX\":0,\"OY\":4},{\"TD\":6,\"OX\":0,\"OY\":6},{\"TD\":16,\"OX\":0,\"OY\":25},{\"TD\":12,\"OX\":0,\"OY\":38}]}"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "dragAndDrop",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=can"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//canvas[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//canvas[@id='can']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#can"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "{\"StartPoint\":{\"X\":130,\"Y\":76},\"Movements\":[{\"TD\":110,\"OX\":0,\"OY\":1},{\"TD\":8,\"OX\":0,\"OY\":9},{\"TD\":24,\"OX\":0,\"OY\":57},{\"TD\":16,\"OX\":0,\"OY\":67},{\"TD\":16,\"OX\":0,\"OY\":46},{\"TD\":16,\"OX\":0,\"OY\":36},{\"TD\":16,\"OX\":0,\"OY\":37},{\"TD\":16,\"OX\":0,\"OY\":12},{\"TD\":8,\"OX\":0,\"OY\":16}]}"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "dragAndDrop",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=can"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//canvas[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//canvas[@id='can']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#can"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "{\"StartPoint\":{\"X\":178,\"Y\":75},\"Movements\":[{\"TD\":273,\"OX\":0,\"OY\":0},{\"TD\":8,\"OX\":0,\"OY\":2},{\"TD\":16,\"OX\":0,\"OY\":2},{\"TD\":17,\"OX\":0,\"OY\":6},{\"TD\":16,\"OX\":1,\"OY\":8},{\"TD\":16,\"OX\":1,\"OY\":8},{\"TD\":16,\"OX\":1,\"OY\":6},{\"TD\":17,\"OX\":3,\"OY\":11},{\"TD\":16,\"OX\":1,\"OY\":11},{\"TD\":16,\"OX\":2,\"OY\":11},{\"TD\":16,\"OX\":1,\"OY\":12},{\"TD\":16,\"OX\":2,\"OY\":14},{\"TD\":24,\"OX\":2,\"OY\":19},{\"TD\":16,\"OX\":1,\"OY\":15},{\"TD\":16,\"OX\":0,\"OY\":15},{\"TD\":16,\"OX\":0,\"OY\":14},{\"TD\":16,\"OX\":0,\"OY\":11},{\"TD\":17,\"OX\":-3,\"OY\":11},{\"TD\":16,\"OX\":-3,\"OY\":5},{\"TD\":16,\"OX\":-5,\"OY\":6},{\"TD\":16,\"OX\":-7,\"OY\":3},{\"TD\":16,\"OX\":-6,\"OY\":0},{\"TD\":16,\"OX\":-11,\"OY\":0},{\"TD\":16,\"OX\":-12,\"OY\":-6},{\"TD\":16,\"OX\":-13,\"OY\":-9},{\"TD\":17,\"OX\":-9,\"OY\":-11},{\"TD\":16,\"OX\":-5,\"OY\":-13},{\"TD\":16,\"OX\":-3,\"OY\":-18},{\"TD\":16,\"OX\":0,\"OY\":-18},{\"TD\":24,\"OX\":4,\"OY\":-21},{\"TD\":16,\"OX\":10,\"OY\":-10},{\"TD\":16,\"OX\":12,\"OY\":-8},{\"TD\":16,\"OX\":16,\"OY\":-7},{\"TD\":16,\"OX\":23,\"OY\":-8},{\"TD\":16,\"OX\":25,\"OY\":-4},{\"TD\":16,\"OX\":23,\"OY\":-1},{\"TD\":16,\"OX\":18,\"OY\":0},{\"TD\":16,\"OX\":12,\"OY\":6},{\"TD\":16,\"OX\":9,\"OY\":12},{\"TD\":16,\"OX\":7,\"OY\":15},{\"TD\":16,\"OX\":6,\"OY\":18},{\"TD\":16,\"OX\":3,\"OY\":20},{\"TD\":16,\"OX\":2,\"OY\":19},{\"TD\":16,\"OX\":0,\"OY\":20},{\"TD\":16,\"OX\":-2,\"OY\":18},{\"TD\":16,\"OX\":-10,\"OY\":18},{\"TD\":16,\"OX\":-11,\"OY\":14},{\"TD\":16,\"OX\":-13,\"OY\":12},{\"TD\":24,\"OX\":-20,\"OY\":10},{\"TD\":17,\"OX\":-16,\"OY\":3},{\"TD\":16,\"OX\":-18,\"OY\":0},{\"TD\":16,\"OX\":-20,\"OY\":-3},{\"TD\":16,\"OX\":-20,\"OY\":-12},{\"TD\":16,\"OX\":-18,\"OY\":-19},{\"TD\":17,\"OX\":-8,\"OY\":-17},{\"TD\":16,\"OX\":-1,\"OY\":-18},{\"TD\":16,\"OX\":0,\"OY\":-15},{\"TD\":16,\"OX\":6,\"OY\":-13},{\"TD\":17,\"OX\":15,\"OY\":-14},{\"TD\":16,\"OX\":27,\"OY\":-16},{\"TD\":16,\"OX\":29,\"OY\":-8},{\"TD\":17,\"OX\":34,\"OY\":-5},{\"TD\":16,\"OX\":40,\"OY\":0},{\"TD\":16,\"OX\":24,\"OY\":1},{\"TD\":17,\"OX\":26,\"OY\":12},{\"TD\":16,\"OX\":15,\"OY\":14},{\"TD\":16,\"OX\":8,\"OY\":16},{\"TD\":25,\"OX\":8,\"OY\":27},{\"TD\":16,\"OX\":1,\"OY\":18},{\"TD\":16,\"OX\":2,\"OY\":19},{\"TD\":16,\"OX\":2,\"OY\":18},{\"TD\":16,\"OX\":0,\"OY\":18},{\"TD\":16,\"OX\":0,\"OY\":15},{\"TD\":16,\"OX\":-2,\"OY\":9},{\"TD\":16,\"OX\":-5,\"OY\":9},{\"TD\":16,\"OX\":-6,\"OY\":7},{\"TD\":16,\"OX\":-8,\"OY\":2},{\"TD\":16,\"OX\":-12,\"OY\":2},{\"TD\":16,\"OX\":-14,\"OY\":0},{\"TD\":16,\"OX\":-13,\"OY\":0},{\"TD\":16,\"OX\":-13,\"OY\":-5},{\"TD\":16,\"OX\":-5,\"OY\":-4},{\"TD\":16,\"OX\":-8,\"OY\":-9},{\"TD\":16,\"OX\":-1,\"OY\":-11},{\"TD\":16,\"OX\":0,\"OY\":-9},{\"TD\":24,\"OX\":4,\"OY\":-10},{\"TD\":17,\"OX\":4,\"OY\":-3},{\"TD\":16,\"OX\":7,\"OY\":-3},{\"TD\":16,\"OX\":9,\"OY\":0},{\"TD\":16,\"OX\":13,\"OY\":0},{\"TD\":16,\"OX\":17,\"OY\":1},{\"TD\":16,\"OX\":13,\"OY\":6},{\"TD\":16,\"OX\":13,\"OY\":9},{\"TD\":16,\"OX\":7,\"OY\":7},{\"TD\":16,\"OX\":4,\"OY\":5},{\"TD\":16,\"OX\":3,\"OY\":5},{\"TD\":16,\"OX\":3,\"OY\":5},{\"TD\":16,\"OX\":1,\"OY\":5},{\"TD\":16,\"OX\":1,\"OY\":4},{\"TD\":16,\"OX\":1,\"OY\":2},{\"TD\":16,\"OX\":1,\"OY\":3},{\"TD\":16,\"OX\":0,\"OY\":2},{\"TD\":24,\"OX\":0,\"OY\":1},{\"TD\":16,\"OX\":1,\"OY\":1},{\"TD\":8,\"OX\":0,\"OY\":0},{\"TD\":16,\"OX\":0,\"OY\":0}]}"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "mouseMoveAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "id=can"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
