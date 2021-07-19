@@ -28,6 +28,7 @@ import { typeFunc } from './recordCommand/typeFunc';
 import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
 import { pauseFunc } from './recordCommand/pauseFunc';
+import {verifyTextFunc} from './recordCommand/verifyTextFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -115,7 +116,7 @@ export const commandFunc: {
     verifyNotText: defaultFunc,
     verifySelectedLabel: defaultFunc,
     verifySelectedValue: defaultFunc,
-    verifyText: defaultFunc,
+    verifyText: verifyTextFunc,
     verifyTitle: defaultFunc,
     verifyValue: defaultFunc,
     waitForElementEditable: defaultFunc,

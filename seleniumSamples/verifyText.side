@@ -1,0 +1,42 @@
+{
+  "id": "e1ec6988-4100-4e4d-85a7-c9d1b1a6e5b8",
+  "version": "2.0",
+  "name": "verifyText",
+  "url": "https://ithelp.ithome.com.tw",
+  "tests": [{
+    "id": "c8dfebe1-ca07-4114-b644-0038d34c51f7",
+    "name": "Untitled",
+    "commands": [{
+      "id": "d2527711-8553-451f-895f-e686d23e9799",
+      "comment": "",
+      "command": "open",
+      "target": "/users/20120614/ironman/2685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9fce1ba-ae0c-4010-8ee3-9b02a02a048b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "975e3f6b-6c23-4757-b247-aa67f7298be3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.profile-header__name",
+      "targets": [],
+      "value": "Maxwell Alexius (nordic_wyvern)"
+    }]
+  }],
+  "suites": [{
+    "id": "5b55666c-a48f-4a09-83bc-8b8c43524531",
+    "name": "verifyText",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c8dfebe1-ca07-4114-b644-0038d34c51f7"]
+  }],
+  "urls": ["https://ithelp.ithome.com.tw/"],
+  "plugins": []
+}
