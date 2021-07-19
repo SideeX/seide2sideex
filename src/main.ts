@@ -10,7 +10,7 @@ import { testToCase } from './testToCase';
 import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('chooseConfirmPrompt');
+const seleniumFile: SeleniumSide = getSample('check');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 

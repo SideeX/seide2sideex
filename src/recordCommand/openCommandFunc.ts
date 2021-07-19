@@ -8,7 +8,7 @@ export function openCommandFunc(
     urlArr?: string[],
 ): Record {
     // console.log(seleniumCommand);
-    console.log(urlArr);
+    // console.log(urlArr);
     let targetUrl = seleniumCommand.target;
     if (targetUrl == '' && typeof urlArr !== 'undefined') {
         targetUrl = 'https://sideex.io/';

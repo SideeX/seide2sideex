@@ -37,7 +37,7 @@ import { mouseMoveAtFunc } from './recordCommand/mouseMoveAtFunc';
 import { chooseCancelOnNextConfirmationFunc } from './recordCommand/chooseCancelOnNextConfirmationFunc';
 import { chooseCancelOnNextPromptFunc } from './recordCommand/chooseCancelOnNextPromptFunc';
 import { chooseOkOnNextConfirmationFunc } from './recordCommand/chooseOkOnNextConfirmationFunc';
-
+import { checkFunc } from './recordCommand/checkFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
@@ -78,7 +78,7 @@ export const commandFunc: {
     assertText: assertTextFunc,
     assertTitle: assertTitleFunc,
     assertValue: assertValueFunc,
-    check: defaultFunc,
+    check: checkFunc,
     chooseCancelOnNextConfirmation: chooseCancelOnNextConfirmationFunc,
     chooseCancelOnNextPrompt: chooseCancelOnNextPromptFunc,
     chooseOkOnNextConfirmation: chooseOkOnNextConfirmationFunc,
@@ -125,7 +125,7 @@ export const commandFunc: {
     submit: defaultFunc,
     times: defaultFunc,
     type: typeFunc,
-    uncheckLocator: defaultFunc,
+    uncheck: defaultFunc,
     verify: defaultFunc,
     verifyChecked: defaultFunc,
     verifyEditable: defaultFunc,

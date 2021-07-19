@@ -5,12 +5,11 @@ import { Record } from '../struct/sideexStruct';
 export function selectWindowFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
-    noUseUrl?: string[],
+    _noUseUrl?: string[],
     libWindowHandle?: string[],
 ): Record {
     let targetStr = seleniumCommand.target;
     console.log('libWindowHandle from selectWindowFunc:', libWindowHandle);
-    console.log(noUseUrl);
     if (seleniumCommand.target.substr(9, 4) == 'root') {
         targetStr = 'win_ser_local';
     } else {

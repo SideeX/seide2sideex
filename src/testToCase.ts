@@ -45,6 +45,7 @@ export function testToCase(
     };
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
+        // console.log(command);
         const isCommandComment = checkIfComment(command);
         if (isCommandComment) {
             command.command = command.command.substring(2);

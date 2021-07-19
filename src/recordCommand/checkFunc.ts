@@ -2,7 +2,7 @@ import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
 
-export function clickAtFunc(
+export function checkFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
 ): Record {
