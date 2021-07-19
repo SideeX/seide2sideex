@@ -54,6 +54,7 @@ export function testToCase(
         const sideexRecord: Record | null = convertFunc(
             command,
             isCommandComment,
+            libWindowHandle,
             urlArr,
             mouseCord,
         );

@@ -5,6 +5,7 @@ import { targetOptionFunc } from './targetOption';
 export function mouseMoveAtFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _libWindowHandle?: string[],
     _urlArr?: string[],
     mouseCord?: {
         StartPoint: { X: number; Y: number };

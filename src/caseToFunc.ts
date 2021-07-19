@@ -28,7 +28,7 @@ import { typeFunc } from './recordCommand/typeFunc';
 import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
 import { pauseFunc } from './recordCommand/pauseFunc';
-import {verifyTextFunc} from './recordCommand/verifyTextFunc';
+import { verifyTextFunc } from './recordCommand/verifyTextFunc';
 import { mouseOverFunc } from './recordCommand/mouseOver';
 import { mouseUpAtFunc } from './recordCommand/mouseUpAt';
 import { mouseOutFunc } from './recordCommand/mouseOut';
@@ -93,13 +93,6 @@ export const commandFunc: {
     executeScript: executeScriptFunc,
     executeAsyncScript: defaultFunc,
     if: defaultFunc,
-    mouseDown: defaultFunc,
-    mouseDownAt: defaultFunc,
-    mouseMoveAt: defaultFunc,
-    mouseOut: defaultFunc,
-    mouseOver: defaultFunc,
-    mouseUp: defaultFunc,
-    mouseUpAt: defaultFunc,
     pause: pauseFunc,
     mouseDown: mouseDownAtFunc,
     mouseDownAt: mouseDownAtFunc,
@@ -108,7 +101,6 @@ export const commandFunc: {
     mouseOver: mouseOverFunc,
     mouseUp: mouseUpAtFunc,
     mouseUpAt: mouseUpAtFunc,
-    pause: defaultFunc,
     removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
     run: defaultFunc,
