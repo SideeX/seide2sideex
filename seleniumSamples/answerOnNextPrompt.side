@@ -1,0 +1,69 @@
+{
+  "id": "7a690cd4-a19a-41a7-b1ad-c6a42466c9d8",
+  "version": "2.0",
+  "name": "answerOnNextPrompt",
+  "url": "https://ui.vision/demo/storeeval",
+  "tests": [{
+    "id": "cc47fe5d-0054-4fb8-b7a5-b6fb59a9b5a9",
+    "name": "answerOnNextPrompt",
+    "commands": [{
+      "id": "8b6e43db-2005-4891-acae-020b550ee3cd",
+      "comment": "",
+      "command": "open",
+      "target": "https://ui.vision/demo/storeeval",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21d8134e-ed11-4e90-bac6-ef7b4f1ec5a8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "980x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c85272d-5e4f-4520-b0cd-606fcb27e2b2",
+      "comment": "",
+      "command": "answerOnNextPrompt",
+      "target": "Happy Hello World!!!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f32fb070-c92c-45e0-abc0-3ff897dad46c",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='myFunction3()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/p[3]/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Prompt')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c299115d-4eb3-4eab-b360-335ec92df572",
+      "comment": "",
+      "command": "assertPrompt",
+      "target": "Please enter your name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b09d558-d0f7-4ccf-aa8f-07a65bcf557a",
+      "comment": "",
+      "command": "webdriverAnswerOnVisiblePrompt",
+      "target": "Happy Hello World!!!",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e208f641-efad-4222-85fe-8e98ee7951ad",
+    "name": "answerOnNextPrompt",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cc47fe5d-0054-4fb8-b7a5-b6fb59a9b5a9"]
+  }],
+  "urls": ["https://ui.vision/", "https://ui.vision/demo/storeeval"],
+  "plugins": []
+}

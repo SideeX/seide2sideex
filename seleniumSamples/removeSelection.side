@@ -1,0 +1,87 @@
+{
+  "id": "95a533f5-e13e-454c-a524-9c8a7d825a52",
+  "version": "2.0",
+  "name": "removeSelection",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "e9dd6a1a-59c7-4720-b730-e2ef47d19f78",
+    "name": "removeSelection",
+    "commands": [{
+      "id": "43086e03-f15e-4ead-9a4f-85d3d639ca52",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/select-multiple-option.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7caddf08-7186-4769-979a-4e77219419af",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1420x855",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "633da367-8c7b-4482-bb0e-b96ad5fe2f8f",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=fruits",
+      "targets": [
+        ["id=fruits", "id"],
+        ["name=fruits", "name"],
+        ["css=#fruits", "css:finder"],
+        ["xpath=//select[@id='fruits']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Banana"
+    }, {
+      "id": "af252e87-8e9c-4f41-bfb5-9225045010ee",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=fruits",
+      "targets": [
+        ["id=fruits", "id"],
+        ["name=fruits", "name"],
+        ["css=#fruits", "css:finder"],
+        ["xpath=//select[@id='fruits']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Strawberry"
+    }, {
+      "id": "f63cd22d-0275-4c3c-9e4f-de5d284ba928",
+      "comment": "",
+      "command": "removeSelection",
+      "target": "id=fruits",
+      "targets": [
+        ["id=fruits", "id"],
+        ["name=fruits", "name"],
+        ["css=#fruits", "css:finder"],
+        ["xpath=//select[@id='fruits']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Strawberry"
+    }, {
+      "id": "fa3356eb-1ad1-4d12-9dac-5397cdfb4eb7",
+      "comment": "",
+      "command": "removeSelection",
+      "target": "id=fruits",
+      "targets": [
+        ["id=fruits", "id"],
+        ["name=fruits", "name"],
+        ["css=#fruits", "css:finder"],
+        ["xpath=//select[@id='fruits']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Banana"
+    }]
+  }],
+  "suites": [{
+    "id": "c48511df-19a9-46b4-ace8-e31daae458f8",
+    "name": "removeSelection",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e9dd6a1a-59c7-4720-b730-e2ef47d19f78"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

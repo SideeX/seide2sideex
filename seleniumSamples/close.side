@@ -1,0 +1,42 @@
+{
+  "id": "0f3c6503-0d5c-4f83-9d70-9cc8aa65c9e1",
+  "version": "2.0",
+  "name": "close",
+  "url": "",
+  "tests": [{
+    "id": "16314da2-003a-4a08-8900-2e4604accbfb",
+    "name": "Untitled",
+    "commands": [{
+      "id": "ba644f51-002b-4dd1-8bb7-dae49edaeb85",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2220992-304a-43ad-affc-93c318a9188e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8d644b7-5b50-47c6-aab0-8eefc359a77d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e912e693-0772-4b1c-ad24-ee19cfb8708a",
+    "name": "close",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["16314da2-003a-4a08-8900-2e4604accbfb"]
+  }],
+  "urls": [],
+  "plugins": []
+}

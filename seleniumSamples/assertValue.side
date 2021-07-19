@@ -1,0 +1,81 @@
+{
+  "id": "29afced5-9dd0-48ae-8823-7078dc26c515",
+  "version": "2.0",
+  "name": "assertValue",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "9301a490-4930-4791-8340-013a2194be74",
+    "name": "assertValue",
+    "commands": [{
+      "id": "9edcd294-5383-40bc-b1d7-9a609a971326",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/input-form-for-personal-data.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3975640c-3502-417c-8118-278203c8d8bc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "976x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "feef62ab-6200-4632-9f33-bd0872377e66",
+      "comment": "",
+      "command": "click",
+      "target": "id=account",
+      "targets": [
+        ["id=account", "id"],
+        ["name=account", "name"],
+        ["css=#account", "css:finder"],
+        ["xpath=//input[@id='account']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c56143e-aa25-4033-a32f-4642e79ef094",
+      "comment": "",
+      "command": "type",
+      "target": "id=account",
+      "targets": [
+        ["id=account", "id"],
+        ["name=account", "name"],
+        ["css=#account", "css:finder"],
+        ["xpath=//input[@id='account']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "P12345"
+    }, {
+      "id": "892d6f45-7e2c-4d87-8540-2f258a4580e4",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=account",
+      "targets": [
+        ["id=account", "id"],
+        ["name=account", "name"],
+        ["css=#account", "css:finder"],
+        ["xpath=//input[@id='account']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "8d635df8-fdfb-4af7-b2e4-dcffccc99586",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=account",
+      "targets": [],
+      "value": "P12345"
+    }]
+  }],
+  "suites": [{
+    "id": "b5a058e8-7793-4e24-8541-59f39e702a5a",
+    "name": "assertValue",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9301a490-4930-4791-8340-013a2194be74"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

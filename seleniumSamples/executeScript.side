@@ -1,0 +1,35 @@
+{
+  "id": "ed46966c-1a92-4fc7-94b7-4070b2bbc828",
+  "version": "2.0",
+  "name": "executeScript",
+  "url": "",
+  "tests": [{
+    "id": "e8fef13f-fc00-4c9f-94fb-23b796e2dab0",
+    "name": "executeScript",
+    "commands": [{
+      "id": "bc1cabb7-8996-4a3b-a124-73037c4d3633",
+      "comment": "",
+      "command": "executeScript",
+      "target": "x=10 ; y=5 ; return x+y ;",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "1b4e5b94-8d3a-4e5e-bbf2-901f9a07cb90",
+      "comment": "",
+      "command": "echo",
+      "target": "${result}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a7887893-74dc-4997-a73c-9b5ce8d592b8",
+    "name": "executeScript",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e8fef13f-fc00-4c9f-94fb-23b796e2dab0"]
+  }],
+  "urls": [],
+  "plugins": []
+}

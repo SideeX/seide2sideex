@@ -1,0 +1,124 @@
+{
+    "time": 1626190643441,
+    "version": {
+        "sideex": [
+            3,
+            5,
+            3
+        ],
+        "format": [
+            2,
+            0,
+            0
+        ]
+    },
+    "suites": [{
+        "title": "selectFrame",
+        "enableOnPlaying": true,
+        "cases": [{
+            "title": "selectFrame",
+            "enableOnPlaying": true,
+            "networkSpeed": 35.92,
+            "records": [{
+                    "name": "open",
+                    "target": {
+                        "usedIndex": 0,
+                        "options": [{
+                            "type": "other",
+                            "value": "https://nba.udn.com/nba/index?gr=www"
+                        }],
+                        "tac": ""
+                    },
+                    "value": {
+                        "usedIndex": 0,
+                        "options": [{
+                            "type": "other",
+                            "value": ""
+                        }],
+                        "tac": ""
+                    },
+                    "pwt": {
+                        "pbw": 0,
+                        "paw": 0,
+                        "prw": 0,
+                        "pdw": 0
+                    },
+                    "comment": false
+                },
+                {
+                    "name": "setViewportSize",
+                    "target": {
+                        "usedIndex": 0,
+                        "options": [{
+                            "type": "other",
+                            "value": ""
+                        }],
+                        "tac": ""
+                    },
+                    "value": {
+                        "usedIndex": 0,
+                        "options": [{
+                            "type": "other",
+                            "value": "1536,721"
+                        }],
+                        "tac": ""
+                    },
+                    "pwt": {
+                        "pbw": 0,
+                        "paw": 0,
+                        "prw": 0,
+                        "pdw": 0
+                    },
+                    "comment": false
+                },
+                {
+                    "name": "selectFrame",
+                    "target": {
+                        "usedIndex": 0,
+                        "options": [{
+                                "type": "id",
+                                "value": "id=scoreboard-iframe"
+                            },
+                            {
+                                "type": "xpath:idRelative",
+                                "value": "//div[@id='event_body']/iframe[1]"
+                            },
+                            {
+                                "type": "xpath:position",
+                                "value": "//iframe[1]"
+                            },
+                            {
+                                "type": "xpath:attributes",
+                                "value": "//iframe[@id='scoreboard-iframe']"
+                            },
+                            {
+                                "type": "css:position",
+                                "value": "css=#scoreboard-iframe"
+                            },
+                            {
+                                "type": "other",
+                                "value": "index=0"
+                            }
+                        ],
+                        "tac": ""
+                    },
+                    "value": {
+                        "usedIndex": 0,
+                        "options": [{
+                            "type": "other",
+                            "value": ""
+                        }],
+                        "tac": ""
+                    },
+                    "pwt": {
+                        "pbw": 0,
+                        "paw": 0,
+                        "prw": 0,
+                        "pdw": 0
+                    },
+                    "comment": false
+                }
+            ]
+        }]
+    }]
+}

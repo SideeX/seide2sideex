@@ -1,0 +1,49 @@
+{
+  "id": "ba72673c-c57a-4f1f-ad5b-9cb7361ae758",
+  "version": "2.0",
+  "name": "store",
+  "url": "https://sideex.io/",
+  "tests": [{
+    "id": "b1336b40-846a-43a7-907b-57c4f2e04bd2",
+    "name": "storeTest",
+    "commands": [{
+      "id": "34361a91-f54c-404d-b477-95e829889797",
+      "comment": "",
+      "command": "store",
+      "target": "I am a local variable",
+      "targets": [],
+      "value": "local_var"
+    }, {
+      "id": "f4acc36f-5317-4612-8269-eca464a5c6ba",
+      "comment": "",
+      "command": "echo",
+      "target": "${local_var}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ca66261-094d-47a3-8436-e5f12879af27",
+      "comment": "",
+      "command": "store",
+      "target": "Bob",
+      "targets": [],
+      "value": "name_var"
+    }, {
+      "id": "c9dde4d0-37ae-4f5f-962e-07aa618b4983",
+      "comment": "",
+      "command": "echo",
+      "target": "My name is ${name_var}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5529ba12-0a45-46e6-9286-36ba14de02b3",
+    "name": "store",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b1336b40-846a-43a7-907b-57c4f2e04bd2"]
+  }],
+  "urls": ["https://sideex.io/"],
+  "plugins": []
+}

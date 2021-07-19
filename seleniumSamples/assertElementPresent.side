@@ -1,0 +1,49 @@
+{
+  "id": "ec54071f-408d-4378-aae4-270c036b33a5",
+  "version": "2.0",
+  "name": "assertElementPresent",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "c30dbc05-a37b-438a-b3fa-8bc489a77c77",
+    "name": "assertElementPresent",
+    "commands": [{
+      "id": "c78b3097-c12f-43ef-a87f-148d6bf8ff00",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-change-color.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4350e0ca-1c9b-4308-a30e-8c462f52d331",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "976x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce9ee169-2cae-4053-b0a4-7b132af9deba",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d3efe35-3b30-4800-8a5b-945364ac2986",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Button",
+      "targets": [],
+      "value": "500"
+    }]
+  }],
+  "suites": [{
+    "id": "e74b9618-ec73-44fd-b4a2-849a5401dfce",
+    "name": "assertElement",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c30dbc05-a37b-438a-b3fa-8bc489a77c77"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

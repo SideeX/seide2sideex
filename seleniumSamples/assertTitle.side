@@ -1,0 +1,42 @@
+{
+  "id": "9e533f33-62bd-4e79-89dc-9135ae1c9dc1",
+  "version": "2.0",
+  "name": "assertTitle",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "59189720-ac5c-4a47-956e-dba867fdb305",
+    "name": "assertTitle",
+    "commands": [{
+      "id": "367d5ccb-9082-4cea-a4c1-13196b39d571",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/noneditable-paragraph.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24fbe478-9458-46ce-92d4-354b3d27429d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "976x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cd6b5be-dcf5-48ee-9a30-de348356b93a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "noneditable-paragraph",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "25e995d8-5be8-4601-ac0d-796cf50150af",
+    "name": "assertTitle",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["59189720-ac5c-4a47-956e-dba867fdb305"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
