@@ -29,15 +29,33 @@ import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
 import { pauseFunc } from './recordCommand/pauseFunc';
 import {verifyTextFunc} from './recordCommand/verifyTextFunc';
+import { mouseOverFunc } from './recordCommand/mouseOver';
+import { mouseUpAtFunc } from './recordCommand/mouseUpAt';
+import { mouseOutFunc } from './recordCommand/mouseOut';
+import { mouseDownAtFunc } from './recordCommand/mouseDownAt';
+import { mouseMoveAtFunc } from './recordCommand/mouseMoveAt';
 
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
         command: Command,
         isCommandComment: boolean,
-        urlArr?: string[],
         libWindowHandle?: string[],
-    ) => Record;
+        urlArr?: string[] | undefined,
+        mouseCord?:
+            | {
+                  StartPoint: {
+                      X: number;
+                      Y: number;
+                  };
+                  PrevPoint: {
+                      X: number;
+                      Y: number;
+                  };
+                  Movements: { TD: number; OX: number; OY: number }[];
+              }
+            | undefined,
+    ) => Record | null;
 } = {
     open: openCommandFunc,
     addSelection: addSelectionFunc,
@@ -83,6 +101,14 @@ export const commandFunc: {
     mouseUp: defaultFunc,
     mouseUpAt: defaultFunc,
     pause: pauseFunc,
+    mouseDown: mouseDownAtFunc,
+    mouseDownAt: mouseDownAtFunc,
+    mouseMoveAt: mouseMoveAtFunc,
+    mouseOut: mouseOutFunc,
+    mouseOver: mouseOverFunc,
+    mouseUp: mouseUpAtFunc,
+    mouseUpAt: mouseUpAtFunc,
+    pause: defaultFunc,
     removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
     run: defaultFunc,
