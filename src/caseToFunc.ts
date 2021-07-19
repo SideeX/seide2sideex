@@ -35,7 +35,7 @@ import { mouseOutFunc } from './recordCommand/mouseOutFunc';
 import { mouseDownAtFunc } from './recordCommand/mouseDownAtFunc';
 import { mouseMoveAtFunc } from './recordCommand/mouseMoveAtFunc';
 import { chooseCancelOnNextConfirmationFunc } from './recordCommand/chooseCancelOnNextConfirmationFunc';
-
+import { chooseCancelOnNextPromptFunc } from './recordCommand/chooseCancelOnNextPromptFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
@@ -78,7 +78,7 @@ export const commandFunc: {
     assertValue: assertValueFunc,
     check: defaultFunc,
     chooseCancelOnNextConfirmation: chooseCancelOnNextConfirmationFunc,
-    chooseCancelOnNextPrompt: defaultFunc,
+    chooseCancelOnNextPrompt: chooseCancelOnNextPromptFunc,
     chooseOkOnNextConfirmation: defaultFunc,
     click: clickAtFunc,
     clickAt: clickAtFunc,
