@@ -1,12 +1,12 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function runFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-    suiteName: string,
-): Record {
-    const targetValue = suiteName + '.' +seleniumCommand.target;
+export function runFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const suiteName = parameters.suiteName;
+    const isCommandComment = parameters.isCommandComment;
+
+    const targetValue = suiteName + '.' + seleniumCommand.target;
     console.log('inside runFunc: ', targetValue);
     const sideexRecord: Record = {
         name: 'INCLUDE',

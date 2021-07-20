@@ -1,10 +1,11 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function executeScriptFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
+export function executeScriptFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     let targetStr = seleniumCommand.target;
     targetStr = targetStr.replace('return', '');
     const sideexRecord: Record = {

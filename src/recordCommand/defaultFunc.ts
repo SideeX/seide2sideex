@@ -1,10 +1,8 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function defaultFunc(
-    _seleniumCommand: Command,
-    _sCommandComment: boolean,
-): Record | null {
+export function defaultFunc(_parameters: ConvertFuncParameter): Record | null {
     return null;
     // const sideexRecord: Record = {
     //     name: seleniumCommand.command,

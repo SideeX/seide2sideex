@@ -1,9 +1,10 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
-export function storeTitleFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
+
+export function storeTitleFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     const sideexRecord: Record = {
         name: 'storeTitle',
         target: {

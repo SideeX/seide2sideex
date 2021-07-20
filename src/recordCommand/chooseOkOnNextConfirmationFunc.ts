@@ -1,10 +1,13 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function chooseOkOnNextConfirmationFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
+    parameters: ConvertFuncParameter,
 ): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     const sideexRecord: Record = {
         name: 'chooseOkOnNextConfirmation',
         target: {

@@ -1,14 +1,14 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
-// handle=${root} == win_ser_local
-// handle=${random4digitNumber} == win_ser_1 Ex: handle=${win3490}
-export function selectWindowFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-    _suiteName: string,
-    _noUseUrl?: string[],
-    libWindowHandle?: string[],
-): Record {
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
+
+export function selectWindowFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+    const libWindowHandle = parameters.libWindowHandle;
+
+    // handle=${root} == win_ser_local
+    // handle=${random4digitNumber} == win_ser_1 Ex: handle=${win3490}
     let targetStr = seleniumCommand.target;
     console.log('libWindowHandle from selectWindowFunc:', libWindowHandle);
     if (seleniumCommand.target.substr(9, 4) == 'root') {

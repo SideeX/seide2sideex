@@ -1,20 +1,12 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function mouseUpAtFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-    _suiteName: string,
-    _libWindowHandle?: string[],
-    _urlArr?: string[],
-    mouseCord?: {
-        StartPoint: { X: number; Y: number };
-        PrevPoint: { X: number; Y: number };
-        Movements: { TD: number; OX: number; OY: number }[];
-    },
-): Record {
-    // console.log(seleniumCommand);
+export function mouseUpAtFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+    const mouseCord = parameters.mouseCord;
+
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,
     );

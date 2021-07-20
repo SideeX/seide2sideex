@@ -1,10 +1,11 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function setWindowSizeFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
+export function setWindowSizeFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     const target = seleniumCommand.target.replace('x', ',');
     const sideexRecord: Record = {
         name: 'setWindowSize',
