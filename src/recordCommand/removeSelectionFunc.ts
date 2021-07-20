@@ -1,13 +1,11 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
 import { valueOptionFunc } from './valueOption';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function removeSelectionFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
-    // console.log(seleniumCommand);
+export function removeSelectionFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
 
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,

@@ -53,14 +53,14 @@ export function testToCase(
         }
         //console.log('testtocase: ', libWindowHandle);
         const convertFunc = commandFunc[command.command];
-        const sideexRecord: Record | null = convertFunc(
-            command,
-            isCommandComment,
-            suiteName,
-            libWindowHandle,
-            urlArr,
-            mouseCord,
-        );
+        const sideexRecord: Record | null = convertFunc({
+            command: command,
+            isCommandComment: isCommandComment,
+            suiteName: suiteName,
+            libWindowHandle: libWindowHandle,
+            urlArr: urlArr,
+            mouseCord: mouseCord,
+        });
         if (sideexRecord) {
             sideexCase.records.push(sideexRecord);
         }

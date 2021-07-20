@@ -1,10 +1,11 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function selectFrameFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
+export function selectFrameFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {

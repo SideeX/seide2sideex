@@ -1,10 +1,13 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function dragAndDropToObjectFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
+    parameters: ConvertFuncParameter,
 ): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     // "value": "xpath=(//div[@id='div1'])[2]" => "type": "xpath:idRelative",
     //                                            "value": "//div[@id='div1'][2]"
     const targetOption: Option = {
