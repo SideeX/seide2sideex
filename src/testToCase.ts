@@ -29,7 +29,14 @@ function checkIfComment(command: Command) {
 
     return isCommandComment;
 }
-
+/**
+ * change selenium test to sideex testcase
+ * @param seleniumTest selenium test
+ * @param urlArr array of url
+ * @param libWindowHandle
+ * @param suiteName suite name
+ * @returns {Case} sideex test case
+ */
 export function testToCase(
     seleniumTest: Test,
     urlArr: string[],
@@ -44,6 +51,7 @@ export function testToCase(
         PrevPoint: { X: -999, Y: -999 },
         Movements: [],
     };
+
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
         // console.log(command);
