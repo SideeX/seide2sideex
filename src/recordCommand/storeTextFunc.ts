@@ -2,10 +2,12 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
-export function storeTextFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
+
+export function storeTextFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,
     );

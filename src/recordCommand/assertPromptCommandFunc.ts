@@ -1,10 +1,13 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function assertPromptCommandFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
+    parameters: ConvertFuncParameter,
 ): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     const sideexRecord: Record = {
         name: 'assertPrompt',
         target: {

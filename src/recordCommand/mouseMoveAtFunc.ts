@@ -1,18 +1,14 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
-import { targetOptionFunc } from './targetOption';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function mouseMoveAtFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-    _libWindowHandle?: string[],
-    _urlArr?: string[],
-    mouseCord?: {
-        StartPoint: { X: number; Y: number };
-        PrevPoint: { X: number; Y: number };
-        Movements: { TD: number; OX: number; OY: number }[];
-    },
+    parameters: ConvertFuncParameter,
 ): Record | null {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+    const mouseCord = parameters.mouseCord;
+
     // console.log(seleniumCommand);
     const xyCord = seleniumCommand.value.split(',');
     // push offest of x, y

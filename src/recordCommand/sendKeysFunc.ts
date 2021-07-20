@@ -1,11 +1,12 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function sendKeysFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
+export function sendKeysFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
+
     // console.log(seleniumCommand);
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,

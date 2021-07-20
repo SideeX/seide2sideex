@@ -1,14 +1,11 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function openCommandFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-    _libWindowHandle?: string[],
-    urlArr?: string[],
-): Record {
-    // console.log(seleniumCommand);
-    // console.log(urlArr);
+export function openCommandFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const urlArr = parameters.urlArr;
+    const isCommandComment = parameters.isCommandComment;
+
     let targetUrl = seleniumCommand.target;
     if (targetUrl == '' && urlArr !== undefined) {
         targetUrl = 'https://sideex.io/';

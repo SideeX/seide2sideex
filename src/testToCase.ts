@@ -29,11 +29,19 @@ function checkIfComment(command: Command) {
 
     return isCommandComment;
 }
-
+/**
+ * change selenium test to sideex testcase
+ * @param seleniumTest selenium test
+ * @param urlArr array of url
+ * @param libWindowHandle
+ * @param suiteName suite name
+ * @returns {Case} sideex test case
+ */
 export function testToCase(
     seleniumTest: Test,
     urlArr: string[],
     libWindowHandle: string[],
+    suiteName: string,
 ): Case {
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
@@ -43,6 +51,7 @@ export function testToCase(
         PrevPoint: { X: -999, Y: -999 },
         Movements: [],
     };
+
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
         // console.log(command);
@@ -52,13 +61,14 @@ export function testToCase(
         }
         //console.log('testtocase: ', libWindowHandle);
         const convertFunc = commandFunc[command.command];
-        const sideexRecord: Record | null = convertFunc(
-            command,
-            isCommandComment,
-            libWindowHandle,
-            urlArr,
-            mouseCord,
-        );
+        const sideexRecord: Record | null = convertFunc({
+            command: command,
+            isCommandComment: isCommandComment,
+            suiteName: suiteName,
+            libWindowHandle: libWindowHandle,
+            urlArr: urlArr,
+            mouseCord: mouseCord,
+        });
         if (sideexRecord) {
             sideexCase.records.push(sideexRecord);
         }

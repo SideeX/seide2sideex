@@ -38,27 +38,12 @@ import { chooseCancelOnNextConfirmationFunc } from './recordCommand/chooseCancel
 import { chooseCancelOnNextPromptFunc } from './recordCommand/chooseCancelOnNextPromptFunc';
 import { chooseOkOnNextConfirmationFunc } from './recordCommand/chooseOkOnNextConfirmationFunc';
 import { checkFunc } from './recordCommand/checkFunc';
+import { runFunc } from './recordCommand/runFunc';
+import { ConvertFuncParameter } from './struct/convertFuncParameterStruct';
+
 //add different function to different command
 export const commandFunc: {
-    [key: string]: (
-        command: Command,
-        isCommandComment: boolean,
-        libWindowHandle?: string[],
-        urlArr?: string[] | undefined,
-        mouseCord?:
-            | {
-                  StartPoint: {
-                      X: number;
-                      Y: number;
-                  };
-                  PrevPoint: {
-                      X: number;
-                      Y: number;
-                  };
-                  Movements: { TD: number; OX: number; OY: number }[];
-              }
-            | undefined,
-    ) => Record | null;
+    [key: string]: (parameters: ConvertFuncParameter) => Record | null;
 } = {
     open: openCommandFunc,
     addSelection: addSelectionFunc,
@@ -106,7 +91,7 @@ export const commandFunc: {
     mouseUpAt: mouseUpAtFunc,
     removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
-    run: defaultFunc,
+    run: runFunc,
     runScript: runScriptFunc,
     select: defaultFunc,
     selectFrame: selectFrameFunc,

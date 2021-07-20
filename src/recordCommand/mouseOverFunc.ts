@@ -1,12 +1,10 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
+import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function mouseOverFunc(
-    seleniumCommand: Command,
-    isCommandComment: boolean,
-): Record {
-    // console.log(seleniumCommand);
+export function mouseOverFunc(parameters: ConvertFuncParameter): Record {
+    const seleniumCommand = parameters.command;
+    const isCommandComment = parameters.isCommandComment;
 
     const sideexTargetOptions: Option[] = targetOptionFunc(
         seleniumCommand.targets,

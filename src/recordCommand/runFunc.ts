@@ -1,19 +1,21 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function echoFunc(parameters: ConvertFuncParameter): Record {
+export function runFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
+    const suiteName = parameters.suiteName;
     const isCommandComment = parameters.isCommandComment;
 
+    const targetValue = suiteName + '.' + seleniumCommand.target;
+    console.log('inside runFunc: ', targetValue);
     const sideexRecord: Record = {
-        name: 'echo',
+        name: 'INCLUDE',
         target: {
             usedIndex: 0,
             options: [
                 {
                     type: 'other',
-                    value: seleniumCommand.target,
+                    value: targetValue,
                 },
             ],
             tac: '',
