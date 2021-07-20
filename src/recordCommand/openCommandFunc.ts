@@ -4,6 +4,7 @@ import { Record } from '../struct/sideexStruct';
 export function openCommandFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _suiteName: string,
     _libWindowHandle?: string[],
     urlArr?: string[],
 ): Record {

@@ -5,6 +5,7 @@ import { targetOptionFunc } from './targetOption';
 export function mouseUpAtFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _suiteName: string,
     _libWindowHandle?: string[],
     _urlArr?: string[],
     mouseCord?: {
