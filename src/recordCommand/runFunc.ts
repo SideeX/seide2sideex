@@ -1,31 +1,21 @@
 import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
 
-export function openCommandFunc(
+export function runFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
-    _suiteName: string,
-    _libWindowHandle?: string[],
-    urlArr?: string[],
+    suiteName: string,
 ): Record {
-    // console.log(seleniumCommand);
-    // console.log(urlArr);
-    let targetUrl = seleniumCommand.target;
-    if (targetUrl == '' && urlArr !== undefined) {
-        targetUrl = 'https://sideex.io/';
-    }
-    if (!targetUrl.includes('https://') && urlArr !== undefined) {
-        targetUrl = urlArr[0] + targetUrl;
-    }
-
+    const targetValue = suiteName + '.' +seleniumCommand.target;
+    console.log('inside runFunc: ', targetValue);
     const sideexRecord: Record = {
-        name: seleniumCommand.command,
+        name: 'INCLUDE',
         target: {
             usedIndex: 0,
             options: [
                 {
                     type: 'other',
-                    value: targetUrl,
+                    value: targetValue,
                 },
             ],
             tac: '',

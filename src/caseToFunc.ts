@@ -38,11 +38,14 @@ import { chooseCancelOnNextConfirmationFunc } from './recordCommand/chooseCancel
 import { chooseCancelOnNextPromptFunc } from './recordCommand/chooseCancelOnNextPromptFunc';
 import { chooseOkOnNextConfirmationFunc } from './recordCommand/chooseOkOnNextConfirmationFunc';
 import { checkFunc } from './recordCommand/checkFunc';
+import { runFunc } from './recordCommand/runFunc';
+
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
         command: Command,
         isCommandComment: boolean,
+        suiteName: string,
         libWindowHandle?: string[],
         urlArr?: string[] | undefined,
         mouseCord?:
@@ -106,7 +109,7 @@ export const commandFunc: {
     mouseUpAt: mouseUpAtFunc,
     removeSelection: removeSelectionFunc,
     repeatIf: defaultFunc,
-    run: defaultFunc,
+    run: runFunc,
     runScript: runScriptFunc,
     select: defaultFunc,
     selectFrame: selectFrameFunc,

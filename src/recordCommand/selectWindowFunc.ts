@@ -5,6 +5,7 @@ import { Record } from '../struct/sideexStruct';
 export function selectWindowFunc(
     seleniumCommand: Command,
     isCommandComment: boolean,
+    _suiteName: string,
     _noUseUrl?: string[],
     libWindowHandle?: string[],
 ): Record {

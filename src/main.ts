@@ -10,7 +10,7 @@ import { testToCase } from './testToCase';
 import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 
-const seleniumFile: SeleniumSide = getSample('openWithSlashSymbol');
+const seleniumFile: SeleniumSide = getSample('run');
 
 const seleniumUrls: string[] = seleniumFile.urls;
 
@@ -113,6 +113,7 @@ function doConvert(suite: SeleniumSuite, urlArr: string[]) {
             seleniumTest,
             urlArr,
             libWindowHandle,
+            suiteName,
         );
         // push the sideex case
         sideexSuite.cases.push(sideexCase);

@@ -34,6 +34,7 @@ export function testToCase(
     seleniumTest: Test,
     urlArr: string[],
     libWindowHandle: string[],
+    suiteName: string,
 ): Case {
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
@@ -55,6 +56,7 @@ export function testToCase(
         const sideexRecord: Record | null = convertFunc(
             command,
             isCommandComment,
+            suiteName,
             libWindowHandle,
             urlArr,
             mouseCord,
