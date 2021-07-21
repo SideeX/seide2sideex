@@ -40,6 +40,7 @@ import { chooseOkOnNextConfirmationFunc } from './recordCommand/chooseOkOnNextCo
 import { checkFunc } from './recordCommand/checkFunc';
 import { runFunc } from './recordCommand/runFunc';
 import { ConvertFuncParameter } from './struct/convertFuncParameterStruct';
+import { elseFunc } from './recordCommand/elseFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -76,7 +77,8 @@ export const commandFunc: {
     dragAndDropToObject: dragAndDropToObjectFunc,
     echo: echoFunc,
     editContent: defaultFunc,
-    else: defaultFunc,
+    else: elseFunc,
+    elseIf: defaultFunc,
     end: defaultFunc,
     executeScript: executeScriptFunc,
     executeAsyncScript: defaultFunc,
