@@ -1,8 +1,11 @@
-import { Command } from './seleniumStruct';
+import { IndexType } from 'typescript';
+import { Command, Test } from './seleniumStruct';
 
 //parameters for convertFunc
 export interface ConvertFuncParameter {
     command: Command;
+    commands: Command[];
+    commandIndex: number;
     isCommandComment: boolean;
     suiteName: string;
     libWindowHandle?: string[];

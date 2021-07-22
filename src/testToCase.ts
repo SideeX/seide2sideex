@@ -46,6 +46,7 @@ export function testToCase(
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
     //mouseCoordinate for mouseMove
+    var commandIndex = -1;
     var mouseCord = {
         StartPoint: { X: -999, Y: -999 },
         PrevPoint: { X: -999, Y: -999 },
@@ -55,14 +56,17 @@ export function testToCase(
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
         // console.log(command);
+        commandIndex++;
         const isCommandComment = checkIfComment(command);
         if (isCommandComment) {
             command.command = command.command.substring(2);
         }
         //console.log('testtocase: ', libWindowHandle);
         const convertFunc = commandFunc[command.command];
-        const sideexRecord: Record | null = convertFunc({
+        const sideexRecord: Record | any | null = convertFunc({
             command: command,
+            commandIndex: commandIndex,
+            commands: seleniumTest.commands,
             isCommandComment: isCommandComment,
             suiteName: suiteName,
             libWindowHandle: libWindowHandle,
@@ -70,7 +74,13 @@ export function testToCase(
             mouseCord: mouseCord,
         });
         if (sideexRecord) {
-            sideexCase.records.push(sideexRecord);
+            if(Array.isArray(sideexRecord)){
+                for (let i = 0; i < sideexRecord.length; i++) {
+                    sideexCase.records.push(sideexRecord[i]);
+                }
+            }else{
+                sideexCase.records.push(sideexRecord);
+            }
         }
     });
 

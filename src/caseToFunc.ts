@@ -41,10 +41,13 @@ import { checkFunc } from './recordCommand/checkFunc';
 import { runFunc } from './recordCommand/runFunc';
 import { ConvertFuncParameter } from './struct/convertFuncParameterStruct';
 import { elseFunc } from './recordCommand/elseFunc';
+import { endFunc } from './recordCommand/endFunc';
+import { ifFunc } from './recordCommand/ifFunc';
+import { elseIfFunc } from './recordCommand/elseIfFunc';
 
 //add different function to different command
 export const commandFunc: {
-    [key: string]: (parameters: ConvertFuncParameter) => Record | null;
+    [key: string]: (parameters: ConvertFuncParameter) => Record | any | null;
 } = {
     open: openCommandFunc,
     addSelection: addSelectionFunc,
@@ -78,11 +81,11 @@ export const commandFunc: {
     echo: echoFunc,
     editContent: defaultFunc,
     else: elseFunc,
-    elseIf: defaultFunc,
-    end: defaultFunc,
+    elseIf: elseIfFunc,
+    end: endFunc,
     executeScript: executeScriptFunc,
     executeAsyncScript: defaultFunc,
-    if: defaultFunc,
+    if: ifFunc,
     pause: pauseFunc,
     mouseDown: mouseDownAtFunc,
     mouseDownAt: mouseDownAtFunc,
