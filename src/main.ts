@@ -5,38 +5,49 @@ import {
     Command,
 } from './struct/seleniumStruct';
 import { SideexJson, SideexSuite, Case, Record } from './struct/sideexStruct';
-import { getSample } from './getSample/getSampleFunc';
+//import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
 import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
+import { readFileSync } from 'fs';
 
-const seleniumFile: SeleniumSide = getSample('if_else');
+export function mainFunc(filePath: string){
+    const file = readFileSync(filePath, 'utf-8');
+    const seleniumFile: SeleniumSide = JSON.parse(file);
+    //const seleniumFile: SeleniumSide = getSample('if_else');
+    const seleniumUrls: string[] = seleniumFile.urls;
 
-const seleniumUrls: string[] = seleniumFile.urls;
+    const seleniumSuites = seleniumFile.suites;
+    const seleniumSuitesLength = seleniumSuites.length;
+    console.log('seleniumSuitesLength: ', seleniumSuitesLength);
 
-const seleniumSuites = seleniumFile.suites;
-const seleniumSuitesLength = seleniumSuites.length;
-console.log('seleniumSuitesLength: ', seleniumSuitesLength);
+    const seleniumTests = seleniumFile.tests;
+    const seleniumTestsLength: number = seleniumTests.length;
+    console.log('seleniumTestsLength: ', seleniumTestsLength);
 
-const seleniumTests = seleniumFile.tests;
-const seleniumTestsLength: number = seleniumTests.length;
-console.log('seleniumTestsLength: ', seleniumTestsLength);
+    //Dictionary for saving selenium tests
+    const dictforSeleniumTests: { [testId: string]: number } = {};
+    for (let i = 0; i < seleniumTestsLength; i++) {
+        const testId: string = seleniumTests[i].id;
+        dictforSeleniumTests[testId] = i;
+    }
 
-//Dictionary for saving selenium tests
-const dictforSeleniumTests: { [testId: string]: number } = {};
-for (let i = 0; i < seleniumTestsLength; i++) {
-    const testId: string = seleniumTests[i].id;
-    dictforSeleniumTests[testId] = i;
+    const objDoConvert = {
+        urlArr: seleniumUrls,
+        seleniumTests: seleniumTests,
+        dictforSeleniumTests: dictforSeleniumTests,
+    };
+
+    //Check if there are more than one suite
+    if (seleniumSuitesLength > 1) {
+        seleniumSuites.forEach((suite) => {
+            doConvert(suite, objDoConvert);
+        });
+    } else {
+        doConvert(seleniumSuites[0], objDoConvert);
+    }
 }
 
-//Check if there are more than one suite
-if (seleniumSuitesLength > 1) {
-    seleniumSuites.forEach((suite) => {
-        doConvert(suite, seleniumUrls);
-    });
-} else {
-    doConvert(seleniumSuites[0], seleniumUrls);
-}
 /**
  * return Created Sideex Json file object
  * @returns {SideexJson} sideex Json
@@ -90,11 +101,17 @@ function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
     generateJsonFileFunc(dir);
 }
 
+interface structDoConvert{
+    urlArr: string[];
+    seleniumTests: Test[];
+    dictforSeleniumTests: { [testId: string]: number };
+}
+
 /**
  * Convert selenium suite to sideex suite and output
  * @param suite selenium suite
  */
-function doConvert(suite: SeleniumSuite, urlArr: string[]) {
+function doConvert(suite: SeleniumSuite, objDoConvert: structDoConvert) {
     const testOfSuite: string[] = suite.tests;
 
     const suiteName = suite.name;
@@ -105,13 +122,13 @@ function doConvert(suite: SeleniumSuite, urlArr: string[]) {
     //convert each tests to case
     for (let i = 0; i < testOfSuite.length; i++) {
         const testId = testOfSuite[i];
-        const testIndex = dictforSeleniumTests[testId];
-        const seleniumTest = seleniumTests[testIndex];
+        const testIndex = objDoConvert.dictforSeleniumTests[testId];
+        const seleniumTest = objDoConvert.seleniumTests[testIndex];
         const libWindowHandle = libWindowHandleFunc(seleniumTest);
         // console.log('libWindowHandle: ', libWindowHandle);
         const sideexCase: Case = testToCase(
             seleniumTest,
-            urlArr,
+            objDoConvert.urlArr,
             libWindowHandle,
             suiteName,
         );
