@@ -130,7 +130,7 @@ export const commandFunc: {
     verifySelectedValue: defaultFunc,
     verifyText: verifyTextFunc,
     verifyTitle: verifyTitleFunc,
-    verifyValue: defaultFunc,
+    verifyValue: verifyTextFunc,
     waitForElementEditable: defaultFunc,
     waitForElementNotEditable: defaultFunc,
     waitForElementNotPresent: defaultFunc,
