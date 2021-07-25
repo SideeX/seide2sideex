@@ -5,7 +5,7 @@
     "main": "cli.js",
     "scripts": {
         "build": "tsc",
-        "doconvert": "node build/main.js",
+        "doconvert": "node bin/cli.js -p",
         "lint": "eslint 'src/**/*.{js,ts}' --fix",
         "start": "npm run build && npm run doconvert",
         "prepare": "npm run build"
