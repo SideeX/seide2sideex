@@ -29,6 +29,7 @@ import { executeScriptFunc } from './recordCommand/executeScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
 import { pauseFunc } from './recordCommand/pauseFunc';
 import { verifyTextFunc } from './recordCommand/verifyTextFunc';
+import { verifyTitleFunc } from './recordCommand/verifyTitleFunc';
 import { mouseOverFunc } from './recordCommand/mouseOverFunc';
 import { mouseUpAtFunc } from './recordCommand/mouseUpAtFunc';
 import { mouseOutFunc } from './recordCommand/mouseOutFunc';
@@ -128,7 +129,7 @@ export const commandFunc: {
     verifySelectedLabel: defaultFunc,
     verifySelectedValue: defaultFunc,
     verifyText: verifyTextFunc,
-    verifyTitle: defaultFunc,
+    verifyTitle: verifyTitleFunc,
     verifyValue: defaultFunc,
     waitForElementEditable: defaultFunc,
     waitForElementNotEditable: defaultFunc,
