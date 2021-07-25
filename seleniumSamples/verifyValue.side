@@ -1,0 +1,70 @@
+{
+  "id": "90f985a6-aafd-491b-8ad0-0dd917880ec9",
+  "version": "2.0",
+  "name": "verifyValue",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "aae809e8-adee-45fb-be83-efc64b914f2e",
+    "name": "verifyValue",
+    "commands": [{
+      "id": "de18bee5-f0ef-47f4-8a0d-e1b96d160b95",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/search-box.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8a1512c-13ac-4e9a-ba29-855c392170d0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5270bda4-7b63-4a63-a2f7-d1887c991248",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=search", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f9a25bb-c241-45ea-b3d8-0389ea52bb1e",
+      "comment": "",
+      "command": "type",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=search", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aaa"
+    }, {
+      "id": "e148ca0d-6957-426d-a379-69afd3c670f1",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=search",
+      "targets": [],
+      "value": "aaa"
+    }]
+  }],
+  "suites": [{
+    "id": "266d2d74-bbd8-45da-a89f-db1e2a77a3bd",
+    "name": "verifyValue",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aae809e8-adee-45fb-be83-efc64b914f2e"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
