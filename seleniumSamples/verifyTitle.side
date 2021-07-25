@@ -1,0 +1,42 @@
+{
+  "id": "208a7c97-1b0b-4154-bb86-87dfd1b8ebe8",
+  "version": "2.0",
+  "name": "verifyTitle",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "cf7b59d4-8068-4b1a-8199-76a4709791a6",
+    "name": "verifyTitle",
+    "commands": [{
+      "id": "82010a36-eeea-4d4b-9b7a-45a60f23fef0",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/search-box.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1079da02-1275-4a9c-9c32-4a01792560f8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11a5dfe1-4fab-4c8d-ace6-ed6d5e5c95ab",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "search-box",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7949c774-b5a9-4f44-a64b-d3b5e61368b8",
+    "name": "verifyTitle",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cf7b59d4-8068-4b1a-8199-76a4709791a6"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
