@@ -45,6 +45,7 @@ import { elseFunc } from './recordCommand/elseFunc';
 import { endFunc } from './recordCommand/endFunc';
 import { ifFunc } from './recordCommand/ifFunc';
 import { elseIfFunc } from './recordCommand/elseIfFunc';
+import { whileFunc } from './recordCommand/whileFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -142,5 +143,5 @@ export const commandFunc: {
     webdriverChooseCancelOnVisibleConfirmation: defaultFunc,
     webdriverChooseCancelOnVisiblePrompt: defaultFunc,
     webdriverChooseOkOnVisibleConfirmation: defaultFunc,
-    while: defaultFunc,
+    while: whileFunc,
 };

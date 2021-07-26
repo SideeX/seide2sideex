@@ -1,0 +1,70 @@
+{
+  "id": "406bf4cc-f7ed-4aa8-a27a-a6b297f2ca54",
+  "version": "2.0",
+  "name": "while",
+  "url": "https://sideex.io",
+  "tests": [{
+    "id": "d636c01c-6f9d-44a0-9c23-6be12bf1007a",
+    "name": "whileTest",
+    "commands": [{
+      "id": "ebce9d4a-3095-48f2-9231-97d9a39f1103",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed195030-2553-4e9b-98e6-8a8f1e52a8db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce8e2793-b550-48bb-9bd1-b5362f16443b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "a14c759a-e0d3-41f0-86a6-1c8068eae0d4",
+      "comment": "",
+      "command": "while",
+      "target": "${i}<3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fee19f7-c2ba-49fd-9690-5889c2a1df25",
+      "comment": "",
+      "command": "echo",
+      "target": "i equal: ${i}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a221cc44-df06-47db-bec4-54de0769a9ee",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i}+1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "ec5a429b-71b4-4ea4-bf58-67b546442425",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ec715252-b9df-44d2-8c61-48dfb861f4d0",
+    "name": "while",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d636c01c-6f9d-44a0-9c23-6be12bf1007a"]
+  }],
+  "urls": ["https://sideex.io/"],
+  "plugins": []
+}
