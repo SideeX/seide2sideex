@@ -1,0 +1,49 @@
+{
+  "id": "99abd3c2-3ab6-46fd-8d64-75f7887ae6a3",
+  "version": "2.0",
+  "name": "select",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "d2d21650-c518-4bdb-9a5f-f28a57f3543c",
+    "name": "selectTest",
+    "commands": [{
+      "id": "bc98be78-2d01-487f-a750-47e6a96f6a0b",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/select-single-option.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edaa701f-2468-49be-b8f4-d101b9be5cb8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c298930-43c2-4b1c-a124-e36f1a3198db",
+      "comment": "",
+      "command": "select",
+      "target": "id=fruits",
+      "targets": [],
+      "value": "label=Guava"
+    }, {
+      "id": "ca1e810c-8613-405f-a6b5-542ef8891be1",
+      "comment": "",
+      "command": "select",
+      "target": "id=fruits",
+      "targets": [],
+      "value": "label=Pear"
+    }]
+  }],
+  "suites": [{
+    "id": "d07cad99-fba0-4b6c-ae80-278046f66910",
+    "name": "select",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d2d21650-c518-4bdb-9a5f-f28a57f3543c"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

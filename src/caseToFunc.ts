@@ -49,6 +49,8 @@ import { whileFunc } from './recordCommand/whileFunc';
 import { editContentFunc } from './recordCommand/editContentFunc';
 import { forEachFunc } from './recordCommand/forEachFunc';
 import { tempEndFunc } from './recordCommand/tempEndFunc';
+import { selectFunc } from './recordCommand/selectFunc';
+
 //add different function to different command
 export const commandFunc: {
     [key: string]: (parameters: ConvertFuncParameter) => Record | any | null;
@@ -103,7 +105,7 @@ export const commandFunc: {
     repeatIf: defaultFunc,
     run: runFunc,
     runScript: runScriptFunc,
-    select: defaultFunc,
+    select: selectFunc,
     selectFrame: selectFrameFunc,
     selectWindow: selectWindowFunc,
     sendKeys: sendKeysFunc,
