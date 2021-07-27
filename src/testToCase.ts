@@ -63,7 +63,7 @@ export function testToCase(
         }
         //console.log('testtocase: ', libWindowHandle);
         const convertFunc = commandFunc[command.command];
-        const sideexRecord: Record | any | null = convertFunc({
+        const sideexRecord: Record | Record[] | null = convertFunc({
             command: command,
             commandIndex: commandIndex,
             commands: seleniumTest.commands,
@@ -74,11 +74,11 @@ export function testToCase(
             mouseCord: mouseCord,
         });
         if (sideexRecord) {
-            if(Array.isArray(sideexRecord)){
+            if (Array.isArray(sideexRecord)) {
                 for (let i = 0; i < sideexRecord.length; i++) {
                     sideexCase.records.push(sideexRecord[i]);
                 }
-            }else{
+            } else {
                 sideexCase.records.push(sideexRecord);
             }
         }

@@ -1,0 +1,63 @@
+{
+  "id": "ad838851-ecad-40f9-992b-38c7c431bb70",
+  "version": "2.0",
+  "name": "forEach",
+  "url": "https://sideex.io/",
+  "tests": [{
+    "id": "d9604e17-2f53-436e-ba59-6dfba4d12f6a",
+    "name": "forEach",
+    "commands": [{
+      "id": "088b8da6-c668-4953-9b18-2faa2507223c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"Hello\",\"Bonjour\",\"你好\"]",
+      "targets": [],
+      "value": "A1"
+    }, {
+      "id": "bde8f9b0-fb8e-482f-8008-01d9149226a8",
+      "comment": "",
+      "command": "echo",
+      "target": "${A1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc58a77b-b9b2-469e-ac5b-5c17c563595c",
+      "comment": "",
+      "command": "forEach",
+      "target": "A1",
+      "targets": [],
+      "value": "greeting"
+    }, {
+      "id": "dab5a159-e3d4-41aa-83d3-5a3f28974989",
+      "comment": "",
+      "command": "echo",
+      "target": "${greeting} and have a nice day!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3e2d8e8-9b39-4fb5-9e75-b07c5dbba499",
+      "comment": "",
+      "command": "echo",
+      "target": "test",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58f177a0-c687-4185-b2d6-fe23ec637da1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "206c1912-32d0-4ae0-9416-c13f741ec00b",
+    "name": "forEach",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d9604e17-2f53-436e-ba59-6dfba4d12f6a"]
+  }],
+  "urls": ["https://sideex.io/"],
+  "plugins": []
+}
