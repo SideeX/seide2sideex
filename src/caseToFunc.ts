@@ -47,7 +47,8 @@ import { ifFunc } from './recordCommand/ifFunc';
 import { elseIfFunc } from './recordCommand/elseIfFunc';
 import { whileFunc } from './recordCommand/whileFunc';
 import { editContentFunc } from './recordCommand/editContentFunc';
-
+import { forEachFunc } from './recordCommand/forEachFunc';
+import { tempEndFunc } from './recordCommand/tempEndFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (parameters: ConvertFuncParameter) => Record | any | null;
@@ -85,9 +86,10 @@ export const commandFunc: {
     editContent: editContentFunc,
     else: elseFunc,
     elseIf: elseIfFunc,
-    end: endFunc,
+    end: tempEndFunc,
     executeScript: executeScriptFunc,
     executeAsyncScript: defaultFunc,
+    forEach: forEachFunc,
     if: ifFunc,
     pause: pauseFunc,
     mouseDown: mouseDownAtFunc,
