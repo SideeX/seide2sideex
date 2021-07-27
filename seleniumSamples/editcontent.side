@@ -1,0 +1,45 @@
+{
+  "id": "f3f8e3e4-125d-42b7-90a0-9fe8dc9a989f",
+  "version": "2.0",
+  "name": "editcontent",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "9407d4db-87af-46c5-8af4-60867be45cc7",
+    "name": "editContent",
+    "commands": [{
+      "id": "ff82ad02-11f7-4186-915f-6d59b0ea11f4",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/editable-paragraph.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c9c4ca3-da21-4e68-88bf-82ee56bf3fde",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e86c6559-3cc4-4398-9e1e-d8830213ed10",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=p",
+      "targets": [
+        ["css=p", "css:finder"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Hi SideeX"
+    }]
+  }],
+  "suites": [{
+    "id": "51ed4190-a18e-44a3-827f-00fd4c303009",
+    "name": "editContent",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9407d4db-87af-46c5-8af4-60867be45cc7"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
