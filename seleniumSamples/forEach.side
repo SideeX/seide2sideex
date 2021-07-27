@@ -49,6 +49,80 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "1e060537-b756-4919-b850-b72782344e61",
+    "name": "forEach2",
+    "commands": [{
+      "id": "e2935b95-6581-4251-aac4-076bf4557a42",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"Hello\",\"Bonjour\",\"你好\"]",
+      "targets": [],
+      "value": "A1"
+    }, {
+      "id": "a1a13956-c37e-4fb7-bce0-551fb1f8a388",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"have nice day\",\"sdlkf sdfopisv asd\",\"日子\"]",
+      "targets": [],
+      "value": "A2"
+    }, {
+      "id": "469028d0-4cc0-4d70-a195-187b7a7acdee",
+      "comment": "",
+      "command": "echo",
+      "target": "${A1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bc46ab7-3b6c-47ee-a4ca-26465f31207e",
+      "comment": "",
+      "command": "echo",
+      "target": "${A2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d62e43c3-ff6b-4183-99c5-76bf69424ea0",
+      "comment": "",
+      "command": "forEach",
+      "target": "A1",
+      "targets": [],
+      "value": "greeting"
+    }, {
+      "id": "f90f05c6-ccb5-448e-a2b6-c7ea592808f8",
+      "comment": "",
+      "command": "forEach",
+      "target": "A2",
+      "targets": [],
+      "value": "text"
+    }, {
+      "id": "6ea42f18-b705-40c3-87c6-f2098efa4472",
+      "comment": "",
+      "command": "echo",
+      "target": "${greeting} ${text}!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17e3d633-3cf9-4106-9778-5aaaa2cbd536",
+      "comment": "",
+      "command": "echo",
+      "target": "${greeting} ${text}!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bf4690b-0959-4204-95bd-77006d53c641",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8fbf669-6f99-4a47-803e-135c63d9ca5f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "206c1912-32d0-4ae0-9416-c13f741ec00b",
@@ -56,7 +130,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["d9604e17-2f53-436e-ba59-6dfba4d12f6a"]
+    "tests": ["d9604e17-2f53-436e-ba59-6dfba4d12f6a", "1e060537-b756-4919-b850-b72782344e61"]
   }],
   "urls": ["https://sideex.io/"],
   "plugins": []

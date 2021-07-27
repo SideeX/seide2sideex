@@ -7,6 +7,7 @@ export interface ConvertFuncParameter {
     commands: Command[];
     commandIndex: number;
     isCommandComment: boolean;
+    countNum?: { forEach: number };
     suiteName: string;
     libWindowHandle?: string[];
     urlArr?: string[] | undefined;

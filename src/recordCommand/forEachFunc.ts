@@ -5,7 +5,10 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-
+    if (parameters.countNum != undefined) {
+        parameters.countNum.forEach += 1;
+    }
+    const countNum = parameters.countNum?.forEach;
     const sideexRecords: Record[] = [
         //store count variable for every forEach loop(initial count = -1)
         {
@@ -25,7 +28,7 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
                 options: [
                     {
                         type: 'other',
-                        value: 'count',
+                        value: countNum ? 'count' + countNum.toString() : '',
                     },
                 ],
                 tac: '',
@@ -56,7 +59,7 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
                 options: [
                     {
                         type: 'other',
-                        value: 'length',
+                        value: 'length' + countNum?.toString(),
                     },
                 ],
                 tac: '',
@@ -77,7 +80,12 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
                 options: [
                     {
                         type: 'others',
-                        value: '${count} < ${length} - 1',
+                        value:
+                            '${count' +
+                            countNum?.toString() +
+                            '} < ${length' +
+                            countNum?.toString() +
+                            '} - 1',
                     },
                 ],
                 tac: '',
@@ -108,7 +116,7 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
                 options: [
                     {
                         type: 'others',
-                        value: '${count} + 1',
+                        value: '${count' + countNum?.toString() + '} + 1',
                     },
                 ],
                 tac: '',
@@ -118,7 +126,7 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
                 options: [
                     {
                         type: 'other',
-                        value: 'count',
+                        value: 'count' + countNum?.toString(),
                     },
                 ],
                 tac: '',
@@ -139,7 +147,12 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
                 options: [
                     {
                         type: 'others',
-                        value: '${' + seleniumCommand.target + '}[${count}]',
+                        value:
+                            '${' +
+                            seleniumCommand.target +
+                            '}[${count' +
+                            countNum?.toString() +
+                            '}]',
                     },
                 ],
                 tac: '',

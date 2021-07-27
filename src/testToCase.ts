@@ -52,6 +52,7 @@ export function testToCase(
         PrevPoint: { X: -999, Y: -999 },
         Movements: [],
     };
+    var countNum = { forEach: 0 };
 
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
@@ -67,6 +68,7 @@ export function testToCase(
             command: command,
             commandIndex: commandIndex,
             commands: seleniumTest.commands,
+            countNum: countNum,
             isCommandComment: isCommandComment,
             suiteName: suiteName,
             libWindowHandle: libWindowHandle,
