@@ -46,6 +46,7 @@ import { endFunc } from './recordCommand/endFunc';
 import { ifFunc } from './recordCommand/ifFunc';
 import { elseIfFunc } from './recordCommand/elseIfFunc';
 import { whileFunc } from './recordCommand/whileFunc';
+import { editContentFunc } from './recordCommand/editContentFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -81,7 +82,7 @@ export const commandFunc: {
     doubleClickAt: doubleClickAtFunc,
     dragAndDropToObject: dragAndDropToObjectFunc,
     echo: echoFunc,
-    editContent: defaultFunc,
+    editContent: editContentFunc,
     else: elseFunc,
     elseIf: elseIfFunc,
     end: endFunc,
