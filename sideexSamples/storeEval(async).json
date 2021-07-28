@@ -1,0 +1,90 @@
+{
+  "time": 1627468838776,
+  "version": {
+    "sideex": [
+      3,
+      5,
+      3
+    ],
+    "format": [
+      2,
+      0,
+      0
+    ]
+  },
+  "suites": [
+    {
+      "title": "executeAsyncScript",
+      "enableOnPlaying": true,
+      "cases": [
+        {
+          "title": "executeAsyncScript",
+          "enableOnPlaying": true,
+          "networkSpeed": 0,
+          "records": [
+            {
+              "name": "storeEval",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "new Promise((r) => {setTimeout(() => {r(\"hello world\")}, 500)});"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "myvar"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "echo",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "${myvar}"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

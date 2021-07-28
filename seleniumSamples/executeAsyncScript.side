@@ -1,0 +1,35 @@
+{
+  "id": "ee48f5bf-6901-48fe-a908-726a81f84ee7",
+  "version": "2.0",
+  "name": "executeAsyncScript",
+  "url": "",
+  "tests": [{
+    "id": "7f5214a3-5f9c-4e83-8579-831209a67d04",
+    "name": "executeAsyncScript",
+    "commands": [{
+      "id": "9efe7c4c-2da2-46e4-9a20-653b7e57b932",
+      "comment": "",
+      "command": "executeAsyncScript",
+      "target": "return new Promise((r) => {setTimeout(() => {r(\"hello world\")}, 500)})",
+      "targets": [],
+      "value": "myvar"
+    }, {
+      "id": "6f101c6a-b08e-4375-bc98-6adc7781292c",
+      "comment": "",
+      "command": "echo",
+      "target": "${myvar}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b398f9e0-4bbd-412c-80a8-65139c4820dc",
+    "name": "executeAsyncScript",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7f5214a3-5f9c-4e83-8579-831209a67d04"]
+  }],
+  "urls": [],
+  "plugins": []
+}
