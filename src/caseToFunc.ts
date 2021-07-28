@@ -26,6 +26,7 @@ import { selectFrameFunc } from './recordCommand/selectFrameFunc';
 import { selectWindowFunc } from './recordCommand/selectWindowFunc';
 import { typeFunc } from './recordCommand/typeFunc';
 import { executeScriptFunc } from './recordCommand/executeScriptFunc';
+import { executeAsyncScriptFunc } from './recordCommand/executeAsyncScriptFunc';
 import { runScriptFunc } from './recordCommand/runScriptFunc';
 import { pauseFunc } from './recordCommand/pauseFunc';
 import { verifyTextFunc } from './recordCommand/verifyTextFunc';
@@ -90,7 +91,7 @@ export const commandFunc: {
     elseIf: elseIfFunc,
     end: tempEndFunc,
     executeScript: executeScriptFunc,
-    executeAsyncScript: defaultFunc,
+    executeAsyncScript: executeAsyncScriptFunc,
     forEach: forEachFunc,
     if: ifFunc,
     pause: pauseFunc,
