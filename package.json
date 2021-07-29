@@ -8,7 +8,9 @@
         "doconvert": "node bin/cli.js -p",
         "lint": "eslint 'src/**/*.{js,ts}' --fix",
         "start": "npm run build && npm run doconvert",
-        "prepare": "npm run build"
+        "prepare": "npm run build",
+        "test": "jest",
+        "coverage": "jest --coverage"
     },
     "author": "",
     "license": "ISC",
@@ -20,12 +22,15 @@
         "typescript": "^4.3.5"
     },
     "devDependencies": {
+        "@types/jest": "^26.0.24",
         "@typescript-eslint/eslint-plugin": "^4.28.2",
         "@typescript-eslint/parser": "^4.28.2",
         "eslint": "^7.30.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
-        "prettier": "^2.3.2"
+        "jest": "^27.0.6",
+        "prettier": "^2.3.2",
+        "ts-jest": "^27.0.4"
     },
     "files": [
         "build/**/*"
