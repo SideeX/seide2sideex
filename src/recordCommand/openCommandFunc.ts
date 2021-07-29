@@ -11,7 +11,7 @@ export function openCommandFunc(parameters: ConvertFuncParameter): Record {
         targetUrl = 'https://sideex.io/';
     }
     if (!targetUrl.includes('https://') && urlArr !== undefined) {
-        targetUrl = urlArr[0] + targetUrl;
+        targetUrl = urlArr[0] + targetUrl.substr(1, targetUrl.length - 1); // remove the first '/' slash symbol
     }
 
     const sideexRecord: Record = {
