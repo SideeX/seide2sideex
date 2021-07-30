@@ -1,0 +1,42 @@
+{
+  "id": "94031d67-201f-491c-b469-91f79c23f874",
+  "version": "2.0",
+  "name": "verifyElementPresent",
+  "url": "",
+  "tests": [{
+    "id": "8e56faa2-87cb-4f84-88b8-d0eca28ac85f",
+    "name": "verifyElementPresent",
+    "commands": [{
+      "id": "687fe92b-ee8d-4b38-a709-811f588ead1a",
+      "comment": "",
+      "command": "open",
+      "target": "\thttps://sideex.github.io/example/webpage_under_test/button-to-change-color.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbab5061-aaf8-407a-bf3d-a1692623cacf",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Button",
+      "targets": [],
+      "value": "500"
+    }, {
+      "id": "3db1ae7c-cec1-446c-9921-f34c8c79c151",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Button",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7a7c9729-ccc0-42c1-bc5c-dd824beb032b",
+    "name": "verifyElementPresent",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8e56faa2-87cb-4f84-88b8-d0eca28ac85f"]
+  }],
+  "urls": [],
+  "plugins": []
+}
