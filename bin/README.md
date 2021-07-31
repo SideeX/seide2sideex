@@ -8,6 +8,7 @@ $ node bin/cli.js -p path-to-(.side)
 // Example
 $ node bin/cli.js -p seleniumSamples/clickAt.side
 $ node bin/cli.js --path seleniumSamples/clickAt.side
+npm start seleniumSamples/uncheck.side
 ```
 
 After upload to npm
