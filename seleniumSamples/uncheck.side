@@ -1,0 +1,107 @@
+{
+  "id": "f8bb4b73-3ba6-4f9b-8bf8-396f6d20fec5",
+  "version": "2.0",
+  "name": "uncheck",
+  "url": "https://www.w3schools.com",
+  "tests": [{
+    "id": "7a05ff8f-8d53-4bf7-8f51-1ecbe22223eb",
+    "name": "uncheck",
+    "commands": [{
+      "id": "61f06484-e6b6-4f8a-b267-f506f75b469a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a351502-3003-430c-a2ef-8d020c92bded",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x874",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad533b06-6594-43eb-8183-8d8acc61c704",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=2",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac2f7856-a3d1-4fb0-982f-52bf51c305c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=html",
+      "targets": [
+        ["id=html", "id"],
+        ["name=fav_language", "name"],
+        ["css=#html", "css:finder"],
+        ["xpath=//input[@id='html']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37caa798-2299-43db-80c5-cfaf01cbcf2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=age1",
+      "targets": [
+        ["id=age1", "id"],
+        ["name=age", "name"],
+        ["css=#age1", "css:finder"],
+        ["xpath=//input[@id='age1']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68849d44-4980-4168-8e24-5cb89af7038d",
+      "comment": "",
+      "command": "click",
+      "target": "id=css",
+      "targets": [
+        ["id=css", "id"],
+        ["css=#css", "css:finder"],
+        ["xpath=//input[@id='css']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf9dd803-be33-4fcd-bb0a-fcdf5e6f5987",
+      "comment": "",
+      "command": "uncheck",
+      "target": "id=css",
+      "targets": [
+        ["id=css", "id"],
+        ["css=#css", "css:finder"],
+        ["xpath=//input[@id='css']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adb8130c-1262-4978-92d4-4ba32f3954f1",
+      "comment": "",
+      "command": "uncheck",
+      "target": "id=age1",
+      "targets": [
+        ["id=age1", "id"],
+        ["name=age", "name"],
+        ["css=#age1", "css:finder"],
+        ["xpath=//input[@id='age1']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c4741179-2bb9-4636-80b5-3c9a19bc446b",
+    "name": "uncheck",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7a05ff8f-8d53-4bf7-8f51-1ecbe22223eb"]
+  }],
+  "urls": ["https://www.w3schools.com/"],
+  "plugins": []
+}
