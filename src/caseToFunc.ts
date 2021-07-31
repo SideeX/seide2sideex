@@ -51,6 +51,7 @@ import { editContentFunc } from './recordCommand/editContentFunc';
 import { forEachFunc } from './recordCommand/forEachFunc';
 import { tempEndFunc } from './recordCommand/tempEndFunc';
 import { selectFunc } from './recordCommand/selectFunc';
+import { verifyElementPresentFunc } from './recordCommand/verifyElementPresentFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -127,7 +128,7 @@ export const commandFunc: {
     verify: defaultFunc,
     verifyChecked: defaultFunc,
     verifyEditable: defaultFunc,
-    verifyElementPresent: defaultFunc,
+    verifyElementPresent: verifyElementPresentFunc,
     verifyElementNotPresent: defaultFunc,
     verifyNotChecked: defaultFunc,
     verifyNotEditable: defaultFunc,
