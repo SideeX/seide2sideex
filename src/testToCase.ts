@@ -64,6 +64,7 @@ export function testToCase(
         }
         //console.log('testtocase: ', libWindowHandle);
         const convertFunc = commandFunc[command.command];
+        // console.log(convertFunc);
         const sideexRecord: Record | Record[] | null = convertFunc({
             command: command,
             commandIndex: commandIndex,

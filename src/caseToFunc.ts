@@ -54,6 +54,11 @@ import { selectFunc } from './recordCommand/selectFunc';
 import { verifyElementPresentFunc } from './recordCommand/verifyElementPresentFunc';
 import { uncheckFunc } from './recordCommand/uncheckFunc';
 import { setSpeedFunc } from './recordCommand/setSpeedFunc';
+import { waitForElementNotPresentFunc } from './recordCommand/waitForElementNotPresentFunc';
+import { waitForElementNotVisibleFunc } from './recordCommand/waitForElementNotVisibleFunc';
+import { waitForElementPresentFunc } from './recordCommand/waitForElementPresentFunc';
+import { waitForElementVisibleFunc } from './recordCommand/waitForElementVisibleFunc';
+
 //add different function to different command
 export const commandFunc: {
     [key: string]: (parameters: ConvertFuncParameter) => Record | any | null;
@@ -142,10 +147,10 @@ export const commandFunc: {
     verifyValue: verifyTextFunc,
     waitForElementEditable: defaultFunc,
     waitForElementNotEditable: defaultFunc,
-    waitForElementNotPresent: defaultFunc,
-    waitForElementNotVisible: defaultFunc,
-    waitForElementPresent: defaultFunc,
-    waitForElementVisibleLocator: defaultFunc,
+    waitForElementNotPresent: waitForElementNotPresentFunc,
+    waitForElementNotVisible: waitForElementNotVisibleFunc,
+    waitForElementPresent: waitForElementPresentFunc,
+    waitForElementVisible: waitForElementVisibleFunc,
     waitForTextLocatorText: defaultFunc,
     webdriverAnswerOnVisiblePrompt: defaultFunc,
     webdriverChooseCancelOnVisibleConfirmation: defaultFunc,
