@@ -53,7 +53,7 @@ import { tempEndFunc } from './recordCommand/tempEndFunc';
 import { selectFunc } from './recordCommand/selectFunc';
 import { verifyElementPresentFunc } from './recordCommand/verifyElementPresentFunc';
 import { uncheckFunc } from './recordCommand/uncheckFunc';
-
+import { setSpeedFunc } from './recordCommand/setSpeedFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (parameters: ConvertFuncParameter) => Record | any | null;
@@ -112,7 +112,7 @@ export const commandFunc: {
     selectFrame: selectFrameFunc,
     selectWindow: selectWindowFunc,
     sendKeys: sendKeysFunc,
-    setSpeed: defaultFunc,
+    setSpeed: setSpeedFunc,
     setWindowSize: setWindowSizeFunc,
     store: storeFunc,
     storeAttribute: defaultFunc,
