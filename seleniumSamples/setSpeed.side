@@ -1,0 +1,233 @@
+{
+  "id": "dd34f850-07ff-4bf7-a5c0-f3c55a861dcb",
+  "version": "2.0",
+  "name": "setSpeed",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "b9117d83-a670-473a-8668-df9d1435a1b6",
+    "name": "setSpeed",
+    "commands": [{
+      "id": "3537c065-2bfc-4882-9907-108dc489d3d0",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/button-to-see-delay.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf60c572-6bf6-4843-b914-980b6e5353fb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "573c9c76-a291-44db-9aa8-7131effa8f9c",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "4000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e4c9f3b-5a9f-4258-879f-97278a5fb90f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40fa930d-4b4c-48a4-8f16-2b5814f26598",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25ce8478-d042-4ce1-ac36-ee8a6737aa02",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "2800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9eebbdf-3594-43da-a722-59c58042c228",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e723f76-d99e-47e1-902d-61d4aced6f67",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0082e510-0d4e-4c47-b4ef-14c4cdfdf08a",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e51d05d1-9556-4e5a-a0c7-463026507b57",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0bd3f32-83ee-4305-8f80-58dc6293b467",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "870ab6f3-9b69-49b3-ab98-aa0190ca3bfd",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "1500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a02c734-b8fa-4d88-8920-c76f300dbf35",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e413ac78-0b8b-4e03-aafd-241428ccae0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47ddc273-e1e4-4fdd-970f-7e43549708d2",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "700",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f3cd614-7da5-4b47-a25a-c360e997480f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a0eddd8-2ca4-4ecb-b3c6-4317aa046b80",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "517f3430-449a-41a7-8886-3fe1e202ccdc",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48878329-e5eb-4845-8010-245e452f5610",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3288ff9-5025-40c8-98f4-5d46d51def26",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click twice to see the command delay in SideeX.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b22860a1-4d1f-43de-8bbd-ac20e9413cd7",
+    "name": "setSpeed",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b9117d83-a670-473a-8668-df9d1435a1b6"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
