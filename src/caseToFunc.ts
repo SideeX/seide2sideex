@@ -58,6 +58,7 @@ import { waitForElementNotPresentFunc } from './recordCommand/waitForElementNotP
 import { waitForElementNotVisibleFunc } from './recordCommand/waitForElementNotVisibleFunc';
 import { waitForElementPresentFunc } from './recordCommand/waitForElementPresentFunc';
 import { waitForElementVisibleFunc } from './recordCommand/waitForElementVisibleFunc';
+import { verifyChecked_and_notCheckedFunc } from './recordCommand/verifyChecked_and_notCheckedFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -132,11 +133,11 @@ export const commandFunc: {
     type: typeFunc,
     uncheck: uncheckFunc,
     verify: defaultFunc,
-    verifyChecked: defaultFunc,
+    verifyChecked: verifyChecked_and_notCheckedFunc,
     verifyEditable: defaultFunc,
     verifyElementPresent: verifyElementPresentFunc,
     verifyElementNotPresent: defaultFunc,
-    verifyNotChecked: defaultFunc,
+    verifyNotChecked: verifyChecked_and_notCheckedFunc,
     verifyNotEditable: defaultFunc,
     verifyNotSelectedValue: defaultFunc,
     verifyNotText: defaultFunc,
