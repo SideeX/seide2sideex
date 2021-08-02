@@ -1,0 +1,49 @@
+{
+  "id": "e316fc44-6ac9-4222-b09e-e471a03deb6d",
+  "version": "2.0",
+  "name": "verifyChecked_and_notChecked",
+  "url": "https://bootstrap5.hexschool.com",
+  "tests": [{
+    "id": "c5da09e6-f73f-42cd-8ce3-f94ef7755b79",
+    "name": "verifyChecked_and_notChecked",
+    "commands": [{
+      "id": "2e6ad5cb-6524-4ec4-bbc4-9b8a330133ca",
+      "comment": "",
+      "command": "open",
+      "target": "/docs/5.0/forms/checks-radios/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83046b22-deed-49eb-8e35-d2ec3bbfce2f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x801",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b953d5aa-78e3-4aed-a7cb-abf49da24e3b",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=flexCheckDefault",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "284df48e-b276-40b9-bc1c-1ff9ce372fff",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=flexCheckChecked",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "195a04f3-1ad7-4284-ad49-31295a9b9fff",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c5da09e6-f73f-42cd-8ce3-f94ef7755b79"]
+  }],
+  "urls": ["https://bootstrap5.hexschool.com/"],
+  "plugins": []
+}
