@@ -6,6 +6,7 @@ export interface ConvertFuncParameter {
     command: Command;
     commands: Command[];
     commandIndex: number;
+    isElseIfCommand: boolean;
     isCommandComment: boolean;
     countNum?: { forEach: number };
     suiteName: string;

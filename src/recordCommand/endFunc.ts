@@ -2,14 +2,14 @@ import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-let end_num: number = 0;
+let end_num: number[] = [];
 let end_list: Record[] = [];
 
 export function endFunc(parameters: ConvertFuncParameter): any {
     const isCommandComment = parameters.isCommandComment;
     const commandIndex = parameters.commandIndex;
     const commands = parameters.commands;
-      
+    
     const sideexRecord: Record = {
         name: 'END',
         target: {
@@ -40,29 +40,24 @@ export function endFunc(parameters: ConvertFuncParameter): any {
         },
         comment: isCommandComment,
     };
-    end_num--;
-    if (commands.length == commandIndex+1){
-        if(end_num == 0){
-            end_num = 1;
-            end_list.push(sideexRecord);
-            return end_list;
-        }else{
-            end_list.push(sideexRecord);
-            return endFunc(parameters);
-        }
-    }else if (commands[commandIndex+1].command != "if" || "elseIf" || "else"){
-        if(end_num == 0){
-            end_num = 1;
-            end_list.push(sideexRecord);
-            return end_list;
-        }else{
-            end_list.push(sideexRecord);
-            return endFunc(parameters);
-        }
+
+    end_num[end_num.length-1]--;
+    end_list.push(sideexRecord);
+    
+    if(end_num[end_num.length-1] == 0){
+        end_num.pop();
+        var temp = end_list.slice();
+        end_list = [];
+        return temp;
     }else{
-        return sideexRecord;
+        return endFunc(parameters);
     }
 }
-export function endCount():void{
-    end_num++;
+
+export function endCount(isElseIfCommand:boolean):void{
+    if(isElseIfCommand == true){
+        end_num[end_num.length-1]++;
+    }else{
+        end_num.push(1);
+    }
 }

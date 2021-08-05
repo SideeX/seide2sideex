@@ -70,6 +70,7 @@ export function testToCase(
             commandIndex: commandIndex,
             commands: seleniumTest.commands,
             countNum: countNum,
+            isElseIfCommand: false,
             isCommandComment: isCommandComment,
             suiteName: suiteName,
             libWindowHandle: libWindowHandle,

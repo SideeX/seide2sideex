@@ -97,7 +97,7 @@ export const commandFunc: {
     editContent: editContentFunc,
     else: elseFunc,
     elseIf: elseIfFunc,
-    end: tempEndFunc,
+    end: endFunc,
     executeScript: executeScriptFunc,
     executeAsyncScript: executeAsyncScriptFunc,
     forEach: forEachFunc,

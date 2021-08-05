@@ -32,6 +32,6 @@ export function whileFunc(parameters: ConvertFuncParameter): Record {
         pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
         comment: isCommandComment,
     };
-    endCount();
+    endCount(parameters.isElseIfCommand);
     return sideexRecord;
 }

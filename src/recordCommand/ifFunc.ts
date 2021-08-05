@@ -6,11 +6,7 @@ import { endCount } from './endFunc';
 export function ifFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-    const commandIndex = parameters.commandIndex;
-    const commands = parameters.commands;
-
-    var targetSubstr = targetStr(seleniumCommand.target);
-    var ifTarget = convertTarget(targetSubstr, commandIndex, commands);
+    var targetstr = targetStr(seleniumCommand.target);
 
     const sideexRecord: Record = {
         name: 'IF',
@@ -19,7 +15,7 @@ export function ifFunc(parameters: ConvertFuncParameter): Record {
             options: [
                 {
                     type: 'other',
-                    value: ifTarget,
+                    value: targetstr,
                 },
             ],
             tac: '',
@@ -42,58 +38,70 @@ export function ifFunc(parameters: ConvertFuncParameter): Record {
         },
         comment: isCommandComment,
     };
-    endCount();
+    endCount(parameters.isElseIfCommand);
+
     return sideexRecord;
 }
 
 export function targetStr(str: string): string{
-    let str_index1 = 0;
-    let str_index2 = 0;
+    //拆分parameter 和 parameter判斷值
+    var temp = str;
+    var commas = ["===","==",">=","<=","!=","&&","||",">","<"];
+    commas.forEach((comma) => {
+        temp = temp.replaceAll(comma, '@@@');
+    });
+    var str_split = temp.split("@@@");
 
-    for (let i = 0; i<str.length; i++){
-        if(str[i]=="{"){
-            str_index1 = i;
-        }else if(str[i]=="}"){
-            str_index2 = i;
-            break
-        }
-    }
-
-    let subStr = str.substring(str_index1+1, str_index2)
-   
-    return subStr;
-}
-
-export function convertTarget(targetSubstr: string, ifCommandIndex: number, commands: Command[]): string{
-    let commandName = "";
-    let commandTarget = "";
-    let targetType = "string";
-    let ifCommandTarget = commands[ifCommandIndex].target;
-
-    for (let i = ifCommandIndex-1; i >= 0; i--){
-        if (commands[i].value == targetSubstr){
-            commandName = commands[i].command;
-            commandTarget = commands[i].target;
-            break;
-        } 
-    }
-
-    for (let i = 0; i < commandTarget.length; i++){
-        if (commandTarget[i] >= "0" && commandTarget[i] <= "9"){
-            targetType = "number";
-            break;
-        }  
-    }
-
-    if (targetType == "string" && commandName == "executeScript"){
-        for (let i = 0; i < ifCommandTarget.length; i++){
-            if (ifCommandTarget[i] == "$"){
-                ifCommandTarget = ifCommandTarget.substring(0,0)+"\""+ifCommandTarget.substring(0,ifCommandTarget.length);
-                i++; //加在前頭，會一直重複
-            }else if(ifCommandTarget[i] == "}"){
-                ifCommandTarget = ifCommandTarget.substring(0,i+1)+"\""+ifCommandTarget.substring(i+1,ifCommandTarget.length);
+    //判別參數type
+    //console.log(str_split);
+    var str_type = [];
+    var right_flag = 0;
+    for(let i = 0; i < str_split.length; i++){
+        for(let j = 0; j < str_split[i].length; j++){
+            if(right_flag == 0){
+                if(str_split[i][j] == '$'){
+                    right_flag = 1;
+                    break;
+                }
+            }else{
+                if(str_split[i][j] == "\"" || str_split[i][j] == '\''){
+                    str_type.push("string");
+                    right_flag = 0;
+                    break;
+                }else if(str_split[i][j] >= "0" && str_split[i][j] <= "9"){
+                    str_type.push("integer");
+                    right_flag = 0;
+                    break;
+                }
             }
         }
     }
-    return ifCommandTarget;
+
+    //加雙引號
+    //console.log(str_type);
+    var str_index = 0;
+    for(let i = 0; i< str_type.length; i++){
+        if(str_type[i] == 'integer'){
+            for (let j = str_index; j < str.length; j++){
+                if(str[j] == "}"){
+                    str_index = j+1;
+                    break;
+                }
+            }
+        }else{
+            for (let j = str_index; j < str.length; j++){
+                if (str[j] == "$"){
+                    str = str.substring(0,j)+"\""+str.substring(j,str.length);
+                    j++; //加在前頭，會一直重複
+                }else if(str[j] == "}"){
+                    str = str.substring(0,j+1)+"\""+str.substring(j+1,str.length);
+                    str_index = j+1;
+                    break;
+                }
+            }
+        }
+    }
+    //console.log(str);
+    
+    return str;
 }
