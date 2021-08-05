@@ -1,0 +1,70 @@
+{
+  "id": "e0b4f866-0b52-4a38-8970-eb3539c9ed7f",
+  "version": "2.0",
+  "name": "storeAtrtribute",
+  "url": "https://sideex.io",
+  "tests": [{
+    "id": "2923df5c-1f59-4186-84bf-111a96f96558",
+    "name": "storeAtrtributeTest",
+    "commands": [{
+      "id": "9ed19404-4c7d-4699-b594-3a7f5b1e7757",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92d97f69-7d58-40c1-aec0-37fa495a9ce3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x600",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cf4c6c3-dcf7-4112-a098-b09f9e42481a",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=.img-responsive@src",
+      "targets": [],
+      "value": "iconSrc"
+    }, {
+      "id": "9b1a2fee-e168-46aa-9f72-dac7b9b7c497",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=.img-responsive@alt",
+      "targets": [],
+      "value": "iconAlt"
+    }, {
+      "id": "db54e11b-037e-47f9-b266-60c307b2058e",
+      "comment": "",
+      "command": "echo",
+      "target": "Image link: ${iconSrc}, image text: ${iconAlt}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a172c81-0c22-47ca-b491-9590328f6ccc",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "linkText=Free Download@href",
+      "targets": [],
+      "value": "downloadHref"
+    }, {
+      "id": "6662e2f5-aeaf-4d65-801d-872117c7fd25",
+      "comment": "",
+      "command": "echo",
+      "target": "${downloadHref}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1cbc0fff-3430-45d6-b430-7cac05ba8149",
+    "name": "storeAtrtribute",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2923df5c-1f59-4186-84bf-111a96f96558"]
+  }],
+  "urls": ["https://sideex.io/"],
+  "plugins": []
+}

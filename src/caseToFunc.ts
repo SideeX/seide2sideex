@@ -59,6 +59,7 @@ import { waitForElementNotVisibleFunc } from './recordCommand/waitForElementNotV
 import { waitForElementPresentFunc } from './recordCommand/waitForElementPresentFunc';
 import { waitForElementVisibleFunc } from './recordCommand/waitForElementVisibleFunc';
 import { verifyChecked_and_notCheckedFunc } from './recordCommand/verifyChecked_and_notCheckedFunc';
+import { storeAttributeFunc } from './recordCommand/storeAttributeFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -121,7 +122,7 @@ export const commandFunc: {
     setSpeed: setSpeedFunc,
     setWindowSize: setWindowSizeFunc,
     store: storeFunc,
-    storeAttribute: defaultFunc,
+    storeAttribute: storeAttributeFunc,
     storeJson: defaultFunc,
     storeText: storeTextFunc,
     storeTitle: storeTitleFunc,
