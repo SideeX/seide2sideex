@@ -1,0 +1,69 @@
+{
+  "id": "49562e2a-2af6-4aaf-8312-7bb5e30aa1c6",
+  "version": "2.0",
+  "name": "times",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "d9a1a82e-4529-4c36-9570-a4309246b42f",
+    "name": "times-click",
+    "commands": [{
+      "id": "41275a13-b28e-4c08-9fca-11178dcfe0d1",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b245414b-c813-4225-904d-15057abee5bb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42e7e8bf-d770-4eb9-9cf4-53b142a214f2",
+      "comment": "",
+      "command": "times",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "deb8809d-ec48-43ce-b892-47ddc51945e4",
+      "comment": "",
+      "command": "echo",
+      "target": "echo me 3 times",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8eaae8e-e937-40c1-8571-fe3ad0fb06c4",
+      "comment": "",
+      "command": "click",
+      "target": "id=demoClickAtButton",
+      "targets": [
+        ["id=demoClickAtButton", "id"],
+        ["css=#demoClickAtButton", "css:finder"],
+        ["xpath=//button[@id='demoClickAtButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me to increase the size of button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6feca0ad-df17-4e3b-b2ce-cc1942cc9724",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9e796f47-d9b7-4d8f-8647-75fc42839ac9",
+    "name": "times",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d9a1a82e-4529-4c36-9570-a4309246b42f"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}
