@@ -60,10 +60,11 @@ import { waitForElementPresentFunc } from './recordCommand/waitForElementPresent
 import { waitForElementVisibleFunc } from './recordCommand/waitForElementVisibleFunc';
 import { verifyChecked_and_notCheckedFunc } from './recordCommand/verifyChecked_and_notCheckedFunc';
 import { storeAttributeFunc } from './recordCommand/storeAttributeFunc';
+import { timesFunc } from './recordCommand/timesFunc';
 
 //add different function to different command
 export const commandFunc: {
-    [key: string]: (parameters: ConvertFuncParameter) => Record | any | null;
+    [key: string]: (parameters: ConvertFuncParameter) => Record | Record[] | null;
 } = {
     open: openCommandFunc,
     addSelection: addSelectionFunc,
@@ -130,7 +131,7 @@ export const commandFunc: {
     storeWindowHandle: defaultFunc,
     storeXpathCount: defaultFunc,
     submit: defaultFunc,
-    times: defaultFunc,
+    times: timesFunc,
     type: typeFunc,
     uncheck: uncheckFunc,
     verify: defaultFunc,

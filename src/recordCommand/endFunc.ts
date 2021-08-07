@@ -5,7 +5,7 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 let end_num: number[] = [];
 let end_list: Record[] = [];
 
-export function endFunc(parameters: ConvertFuncParameter): any {
+export function endFunc(parameters: ConvertFuncParameter): Record[] {
     const isCommandComment = parameters.isCommandComment;
     const commandIndex = parameters.commandIndex;
     const commands = parameters.commands;
