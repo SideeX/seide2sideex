@@ -62,6 +62,7 @@ import { verifyChecked_and_notCheckedFunc } from './recordCommand/verifyChecked_
 import { storeAttributeFunc } from './recordCommand/storeAttributeFunc';
 import { timesFunc } from './recordCommand/timesFunc';
 
+import { submitFunc } from './recordCommand/submitFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (parameters: ConvertFuncParameter) => Record | Record[] | null;
@@ -130,7 +131,7 @@ export const commandFunc: {
     storeValue: storeTextFunc, //same as storeTextFunc
     storeWindowHandle: defaultFunc,
     storeXpathCount: defaultFunc,
-    submit: defaultFunc,
+    submit: submitFunc,
     times: timesFunc,
     type: typeFunc,
     uncheck: uncheckFunc,
