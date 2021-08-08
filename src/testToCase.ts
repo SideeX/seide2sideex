@@ -52,6 +52,12 @@ export function testToCase(
         PrevPoint: { X: -999, Y: -999 },
         Movements: [],
     };
+    var tempRecords: Record[][] = [];
+    var doRepeat = {
+        doCount: -1,
+        currentDo: -1,
+        doRecords: tempRecords,
+    };
     var countNum = { forEach: 0 };
 
     seleniumTest.commands.forEach((command) => {
@@ -76,17 +82,31 @@ export function testToCase(
             libWindowHandle: libWindowHandle,
             urlArr: urlArr,
             mouseCord: mouseCord,
+            doRepeat: doRepeat,
         });
         if (sideexRecord) {
             if (Array.isArray(sideexRecord)) {
                 for (let i = 0; i < sideexRecord.length; i++) {
                     sideexCase.records.push(sideexRecord[i]);
+                    if (doRepeat.currentDo != -1) {
+                        doRepeat.doRecords[doRepeat.currentDo].push(
+                            sideexRecord[i],
+                        );
+                    }
                 }
             } else {
                 sideexCase.records.push(sideexRecord);
+                if (doRepeat.currentDo != -1) {
+                    doRepeat.doRecords[doRepeat.currentDo].push(sideexRecord);
+                }
             }
         }
     });
+    // console.log(doRepeat.doRecords.length);
+    // for (var i = 0; i < doRepeat.doRecords.length; i++) {
+    //     console.log(doRepeat.doRecords[i]);
+    // }
+    // console.log('---------------------------------------');
 
     return sideexCase;
 }

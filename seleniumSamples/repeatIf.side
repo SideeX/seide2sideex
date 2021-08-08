@@ -1,0 +1,338 @@
+{
+  "id": "0fc7c82f-7f21-4056-b530-f4a81063cff1",
+  "version": "2.0",
+  "name": "repeatIf",
+  "url": "https://sideex.github.io",
+  "tests": [{
+    "id": "9f215053-6474-4a97-a465-0f46da5b0c9a",
+    "name": "repeatIf",
+    "commands": [{
+      "id": "5cc1d8b4-341d-4d2b-bcd1-610f695466c1",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81d3b9bf-46c2-42b9-831e-b8841450e941",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "1da8d50d-d27f-4d26-873f-b34c0792262b",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93985f96-69f8-44f0-bce6-ad15f527c292",
+      "comment": "",
+      "command": "echo",
+      "target": "${x}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03786115-191e-4c6a-8ad6-15b198525f67",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${x}+1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "6591ba62-f673-4e06-af1f-b05f79ec6ce6",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${x} < 1",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3ddd7636-b807-4637-84a1-080341b872e0",
+    "name": "repeatIf2",
+    "commands": [{
+      "id": "a0d0432a-248e-41d3-bd9c-c2d2c2f0fd3d",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c97a87cd-3ede-43b7-be42-36f251795d65",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "d6ce1562-7f77-48f9-aa44-ae4aa614becc",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3731d97c-905a-403a-8913-83b43a52d3cc",
+      "comment": "",
+      "command": "echo",
+      "target": "${x}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00ef71f3-f256-45cb-982a-263ee0d926ce",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${x}+1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "3d326f37-cc5e-4102-9134-2752d0aa752d",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${x} < 0",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "38ff0718-7af3-4756-bab9-fed01daa47ac",
+    "name": "repeatIf3",
+    "commands": [{
+      "id": "30cf1c8c-1b0f-4fd8-b485-31d63d7f48ec",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dea71316-595d-41a9-8865-73f1646287c9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "9f5cb775-352d-4090-b4af-8f5909707cd0",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22bbd408-350e-42f6-bcf1-b1a397d382ce",
+      "comment": "",
+      "command": "echo",
+      "target": "${x}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6117b0c-2e9c-4954-9424-5e4fe9e61790",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${x}+1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "8f46c995-8743-4668-a854-656ba26b50d1",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${x} < 5",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fe494c9c-aa12-4764-9ec8-839fee395a21",
+    "name": "repeatIf4",
+    "commands": [{
+      "id": "020034a2-b66d-4c69-ab63-b25683f9f200",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/click-to-increase-button-size.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8872bd4b-239b-4b00-a561-bd3e675daa61",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "ee9c4306-2c6b-4b59-a9e0-826d55f16106",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8af953f3-1ae4-4bd7-802e-718b6d99a8db",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "96b33def-16e6-4941-af00-754f55f28482",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${x}+1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "df36c37c-0db1-4b03-9a09-a65826872fd3",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb2c5f26-a262-4064-aebc-2ef655e4a97d",
+      "comment": "",
+      "command": "echo",
+      "target": "${x}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc9844e0-2d14-42bf-9aee-c87b2e6d601f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${y}+1",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "4f87daf0-282e-4dfc-90e2-3ec2eae14f34",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${y} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc4d96ac-e761-4065-ad45-9f129416c5a9",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${x} < 5",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c9a1dda0-bc8c-4d98-96a1-b48de8967551",
+    "name": "repeatIf5",
+    "commands": [{
+      "id": "c44fc790-12ae-4212-b2fe-6c4172e1334b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "155cae3d-486d-4612-aa86-e3584e2f353d",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e07d2a49-47df-417d-9fbb-e55113f1ae5f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${x}+1",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "32a059d9-05b3-4e32-9886-2f5b2e5e344a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "42f5f3ea-f67a-4833-bcae-fdb28d3cb528",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bbde3eb-caf2-40d8-9324-388a8fcc556a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "z"
+    }, {
+      "id": "9395be8b-e7dd-47ca-aeb8-406502a72d86",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${y}+1",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "c3f74adb-761b-4344-bab6-22d9d1f3b59b",
+      "comment": "",
+      "command": "echo",
+      "target": "${y}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3ff76eb-1ebe-4ef9-b5fc-d628a55999f5",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b59973e9-0474-4d6a-bafd-f018461e1068",
+      "comment": "",
+      "command": "echo",
+      "target": "${x}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "457da69f-a6c9-4054-bc94-7f05a32c2d8b",
+      "comment": "",
+      "command": "echo",
+      "target": "${z}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13652853-7ba5-49df-8c07-f14c82b6bf8b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${z}+1",
+      "targets": [],
+      "value": "z"
+    }, {
+      "id": "c096f4b0-18b2-45e0-a8cb-975255a56e4a",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${z} < 4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33ad352e-fc09-45b4-906f-02cb050d5f0d",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${y} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68896014-f458-4988-82db-1c115139f88f",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${x} < 2",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "95aa48fa-f802-47cb-8152-29c04c273da3",
+    "name": "repeatIf",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9f215053-6474-4a97-a465-0f46da5b0c9a", "3ddd7636-b807-4637-84a1-080341b872e0", "38ff0718-7af3-4756-bab9-fed01daa47ac", "fe494c9c-aa12-4764-9ec8-839fee395a21", "c9a1dda0-bc8c-4d98-96a1-b48de8967551"]
+  }],
+  "urls": ["https://sideex.github.io/"],
+  "plugins": []
+}

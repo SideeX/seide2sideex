@@ -61,11 +61,14 @@ import { waitForElementVisibleFunc } from './recordCommand/waitForElementVisible
 import { verifyChecked_and_notCheckedFunc } from './recordCommand/verifyChecked_and_notCheckedFunc';
 import { storeAttributeFunc } from './recordCommand/storeAttributeFunc';
 import { timesFunc } from './recordCommand/timesFunc';
-
+import { doFunc } from './recordCommand/doFunc';
+import { repeatIfFunc } from './recordCommand/repeatIfFunc';
 import { submitFunc } from './recordCommand/submitFunc';
 //add different function to different command
 export const commandFunc: {
-    [key: string]: (parameters: ConvertFuncParameter) => Record | Record[] | null;
+    [key: string]: (
+        parameters: ConvertFuncParameter,
+    ) => Record | Record[] | null;
 } = {
     open: openCommandFunc,
     addSelection: addSelectionFunc,
@@ -95,6 +98,7 @@ export const commandFunc: {
     debugger: defaultFunc,
     doubleClick: doubleClickAtFunc,
     doubleClickAt: doubleClickAtFunc,
+    do: doFunc,
     dragAndDropToObject: dragAndDropToObjectFunc,
     echo: echoFunc,
     editContent: editContentFunc,
@@ -114,7 +118,7 @@ export const commandFunc: {
     mouseUp: mouseUpAtFunc,
     mouseUpAt: mouseUpAtFunc,
     removeSelection: removeSelectionFunc,
-    repeatIf: defaultFunc,
+    repeatIf: repeatIfFunc,
     run: runFunc,
     runScript: runScriptFunc,
     select: selectFunc,
