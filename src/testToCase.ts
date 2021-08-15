@@ -86,12 +86,16 @@ export function testToCase(
         });
         if (sideexRecord) {
             if (Array.isArray(sideexRecord)) {
-                for (let i = 0; i < sideexRecord.length; i++) {
-                    sideexCase.records.push(sideexRecord[i]);
-                    if (doRepeat.currentDo != -1) {
+                if (doRepeat.currentDo != -1) {
+                    for (let i = 0; i < sideexRecord.length; i++) {
+                        sideexCase.records.push(sideexRecord[i]);
                         doRepeat.doRecords[doRepeat.currentDo].push(
                             sideexRecord[i],
                         );
+                    }
+                } else {
+                    for (let i = 0; i < sideexRecord.length; i++) {
+                        sideexCase.records.push(sideexRecord[i]);
                     }
                 }
             } else {

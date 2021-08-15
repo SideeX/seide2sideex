@@ -8,7 +8,7 @@ export function repeatIfFunc(
     const doRepeat = parameters.doRepeat;
     const seleniumCommand = parameters.command;
     if (!isCommandComment) {
-        const sideexRecord: Record[] = [
+        const sideexRecords: Record[] = [
             //while loop
             {
                 name: 'WHILE',
@@ -27,7 +27,7 @@ export function repeatIfFunc(
                     options: [
                         {
                             type: 'other',
-                            value: '',
+                            value: seleniumCommand.value,
                         },
                     ],
                     tac: '',
@@ -42,9 +42,9 @@ export function repeatIfFunc(
             },
         ];
         doRepeat.doRecords[doRepeat.currentDo].forEach((record) => {
-            sideexRecord.push(record);
+            sideexRecords.push(record);
         });
-        sideexRecord.push({
+        sideexRecords.push({
             name: 'END',
             target: {
                 usedIndex: 0,
@@ -75,8 +75,13 @@ export function repeatIfFunc(
             comment: isCommandComment,
         });
         doRepeat.currentDo -= 1;
+        if (doRepeat.currentDo != -1) {
+            doRepeat.doRecords[doRepeat.currentDo + 1].forEach((record) => {
+                doRepeat.doRecords[doRepeat.currentDo].push(record);
+            });
+        }
 
-        return sideexRecord;
+        return sideexRecords;
     } else {
         return null;
     }
