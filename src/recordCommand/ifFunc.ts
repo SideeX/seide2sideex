@@ -51,6 +51,9 @@ export function targetStr(str: string): string{
         temp = temp.replaceAll(comma, '@@@');
     });
     var str_split = temp.split("@@@");
+    if(str_split.length <= 1){
+        return str;
+    }
 
     //判別參數type
     //console.log(str_split);
@@ -58,9 +61,14 @@ export function targetStr(str: string): string{
     var right_flag = 0;
     for(let i = 0; i < str_split.length; i++){
         for(let j = 0; j < str_split[i].length; j++){
-            if(right_flag == 0){
+            if(str_split[i][j] == " "){
+                continue;
+            }else if(right_flag == 0){
                 if(str_split[i][j] == '$'){
                     right_flag = 1;
+                    break;
+                }else if(str_split[i][j] == '!'){
+                    str_type.push("other");
                     break;
                 }
             }else{
@@ -68,20 +76,33 @@ export function targetStr(str: string): string{
                     str_type.push("string");
                     right_flag = 0;
                     break;
-                }else if(str_split[i][j] >= "0" && str_split[i][j] <= "9"){
-                    str_type.push("integer");
+                }else if(str_split[i][j] == '$'){
+                    str_type.push("other");
+                    right_flag = 1;
+                    break;
+                }else if(str_split[i][j] == "!"){
+                    str_type.push("other");
+                    str_type.push("other");
+                    right_flag = 0;
+                    break;
+                }else{
+                    str_type.push("other");
                     right_flag = 0;
                     break;
                 }
             }
         }
     }
+    if (right_flag == 1){
+        str_type.push("other");
+    }
+
 
     //加雙引號
     //console.log(str_type);
     var str_index = 0;
     for(let i = 0; i< str_type.length; i++){
-        if(str_type[i] == 'integer'){
+        if(str_type[i] == 'other'){
             for (let j = str_index; j < str.length; j++){
                 if(str[j] == "}"){
                     str_index = j+1;
