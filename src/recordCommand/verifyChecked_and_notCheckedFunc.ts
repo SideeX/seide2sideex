@@ -4,6 +4,7 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function verifyChecked_and_notCheckedFunc(
     parameters: ConvertFuncParameter,
 ): Record {
+    console.log('asdsadsada');
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
 
@@ -28,7 +29,8 @@ export function verifyChecked_and_notCheckedFunc(
                 {
                     type: 'other',
                     value:
-                        seleniumCommand.command === 'verifyChecked'
+                        seleniumCommand.command === 'verifyChecked' ||
+                        seleniumCommand.command === 'assertChecked'
                             ? 'on'
                             : 'off',
                 },
