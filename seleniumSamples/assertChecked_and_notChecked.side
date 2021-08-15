@@ -1,0 +1,49 @@
+{
+  "id": "c8abbc89-fbfd-4b7c-b263-84b1cb47efaf",
+  "version": "2.0",
+  "name": "https://getbootstrap.com/docs/5.0/forms/checks-radios/",
+  "url": "https://getbootstrap.com",
+  "tests": [{
+    "id": "a43bf8f2-8dc1-4fe4-8912-386e90a13682",
+    "name": "Untitled",
+    "commands": [{
+      "id": "79d11264-de6d-4722-96f5-019013f75757",
+      "comment": "",
+      "command": "open",
+      "target": "/docs/5.0/forms/checks-radios/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ecf4706-b524-446a-a803-2ee8671f32c5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8ade26b-ff05-452a-98b7-d36f0a0234d0",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "id=flexCheckDefault",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16fd9188-12d8-48ea-adc0-2aab957634c0",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "id=flexCheckChecked",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8533ab5e-6175-4805-ab04-7e3e48f5e620",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a43bf8f2-8dc1-4fe4-8912-386e90a13682"]
+  }],
+  "urls": ["https://getbootstrap.com/"],
+  "plugins": []
+}
