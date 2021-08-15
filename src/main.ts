@@ -11,7 +11,7 @@ import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 import { readFileSync } from 'fs';
 
-export function mainFunc(filePath: string){
+export function mainFunc(filePath: string) {
     const file = readFileSync(filePath, 'utf-8');
     const seleniumFile: SeleniumSide = JSON.parse(file);
     //const seleniumFile: SeleniumSide = getSample('if_else');
@@ -101,7 +101,7 @@ function generateSideexJson(sideexJson: SideexJson, suiteName: string) {
     generateJsonFileFunc(dir);
 }
 
-interface structDoConvert{
+interface structDoConvert {
     urlArr: string[];
     seleniumTests: Test[];
     dictforSeleniumTests: { [testId: string]: number };
