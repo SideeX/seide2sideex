@@ -11,7 +11,13 @@ export function openCommandFunc(parameters: ConvertFuncParameter): Record {
         targetUrl = 'https://sideex.io/';
     }
     if (!targetUrl.includes('https://') && urlArr !== undefined) {
-        targetUrl = urlArr[0] + targetUrl.substr(1, targetUrl.length - 1); // remove the first '/' slash symbol
+        const urlArrLastChar = urlArr[0].substr(urlArr[0].length - 1);
+        const targetUrlFirstChar = targetUrl.substr(0, 1);
+        const tmpTargetUrl = targetUrl;
+        targetUrl = urlArr[0] + targetUrl;
+        if (urlArrLastChar == '/' && targetUrlFirstChar == '/') {
+            targetUrl = urlArr[0] + tmpTargetUrl.substr(1); // remove the first '/' slash symbol
+        }
     }
 
     const sideexRecord: Record = {
