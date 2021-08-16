@@ -1,0 +1,58 @@
+{
+  "id": "85daed90-c395-4eb6-a833-5fd8a47bca27",
+  "version": "2.0",
+  "name": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox",
+  "tests": [{
+    "id": "0c9f0623-90e0-4133-8ab3-45fc985f8101",
+    "name": "Untitled",
+    "commands": [{
+      "id": "df3d7df6-330d-472f-8e59-638993fcc0a5",
+      "comment": "",
+      "command": "open",
+      "target": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2b93406-c296-494b-8c42-23fbb09b65d4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f6747b9-80f8-42ba-9661-dd4fc5539f18",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=2",
+      "targets": [
+        ["index=2"]
+      ],
+      "value": ""
+    }, {
+      "id": "7295238b-a1f6-4424-b3a2-de8dff47cc0c",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=coding",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4ccc010-d103-4f0d-893d-278abd5e7d27",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=music",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7f8fe1de-5781-4352-a006-8ca4d44e31e2",
+    "name": "check 1 Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0c9f0623-90e0-4133-8ab3-45fc985f8101"]
+  }],
+  "urls": ["https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox"],
+  "plugins": []
+}
