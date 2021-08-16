@@ -1,0 +1,82 @@
+{
+  "id": "df393c17-cfc5-462b-93e2-613d9e896834",
+  "version": "2.0",
+  "name": "https://moz.com/search",
+  "url": "https://moz.com",
+  "tests": [{
+    "id": "db4328e8-98f9-43e9-98f5-953f442e2e18",
+    "name": "Untitled",
+    "commands": [{
+      "id": "0fa13957-1972-473d-be9e-1cd570b08ddc",
+      "comment": "",
+      "command": "open",
+      "target": "/search",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1521615e-4be4-4869-86f5-425f7694b5d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8610804-44c7-415e-a3b0-98dc611384ad",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Search moz.com"
+    }, {
+      "id": "7e758b71-0ddc-4587-8c1a-7bac38a57b47",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Site Search - Moz",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd323eaa-6ee0-4fa5-bda3-4d0192fe218f",
+      "comment": "",
+      "command": "click",
+      "target": "id=bcs-searchbox",
+      "targets": [
+        ["id=bcs-searchbox", "id"],
+        ["css=#bcs-searchbox", "css:finder"],
+        ["xpath=//input[@id='bcs-searchbox']", "xpath:attributes"],
+        ["xpath=//main[@id='content']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85f5de7a-d05b-4b3b-a782-6c59faba7502",
+      "comment": "",
+      "command": "type",
+      "target": "id=bcs-searchbox",
+      "targets": [
+        ["id=bcs-searchbox", "id"],
+        ["css=#bcs-searchbox", "css:finder"],
+        ["xpath=//input[@id='bcs-searchbox']", "xpath:attributes"],
+        ["xpath=//main[@id='content']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "aaa"
+    }, {
+      "id": "a62790f3-89ed-4b1e-9992-a8d55269560b",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=bcs-searchbox",
+      "targets": [],
+      "value": "aaa"
+    }]
+  }],
+  "suites": [{
+    "id": "7ea90a63-09c2-4eed-90c6-0076071ec11a",
+    "name": "verify 1 Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["db4328e8-98f9-43e9-98f5-953f442e2e18"]
+  }],
+  "urls": ["https://moz.com/"],
+  "plugins": []
+}

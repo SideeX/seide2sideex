@@ -1,0 +1,84 @@
+{
+  "id": "9c5e8a00-0551-4d91-9547-64dcdcc88720",
+  "version": "2.0",
+  "name": "https://developer.mozilla.org/zh-CN/",
+  "url": "https://developer.mozilla.org/zh-CN/",
+  "tests": [{
+    "id": "5b8aaf02-b029-425d-823f-15838d9c0e6b",
+    "name": "Untitled",
+    "commands": [{
+      "id": "e8ecb796-face-432d-8b29-bd7f0f867584",
+      "comment": "",
+      "command": "open",
+      "target": "https://developer.mozilla.org/zh-CN/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5aa8cc68-dbf7-48eb-a0c7-1939b90b142c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abd23615-3293-420c-af3e-d5ba002d7a6c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.contribute > h2",
+      "targets": [],
+      "value": "Help improve MDN Web Docs"
+    }, {
+      "id": "0d2ed676-24f9-450e-bce4-a0ea977b42d2",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "MDN Web Docs",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cebc8da-98a0-4166-b180-ca057e47b0a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=main-q",
+      "targets": [
+        ["id=main-q", "id"],
+        ["name=q", "name"],
+        ["css=#main-q", "css:finder"],
+        ["xpath=//input[@id='main-q']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-main-search']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d810c24-7b2a-4a12-b7d3-683fb0654b93",
+      "comment": "",
+      "command": "type",
+      "target": "id=main-q",
+      "targets": [
+        ["id=main-q", "id"],
+        ["name=q", "name"],
+        ["css=#main-q", "css:finder"],
+        ["xpath=//input[@id='main-q']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-main-search']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aaa"
+    }, {
+      "id": "523abe6e-4067-4076-afab-d6e9768c8fdd",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=main-q",
+      "targets": [],
+      "value": "aaa"
+    }]
+  }],
+  "suites": [{
+    "id": "6b7e36ad-5a50-476d-b5ea-5c58d931d735",
+    "name": "verify 4 Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5b8aaf02-b029-425d-823f-15838d9c0e6b"]
+  }],
+  "urls": ["https://developer.mozilla.org/zh-CN/"],
+  "plugins": []
+}

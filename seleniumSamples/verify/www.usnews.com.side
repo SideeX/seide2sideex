@@ -1,0 +1,79 @@
+{
+  "id": "2e29da24-8443-4370-b3cc-f47db9107962",
+  "version": "2.0",
+  "name": "https://www.usnews.com/",
+  "url": "https://www.usnews.com/",
+  "tests": [{
+    "id": "2ec3c0cd-d639-4195-918b-abcbb5e8acaf",
+    "name": "Untitled",
+    "commands": [{
+      "id": "79737950-b2af-4283-aa45-686afe543175",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.usnews.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8d4d915-cb21-4f97-a073-9e8a8a0fd918",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f9816bf-69d1-4e26-9773-e4c7cdad2d93",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.CYZBT > .Heading__HeadingStyled-sc-1w5xk2o-0-h2",
+      "targets": [],
+      "value": "RANKINGS & ADVICE"
+    }, {
+      "id": "c0e1cfab-6772-4d97-85c4-f512926a8eca",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "U.S. News & World Report: News, Rankings and Analysis on Politics, Education, Healthcare and More",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10d2a3a0-618a-4117-9e02-0872fe60a4cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.deRAyg",
+      "targets": [
+        ["css=.deRAyg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "12d19c7b-0fd2-43a6-b5ed-37bb572e08af",
+      "comment": "",
+      "command": "type",
+      "target": "id=gsc-i-id1",
+      "targets": [
+        ["id=gsc-i-id1", "id"],
+        ["name=search", "name"],
+        ["css=#gsc-i-id1", "css:finder"],
+        ["xpath=//input[@id='gsc-i-id1']", "xpath:attributes"],
+        ["xpath=//td[@id='gs_tti50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aaa"
+    }, {
+      "id": "a87a7106-5acf-4268-9870-f1b43b757b46",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=gsc-i-id1",
+      "targets": [],
+      "value": "aaa"
+    }]
+  }],
+  "suites": [{
+    "id": "51db3d32-2250-4963-b4c1-162d03bf033d",
+    "name": "verify 6 Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2ec3c0cd-d639-4195-918b-abcbb5e8acaf"]
+  }],
+  "urls": ["https://www.usnews.com/"],
+  "plugins": []
+}
