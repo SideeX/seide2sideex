@@ -1,25 +1,25 @@
-import { echoFunc } from '../src/recordCommand/echoFunc';
+import { timesFunc } from '../src/recordCommand/timesFunc';
 import { Command } from '../src/struct/seleniumStruct';
 import { Record } from '../src/struct/sideexStruct';
 import { ConvertFuncParameter } from '../src/struct/convertFuncParameterStruct';
 
-const echoCommand: Command = {
-    id: '123-456',
+const timesCommand: Command = {
+    id: '1',
     comment: '',
-    command: 'echo',
-    target: 'Hello world',
+    command: 'times',
+    target: '3',
     targets: [],
     value: '',
-}
+};
 
-const echoExpected: Record = {
-    name: echoCommand.command,
+const timesExpected: Record = {
+    name: 'WHILE',
     target: {
         usedIndex: 0,
         options: [
             {
                 type: 'other',
-                value: echoCommand.target,
+                value: '1==1',
             },
         ],
         tac: '',
@@ -29,31 +29,31 @@ const echoExpected: Record = {
         options: [
             {
                 type: 'other',
-                value: '',
+                value: timesCommand.target,
             },
         ],
         tac: '',
     },
     pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
     comment: false,
-}
+};
 
-const echoParameters: ConvertFuncParameter = {
-    command: echoCommand,
+const timesParameters: ConvertFuncParameter = {
+    command: timesCommand,
     commands: [],
     commandIndex: 0,
     isCommandComment: false,
-    suiteName: 'ehcoTest',
+    suiteName: 'timesTest',
     isElseIfCommand: false,
     doRepeat: {
         doCount: 0,
         currentDo: 0,
-        doRecords: []
-    }
-}
+        doRecords: [],
+    },
+};
 
-const echoActual = echoFunc(echoParameters);
+const timesActual = timesFunc(timesParameters);
 
-test('echo test', () => {
-    expect(echoActual).toMatchObject(echoExpected);
+test('times test', () => {
+    expect(timesActual).toMatchObject(timesExpected);
 });

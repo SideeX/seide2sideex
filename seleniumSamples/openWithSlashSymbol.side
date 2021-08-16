@@ -1,71 +1,115 @@
 {
-  "id": "437caa7c-1aab-4532-8fb9-751c585b4d6f",
-  "version": "2.0",
-  "name": "open",
-  "url": "https://stackoverflow.com",
-  "tests": [{
-    "id": "2dd8c066-78ec-4930-ac33-14cd20ccb481",
-    "name": "openStackoverflowTest",
-    "commands": [{
-      "id": "d1e5d9df-3ee0-4e79-aba7-b07dd4e67f46",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "221de395-3803-49cc-ae95-5eebf47c33e7",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "980x728",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c12d751b-3d9c-49e9-8fd6-3cddd7d17a35",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=About",
-      "targets": [
-        ["linkText=About", "linkText"],
-        ["css=.flex--item:nth-child(1) > .-marketing-link", "css:finder"],
-        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/company')]", "xpath:href"],
-        ["xpath=//div/ol/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
-    "id": "79be6088-43c3-4e95-900a-292259afb5a0",
-    "name": "openGoogleTest",
-    "commands": [{
-      "id": "bc7e1239-00b1-4501-a080-f3b21f9aa6cf",
-      "comment": "",
-      "command": "open",
-      "target": "https://www.google.com/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1e1e7d43-ba00-4480-84ab-4793fa1ff570",
-      "comment": "",
-      "command": "click",
-      "target": "css=center:nth-child(1) > .RNmpXc",
-      "targets": [
-        ["css=center:nth-child(1) > .RNmpXc", "css:finder"],
-        ["xpath=(//input[@name='btnI'])[2]", "xpath:attributes"],
-        ["xpath=//div[3]/center/input[2]", "xpath:position"]
-      ],
-      "value": ""
-    }]
-  }],
-  "suites": [{
-    "id": "7d1aef87-7ad4-432e-abbc-cb052abd3cb2",
-    "name": "openSuite1",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": ["2dd8c066-78ec-4930-ac33-14cd20ccb481", "79be6088-43c3-4e95-900a-292259afb5a0"]
-  }],
-  "urls": ["https://stackoverflow.com/"],
-  "plugins": []
+    "id": "437caa7c-1aab-4532-8fb9-751c585b4d6f",
+    "version": "2.0",
+    "name": "open",
+    "url": "https://stackoverflow.com",
+    "tests": [
+        {
+            "id": "2dd8c066-78ec-4930-ac33-14cd20ccb481",
+            "name": "openStackoverflowTest",
+            "commands": [
+                {
+                    "id": "d1e5d9df-3ee0-4e79-aba7-b07dd4e67f46",
+                    "comment": "",
+                    "command": "open",
+                    "target": "/",
+                    "targets": [],
+                    "value": ""
+                },
+                {
+                    "id": "221de395-3803-49cc-ae95-5eebf47c33e7",
+                    "comment": "",
+                    "command": "setWindowSize",
+                    "target": "980x728",
+                    "targets": [],
+                    "value": ""
+                },
+                {
+                    "id": "c12d751b-3d9c-49e9-8fd6-3cddd7d17a35",
+                    "comment": "",
+                    "command": "click",
+                    "target": "linkText=About",
+                    "targets": [
+                        [
+                            "linkText=About",
+                            "linkText"
+                        ],
+                        [
+                            "css=.flex--item:nth-child(1) > .-marketing-link",
+                            "css:finder"
+                        ],
+                        [
+                            "xpath=//a[contains(text(),'About')]",
+                            "xpath:link"
+                        ],
+                        [
+                            "xpath=//a[contains(@href, '/company')]",
+                            "xpath:href"
+                        ],
+                        [
+                            "xpath=//div/ol/li/a",
+                            "xpath:position"
+                        ],
+                        [
+                            "xpath=//a[contains(.,'About')]",
+                            "xpath:innerText"
+                        ]
+                    ],
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "id": "79be6088-43c3-4e95-900a-292259afb5a0",
+            "name": "openGoogleTest",
+            "commands": [
+                {
+                    "id": "bc7e1239-00b1-4501-a080-f3b21f9aa6cf",
+                    "comment": "",
+                    "command": "open",
+                    "target": "https://www.google.com/",
+                    "targets": [],
+                    "value": ""
+                },
+                {
+                    "id": "1e1e7d43-ba00-4480-84ab-4793fa1ff570",
+                    "comment": "",
+                    "command": "click",
+                    "target": "css=center:nth-child(1) > .RNmpXc",
+                    "targets": [
+                        [
+                            "css=center:nth-child(1) > .RNmpXc",
+                            "css:finder"
+                        ],
+                        [
+                            "xpath=(//input[@name='btnI'])[2]",
+                            "xpath:attributes"
+                        ],
+                        [
+                            "xpath=//div[3]/center/input[2]",
+                            "xpath:position"
+                        ]
+                    ],
+                    "value": ""
+                }
+            ]
+        }
+    ],
+    "suites": [
+        {
+            "id": "7d1aef87-7ad4-432e-abbc-cb052abd3cb2",
+            "name": "openWithSlashSymbol",
+            "persistSession": false,
+            "parallel": false,
+            "timeout": 300,
+            "tests": [
+                "2dd8c066-78ec-4930-ac33-14cd20ccb481",
+                "79be6088-43c3-4e95-900a-292259afb5a0"
+            ]
+        }
+    ],
+    "urls": [
+        "https://stackoverflow.com/"
+    ],
+    "plugins": []
 }
