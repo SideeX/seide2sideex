@@ -5,6 +5,13 @@ export function openCommandFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const urlArr = parameters.urlArr;
     const isCommandComment = parameters.isCommandComment;
+    if (urlArr !== undefined) {
+        console.log(
+            `Warning: if you want to convert open command, make sure that base URL is correct. 
+            Only the first index of 'urls' will be selected.
+            At this case, the selected base URL will be: ${urlArr[0]}`,
+        );
+    }
 
     let targetUrl = seleniumCommand.target;
     if (targetUrl == '' && urlArr !== undefined) {

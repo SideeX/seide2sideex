@@ -10,14 +10,12 @@ export function selectWindowFunc(parameters: ConvertFuncParameter): Record {
     // handle=${root} == win_ser_local
     // handle=${random4digitNumber} == win_ser_1 Ex: handle=${win3490}
     let targetStr = seleniumCommand.target;
-    console.log('libWindowHandle from selectWindowFunc:', libWindowHandle);
     if (seleniumCommand.target.substr(9, 4) == 'root') {
         targetStr = 'win_ser_local';
     } else {
         if (libWindowHandle != undefined) {
             const indexLib =
                 libWindowHandle.indexOf(targetStr.substr(9, 7)) + 1;
-            console.log(indexLib);
             targetStr = 'win_ser_' + indexLib.toString();
         }
     }
