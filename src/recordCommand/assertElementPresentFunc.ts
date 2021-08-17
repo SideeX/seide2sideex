@@ -9,7 +9,7 @@ export function assertElementPresentFunc(
     const isCommandComment = parameters.isCommandComment;
 
     const sideexRecord: Record = {
-        name: 'assertElement',
+        name: 'assertPresence',
         target: {
             usedIndex: 0,
             options: [

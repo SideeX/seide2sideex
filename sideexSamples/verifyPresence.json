@@ -1,5 +1,5 @@
 {
-  "time": 1626029096585,
+  "time": 1627630072107,
   "version": {
     "sideex": [
       3,
@@ -14,11 +14,11 @@
   },
   "suites": [
     {
-      "title": "assertElement",
+      "title": "verifyPresence",
       "enableOnPlaying": true,
       "cases": [
         {
-          "title": "assertElement",
+          "title": "verifyPresence",
           "enableOnPlaying": true,
           "networkSpeed": 0,
           "records": [
@@ -53,7 +53,49 @@
               "comment": false
             },
             {
-              "name": "assertElement",
+              "name": "verifyPresence",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "id",
+                    "value": "id=Button"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//button[@id='locatorButton']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=#locatorButton"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "500"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "verifyPresence",
               "target": {
                 "usedIndex": 0,
                 "options": [
@@ -82,66 +124,6 @@
                   {
                     "type": "other",
                     "value": ""
-                  }
-                ],
-                "tac": ""
-              },
-              "pwt": {
-                "pbw": 0,
-                "paw": 0,
-                "prw": 0,
-                "pdw": 0
-              },
-              "comment": false
-            },
-            {
-              "name": "assertElement",
-              "target": {
-                "usedIndex": 0,
-                "options": [
-                  {
-                    "type": "other",
-                    "value": "id=Button"
-                  }
-                ],
-                "tac": ""
-              },
-              "value": {
-                "usedIndex": 0,
-                "options": [
-                  {
-                    "type": "other",
-                    "value": "500"
-                  }
-                ],
-                "tac": ""
-              },
-              "pwt": {
-                "pbw": 0,
-                "paw": 0,
-                "prw": 0,
-                "pdw": 0
-              },
-              "comment": false
-            },
-            {
-              "name": "echo",
-              "target": {
-                "usedIndex": 0,
-                "options": [
-                  {
-                    "type": "other",
-                    "value": ""
-                  }
-                ],
-                "tac": ""
-              },
-              "value": {
-                "usedIndex": 0,
-                "options": [
-                  {
-                    "type": "other",
-                    "value": "This command will not be executed since the test case terminated due to command failure"
                   }
                 ],
                 "tac": ""

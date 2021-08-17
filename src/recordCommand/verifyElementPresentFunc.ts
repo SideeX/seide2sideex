@@ -9,7 +9,7 @@ export function verifyElementPresentFunc(
     const isCommandComment = parameters.isCommandComment;
 
     const sideexRecord: Record = {
-        name: 'verifyElement',
+        name: 'verifyPresence',
         target: {
             usedIndex: 0,
             options: [
