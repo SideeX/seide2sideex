@@ -31,11 +31,23 @@ export function mainFunc(filePath: string) {
         const testId: string = seleniumTests[i].id;
         dictforSeleniumTests[testId] = i;
     }
+    const suitesName: string[] = [];
+    const testSuiteDetail: { [testName: string]: string[] } = {};
+    seleniumSuites.forEach((suite) => {
+        suitesName.push(suite.name); // get suites name
+        testSuiteDetail[suite.name] = [];
+        suite.tests.forEach((test) => {
+            const testId = dictforSeleniumTests[test];
+            testSuiteDetail[suite.name].push(seleniumTests[testId].name);
+        });
+    });
 
     const objDoConvert = {
         urlArr: seleniumUrls,
         seleniumTests: seleniumTests,
         dictforSeleniumTests: dictforSeleniumTests,
+        suitesName,
+        testSuiteDetail,
     };
 
     //Check if there are more than one suite
@@ -105,6 +117,8 @@ interface structDoConvert {
     urlArr: string[];
     seleniumTests: Test[];
     dictforSeleniumTests: { [testId: string]: number };
+    suitesName: string[];
+    testSuiteDetail: { [testName: string]: string[] };
 }
 
 /**
@@ -131,6 +145,8 @@ function doConvert(suite: SeleniumSuite, objDoConvert: structDoConvert) {
             objDoConvert.urlArr,
             libWindowHandle,
             suiteName,
+            objDoConvert.suitesName,
+            objDoConvert.testSuiteDetail,
         );
         // push the sideex case
         sideexSuite.cases.push(sideexCase);

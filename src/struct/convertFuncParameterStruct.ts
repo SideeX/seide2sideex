@@ -29,4 +29,6 @@ export interface ConvertFuncParameter {
         currentDo: number;
         doRecords: Record[][];
     };
+    suitesName: string[];
+    testSuiteDetail: { [testName: string]: string[] };
 }

@@ -35,6 +35,8 @@ function checkIfComment(command: Command) {
  * @param urlArr array of url
  * @param libWindowHandle
  * @param suiteName suite name
+ * @param suitesName suites name(array)
+ * @param testSuiteDetail detail of test suite
  * @returns {Case} sideex test case
  */
 export function testToCase(
@@ -42,6 +44,8 @@ export function testToCase(
     urlArr: string[],
     libWindowHandle: string[],
     suiteName: string,
+    suitesName: string[],
+    testSuiteDetail: { [testName: string]: string[] },
 ): Case {
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
@@ -83,6 +87,8 @@ export function testToCase(
             urlArr: urlArr,
             mouseCord: mouseCord,
             doRepeat: doRepeat,
+            suitesName: suitesName,
+            testSuiteDetail: testSuiteDetail,
         });
         if (sideexRecord) {
             if (Array.isArray(sideexRecord)) {
