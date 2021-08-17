@@ -1,0 +1,71 @@
+{
+  "id": "780308e8-a61a-4933-8515-a3415defa83d",
+  "version": "2.0",
+  "name": "runOnMultiSuite",
+  "url": "https://sideex.io/",
+  "tests": [{
+    "id": "b0199b25-9603-44c4-88d8-cfe8042336cf",
+    "name": "case1",
+    "commands": [{
+      "id": "887a85d6-d71a-4d3f-8933-13ac5b9e62eb",
+      "comment": "",
+      "command": "run",
+      "target": "case2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3b673ef-ed98-43ea-ac6a-a350fca6ee7d",
+      "comment": "",
+      "command": "run",
+      "target": "case3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "198e3649-aa25-4d5f-8d3f-749b6884da64",
+      "comment": "",
+      "command": "echo",
+      "target": "end ~",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b27fcd7c-d395-442a-8ebf-0c9d59c84190",
+    "name": "case2",
+    "commands": [{
+      "id": "74b3be92-4e0b-4956-8101-71296c3c21d8",
+      "comment": "",
+      "command": "echo",
+      "target": "include me",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a6935b4e-82f0-44c5-83bf-c8ebd7548e4e",
+    "name": "case3",
+    "commands": [{
+      "id": "e622427a-399c-4cb1-bdf2-ffd87b2b17ee",
+      "comment": "",
+      "command": "echo",
+      "target": "say hi from case3",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "98c5232e-6014-4f6a-ab43-87b68c6be28d",
+    "name": "run",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b0199b25-9603-44c4-88d8-cfe8042336cf", "b27fcd7c-d395-442a-8ebf-0c9d59c84190"]
+  }, {
+    "id": "8cf451a4-19f8-4ec0-840c-2bdaea5899f8",
+    "name": "run2",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a6935b4e-82f0-44c5-83bf-c8ebd7548e4e"]
+  }],
+  "urls": ["https://sideex.io/"],
+  "plugins": []
+}
