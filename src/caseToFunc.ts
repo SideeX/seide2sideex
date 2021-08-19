@@ -2,7 +2,7 @@ import { openCommandFunc } from './recordCommand/openCommandFunc';
 import { addSelectionFunc } from './recordCommand/addSelectionFunc';
 import { removeSelectionFunc } from './recordCommand/removeSelectionFunc';
 import { answerOnNextPromptCommandFunc } from './recordCommand/answerOnNextPromptCommandFunc';
-import { assertPromptCommandFunc } from './recordCommand/assertPromptCommandFunc';
+import { assertPromptFunc } from './recordCommand/assertPromptFunc';
 import { dragAndDropToObjectFunc } from './recordCommand/dragAndDropToObjectFunc';
 import { setWindowSizeFunc } from './recordCommand/setWindowSizeFunc';
 import { assertAlertFunc } from './recordCommand/assertAlertFunc';
@@ -82,7 +82,7 @@ export const commandFunc: {
     assertElementNotPresent: defaultFunc,
     assertNotChecked: verifyChecked_and_notCheckedFunc,
     assertNotSelectedValue: defaultFunc,
-    assertPrompt: assertPromptCommandFunc,
+    assertPrompt: assertPromptFunc,
     assertSelectedValue: defaultFunc,
     assertSelectedLabel: defaultFunc,
     assertText: assertTextFunc,
