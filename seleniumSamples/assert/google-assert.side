@@ -1,0 +1,73 @@
+{
+  "id": "585975b4-1e4c-48e4-a03d-59bc8b1ad0cf",
+  "version": "2.0",
+  "name": "https://www.google.com/",
+  "url": "https://www.google.com/",
+  "tests": [{
+    "id": "7e07dbfa-957b-4a8a-8e4a-8eb7eee15143",
+    "name": "google-assert",
+    "commands": [{
+      "id": "3653ab8b-d702-4860-b439-00de32c12949",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b0e6d23-0544-44c2-8b2a-bc7757d4e6d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd5f2c29-89b2-42fe-b356-41a6fda73190",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Google",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "409e911d-ce98-4a0b-8a33-0a89936fc106",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "200c9381-98ad-46fc-bcee-a534079dd5f8",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "abc"
+    }, {
+      "id": "d359d91c-7bf6-4a76-a81a-4b3cd20b7def",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=q",
+      "targets": [],
+      "value": "abc"
+    }]
+  }],
+  "suites": [{
+    "id": "1a5c472e-c822-4d72-8b46-14ed046aea34",
+    "name": "google-assert",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7e07dbfa-957b-4a8a-8e4a-8eb7eee15143"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

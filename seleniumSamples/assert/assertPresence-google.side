@@ -1,0 +1,76 @@
+{
+  "id": "e4a36929-c73b-4a65-a087-75813ff4af7b",
+  "version": "2.0",
+  "name": "assertPresence-google",
+  "url": "https://www.google.com/",
+  "tests": [{
+    "id": "98ba80ca-ce1a-4a22-8336-d663d3e69bcf",
+    "name": "assertPresence-google",
+    "commands": [{
+      "id": "af9e874a-e3a5-452d-8322-16e834a521ae",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce906a4f-2eed-4cda-acd2-2ac10e376c6f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=關於 Google",
+      "targets": [
+        ["linkText=關於 Google", "linkText"],
+        ["css=.MV3Tnb:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'關於 Google')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://about.google/?fg=1&utm_source=google-&utm_medium=referral&utm_campaign=hp-header')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'關於 Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24e96c15-3b0d-42c1-96a9-1018cbf6695f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=center:nth-child(1) > .gNO89b",
+      "targets": [
+        ["css=center:nth-child(1) > .gNO89b", "css:finder"],
+        ["xpath=(//input[@name='btnK'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b858721-8da4-4331-895e-049f59a6e3c3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Google 商店",
+      "targets": [
+        ["linkText=Google 商店", "linkText"],
+        ["css=.MV3Tnb:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Google 商店')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://store.google.com/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=zh-TW-')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Google 商店')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad27f4a6-1556-4ffa-9991-4c5880738997",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.goxjub",
+      "targets": [
+        ["css=.goxjub", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ccdb860b-caff-4339-b61f-a4f1dd34eaa9",
+    "name": "assertPresence-google",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["98ba80ca-ce1a-4a22-8336-d663d3e69bcf"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

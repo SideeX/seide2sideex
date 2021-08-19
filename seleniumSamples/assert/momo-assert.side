@@ -1,0 +1,61 @@
+{
+  "id": "b2fcbbaf-8d31-4d0b-956f-5a1a00882ee1",
+  "version": "2.0",
+  "name": "momo-assert",
+  "url": "https://www.momoshop.com.tw",
+  "tests": [{
+    "id": "4e36f9d8-617b-4d9b-a3b8-38abd7deb3a2",
+    "name": "momo-assert",
+    "commands": [{
+      "id": "cbbf0a92-de18-44c0-b077-acbabc7a28bf",
+      "comment": "",
+      "command": "open",
+      "target": "/goods/GoodsDetail.jsp?i_code=8093571&str_category_code=1500203970&ctype=B&Area=DgrpCategory",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e14b966-b0ec-4302-9922-c378cd6486b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ac41aa5-33a2-4d80-a479-77f8fdd3186d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#inCar img",
+      "targets": [
+        ["css=#inCar img", "css:finder"],
+        ["xpath=//img[@alt='放入購物車']", "xpath:img"],
+        ["xpath=//dd[@id='inCar']/a/img", "xpath:idRelative"],
+        ["xpath=//dd/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bae36d55-bd7d-48a5-84de-46e53b41de41",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "請選擇商品規格",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63aa74da-3074-4055-acc3-a127e7c81697",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f6c9fb3f-2da6-4795-8989-214f473d6e96",
+    "name": "momo-assert",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4e36f9d8-617b-4d9b-a3b8-38abd7deb3a2"]
+  }],
+  "urls": ["https://www.momoshop.com.tw/"],
+  "plugins": []
+}

@@ -1,21 +1,27 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function assertValueFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
+    let options: Option[] = [];
 
+    options.push({
+        type: 'other',
+        value: seleniumCommand.target,
+    });
+
+    seleniumCommand.targets.forEach((target) => {
+        options.push({
+            type: target[1],
+            value: target[0],
+        });
+    });
     const sideexRecord: Record = {
         name: 'assertValue',
         target: {
             usedIndex: 0,
-            options: [
-                {
-                    type: 'other',
-                    value: seleniumCommand.target,
-                },
-            ],
+            options: options,
             tac: '',
         },
         value: {
