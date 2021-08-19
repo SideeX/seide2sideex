@@ -4,11 +4,14 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function storeAttributeFunc(parameters: ConvertFuncParameter): Record[] {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
+    const seleniumCommandTarget = seleniumCommand.target;
+    const indexOfAtSign = seleniumCommandTarget.lastIndexOf('@'); //index of last '@'
 
-    const splitArr = seleniumCommand.target.split('@');
-    const tempValue = 'tempVar';
-    const locator = splitArr[0]; //linkText case to link
-    const attribute = '$' + `{${tempValue}.${splitArr[1]}}`;
+    const tempValue = 'tempVar' + Math.floor(Math.random() * (999 + 1));
+    const locator = seleniumCommandTarget.substr(0, indexOfAtSign);
+    const attribute =
+        '$' +
+        `{${tempValue}.${seleniumCommandTarget.substr(indexOfAtSign + 1)}}`;
 
     const sideexRecord: Record[] = [
         {
