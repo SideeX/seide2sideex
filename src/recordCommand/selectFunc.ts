@@ -22,7 +22,7 @@ export function selectFunc(parameters: ConvertFuncParameter): Record {
             options: [
                 {
                     type: 'other',
-                    value: seleniumCommand.value.substr(6), // remove 'label='
+                    value: seleniumCommand.value, //label= value= index=
                 },
             ],
             tac: '',
