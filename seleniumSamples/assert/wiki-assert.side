@@ -1,0 +1,84 @@
+{
+  "id": "35785ffb-eada-4fea-9464-b790dc610d84",
+  "version": "2.0",
+  "name": "https://en.wikipedia.org/wiki/Main_Page",
+  "url": "https://en.wikipedia.org/wiki/Main_Page",
+  "tests": [{
+    "id": "2dee51c1-44c8-48c5-8ea0-114d31cdffbc",
+    "name": "wiki-assert",
+    "commands": [{
+      "id": "6927c636-bbef-47ec-b7f8-37089b669705",
+      "comment": "",
+      "command": "open",
+      "target": "https://en.wikipedia.org/wiki/Main_Page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "300c571a-cb15-4e7e-b926-a1d6b04fafe1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c06c8dbb-7aec-4ea6-80b1-459bdb2553a2",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=In_the_news",
+      "targets": [],
+      "value": "In the news"
+    }, {
+      "id": "09ca4523-eaf3-47dd-8697-369ebf15efe6",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Wikipedia, the free encyclopedia",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdaa1b73-4a4f-4a7d-86f2-d4a9a5e9b0b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='simpleSearch']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "19f32fb1-39d3-4370-8e06-b73f2f59f219",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='simpleSearch']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "abc"
+    }, {
+      "id": "49efd530-19a5-474f-8079-6e87657802c8",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=searchInput",
+      "targets": [],
+      "value": "abc"
+    }]
+  }],
+  "suites": [{
+    "id": "6144c523-24e0-4149-9b7d-3f372e588470",
+    "name": "wiki-assert",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2dee51c1-44c8-48c5-8ea0-114d31cdffbc"]
+  }],
+  "urls": ["https://en.wikipedia.org/wiki/Main_Page"],
+  "plugins": []
+}
