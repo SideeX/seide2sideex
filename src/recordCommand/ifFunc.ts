@@ -44,6 +44,7 @@ export function ifFunc(parameters: ConvertFuncParameter): Record {
 }
 
 export function targetStr(str: string): string{
+    //解決參數type為string時，需要在該參數兩邊加上雙引號 ex. "${myVar}"
     try{
         //拆分parameter 和 parameter判斷值
         var temp = str;
@@ -95,17 +96,20 @@ export function targetStr(str: string): string{
             }
         }
         if (right_flag == 1){
+            right_flag = 0;
             str_type.push("other");
         }
 
 
-        //加雙引號
+        //type為string時，加雙引號
         //console.log(str_type);
         var str_index = 0;
-        for(let i = 0; i< str_type.length; i++){
-            if(str_type[i] == 'other'){
+        for (let i = 0; i< str_type.length; i++){
+            if (str_index >= str.length){
+                break;
+            }else if (str_type[i] == 'other'){
                 for (let j = str_index; j < str.length; j++){
-                    if(str[j] == "}"){
+                    if (str[j] == "}"){
                         str_index = j+1;
                         break;
                     }
@@ -114,8 +118,8 @@ export function targetStr(str: string): string{
                 for (let j = str_index; j < str.length; j++){
                     if (str[j] == "$"){
                         str = str.substring(0,j)+"\""+str.substring(j,str.length);
-                        j++; //加在前頭，會一直重複
-                    }else if(str[j] == "}"){
+                        j++; //若雙引號加在前頭，會一直重複加上去
+                    }else if (str[j] == "}"){
                         str = str.substring(0,j+1)+"\""+str.substring(j+1,str.length);
                         str_index = j+1;
                         break;
@@ -125,10 +129,14 @@ export function targetStr(str: string): string{
         }
     }catch(e){
         console.log(`${e.name}: ${e.message}`);
-        console.log("Error: Please adjust manually!!!");
+        console.log("Error: Please modify ifCommand's target manually!!!");
     }finally{
         //console.log(str);
-        console.log("Warning: Maybe still have some errors. Please adjust manually!!!");
+        console.log(
+            "Warning: IF command maybe still have some problems. Please check your IF command's target.\n"+
+            "         If your parameters' type are string, you need to add \" on both sides of the parameters.\n"+
+            "         ex. \"${myVar}\""
+        );
         return str;
     }
 }

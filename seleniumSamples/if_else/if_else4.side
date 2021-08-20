@@ -1,0 +1,70 @@
+{
+  "id": "e8856905-a3a7-4d7e-9d29-369c4f1c22f5",
+  "version": "2.0",
+  "name": "if_else4",
+  "url": "",
+  "tests": [{
+    "id": "7c44b344-32bc-4d9f-83d0-f9dbcab25b98",
+    "name": "if_else4",
+    "commands": [{
+      "id": "16c9b190-e127-4d4a-97b5-aa007ebb3181",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let x = \"Hello\"; let y = \"World\"; return x+' '+y;",
+      "targets": [],
+      "value": "myStr"
+    }, {
+      "id": "d7804533-808a-441e-9dd5-096bc4f737a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Hello World\"",
+      "targets": [],
+      "value": "myStr1"
+    }, {
+      "id": "040d89d7-25df-41d5-846b-fe483200faa1",
+      "comment": "",
+      "command": "if",
+      "target": "${myStr} == ${myStr1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3dc09eb-47d0-4fd0-9181-fea3aa8be6f5",
+      "comment": "",
+      "command": "echo",
+      "target": "win",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d5a05ab-eef5-4817-99d9-0a62be0a8d56",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c3442de-6e27-4783-9617-231cea7bc40d",
+      "comment": "",
+      "command": "echo",
+      "target": "lose",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd7c8860-4072-4027-803b-a7ba9df605a5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "22dd3eb2-863c-43c3-ba5c-8f5262e935ce",
+    "name": "if_else4",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7c44b344-32bc-4d9f-83d0-f9dbcab25b98"]
+  }],
+  "urls": [],
+  "plugins": []
+}
