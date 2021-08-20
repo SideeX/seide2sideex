@@ -1,0 +1,56 @@
+{
+  "id": "10031bc8-969f-43bf-b0eb-adeb50ea1a58",
+  "version": "2.0",
+  "name": "executeScript1",
+  "url": "",
+  "tests": [{
+    "id": "38f88f1d-d4b5-4b14-8cd9-a3a8a0b35bbb",
+    "name": "exescript1",
+    "commands": [{
+      "id": "67390402-2fec-40c0-b373-cdc688e73d46",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let x = 100; var y = 55; return x*y",
+      "targets": [],
+      "value": "myVar"
+    }, {
+      "id": "a0630a67-ae8f-47a7-8fbf-b509a44ad50b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${myVar}+${myVar}",
+      "targets": [],
+      "value": "myVar"
+    }, {
+      "id": "561796ea-3958-4107-bf43-50ac7868ffbb",
+      "comment": "",
+      "command": "echo",
+      "target": "${myVar}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d6e79f7-3ebc-4ff7-b42f-a1c678bfe5b5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let x = \"Hello\"; let y = \"World\"; return x+' '+y;",
+      "targets": [],
+      "value": "myStr"
+    }, {
+      "id": "e841a849-c177-46f0-aae1-35c7139446f7",
+      "comment": "",
+      "command": "echo",
+      "target": "${myStr}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3413a26f-e87f-441f-bdf0-f26a630a23fb",
+    "name": "executeScript1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["38f88f1d-d4b5-4b14-8cd9-a3a8a0b35bbb"]
+  }],
+  "urls": [],
+  "plugins": []
+}
