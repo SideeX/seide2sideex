@@ -1,53 +1,67 @@
 {
-  "id": "10031bc8-969f-43bf-b0eb-adeb50ea1a58",
-  "version": "2.0",
-  "name": "executeScript2",
-  "url": "",
-  "tests": [{
-    "id": "38f88f1d-d4b5-4b14-8cd9-a3a8a0b35bbb",
-    "name": "exescript2-1",
-    "commands": [{
-      "id": "9db252b2-fa4f-40b0-b698-eb62e8e79b74",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let x = 10; var y = 120; if(x*x > y){\"good\"}else{\"bad\"}",
-      "targets": [],
-      "value": "myVar"
-    }, {
-      "id": "5c9c34fc-4111-433d-b08c-4ff4cd311d99",
-      "comment": "",
-      "command": "echo",
-      "target": "${myVar}",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "ec4df3f9-e2b5-430e-bc0a-cc2707c70cf8",
-    "name": "exescript2-2",
-    "commands": [{
-      "id": "6ae34309-5f6a-4ad5-aec7-684fd0bea4d5",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let a = [1, 2, 3]; let b = a.map((num) => { return num*num;}); return b;",
-      "targets": [],
-      "value": "myVar"
-    }, {
-      "id": "f679f703-55e5-4a15-bbfe-222331f5fd9e",
-      "comment": "",
-      "command": "echo",
-      "target": "${myVar}",
-      "targets": [],
-      "value": ""
-    }]
-  }],
-  "suites": [{
-    "id": "3413a26f-e87f-441f-bdf0-f26a630a23fb",
+    "id": "10031bc8-969f-43bf-b0eb-adeb50ea1a58",
+    "version": "2.0",
     "name": "executeScript2",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": ["38f88f1d-d4b5-4b14-8cd9-a3a8a0b35bbb"]
-  }],
-  "urls": [],
-  "plugins": []
+    "url": "",
+    "tests": [
+        {
+            "id": "38f88f1d-d4b5-4b14-8cd9-a3a8a0b35bbb",
+            "name": "exescript2-1",
+            "commands": [
+                {
+                    "id": "9db252b2-fa4f-40b0-b698-eb62e8e79b74",
+                    "comment": "",
+                    "command": "executeScript",
+                    "target": "let x = 10; var y = 120; if(x*x > y){\"good\"}else{\"bad\"}",
+                    "targets": [],
+                    "value": "myVar"
+                },
+                {
+                    "id": "5c9c34fc-4111-433d-b08c-4ff4cd311d99",
+                    "comment": "",
+                    "command": "echo",
+                    "target": "${myVar}",
+                    "targets": [],
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "id": "ec4df3f9-e2b5-430e-bc0a-cc2707c70cf8",
+            "name": "exescript2-2",
+            "commands": [
+                {
+                    "id": "6ae34309-5f6a-4ad5-aec7-684fd0bea4d5",
+                    "comment": "",
+                    "command": "executeScript",
+                    "target": "let a = [1, 2, 3]; let b = a.map((num) => { return num*num;}); return b;",
+                    "targets": [],
+                    "value": "myVar"
+                },
+                {
+                    "id": "f679f703-55e5-4a15-bbfe-222331f5fd9e",
+                    "comment": "",
+                    "command": "echo",
+                    "target": "${myVar}",
+                    "targets": [],
+                    "value": ""
+                }
+            ]
+        }
+    ],
+    "suites": [
+        {
+            "id": "3413a26f-e87f-441f-bdf0-f26a630a23fb",
+            "name": "executeScript2",
+            "persistSession": false,
+            "parallel": false,
+            "timeout": 300,
+            "tests": [
+                "38f88f1d-d4b5-4b14-8cd9-a3a8a0b35bbb",
+                "ec4df3f9-e2b5-430e-bc0a-cc2707c70cf8"
+            ]
+        }
+    ],
+    "urls": [],
+    "plugins": []
 }

@@ -1,8 +1,11 @@
-import { Command } from '../struct/seleniumStruct';
+//import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function defaultFunc(_parameters: ConvertFuncParameter): Record | null {
+export function defaultFunc(parameters: ConvertFuncParameter): Record | null {
+    console.log(
+        `Warning: This command (${parameters.command.command}) haven't convert`,
+    );
     return null;
     // const sideexRecord: Record = {
     //     name: seleniumCommand.command,
