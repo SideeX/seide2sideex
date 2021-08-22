@@ -5,8 +5,29 @@
   "url": "https://sideex.github.io",
   "tests": [{
     "id": "d757a304-91aa-4bc7-b9ad-074cbfaaa5a3",
-    "name": "times",
-    "commands": []
+    "name": "times_basic",
+    "commands": [{
+      "id": "ad2060ef-d35e-4ded-8516-96f80ccb6595",
+      "comment": "",
+      "command": "times",
+      "target": "1000",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "98c32631-cc23-48fd-91a2-056aa648ced4",
+      "comment": "",
+      "command": "echo",
+      "target": "1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7c9cc1d-678e-4147-9f29-87891949329e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }, {
     "id": "cbef845d-3e03-489e-8c80-d1b18bae6f1a",
     "name": "foreach_basic",
@@ -632,6 +653,232 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "80e042a0-68c4-402a-b978-290356863bab",
+    "name": "times_nested2_with_limit",
+    "commands": [{
+      "id": "fe8b86f1-c110-4e22-b339-ebc1345e38a9",
+      "comment": "",
+      "command": "times",
+      "target": "1000",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "41f5c530-b158-4db8-b495-83c7119888f7",
+      "comment": "",
+      "command": "times",
+      "target": "1000",
+      "targets": [],
+      "value": "5"
+    }, {
+      "id": "405d8c5f-1274-4479-8e2a-b04f77e0719c",
+      "comment": "",
+      "command": "echo",
+      "target": "1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "260c4e19-624f-40db-84cc-b49d0cdc8833",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fc8abd3-9cc8-43c3-be6e-f18736645168",
+      "comment": "",
+      "command": "echo",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "389bb80b-8631-4cd6-8fcd-9942d393c8ab",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6ee38a57-b3a5-48a4-b01f-5755e88c9ff1",
+    "name": "times_nested3",
+    "commands": [{
+      "id": "b0f135ea-a904-48cb-be2b-4f5ee119c40e",
+      "comment": "",
+      "command": "times",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "109c7ad1-c30e-4d26-a445-9e2677007487",
+      "comment": "",
+      "command": "echo",
+      "target": "1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "267eb5b0-5efd-4031-beea-b11b176b9c93",
+      "comment": "",
+      "command": "times",
+      "target": "4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2927dbe1-8e9a-4994-8986-4f3f3b3d7084",
+      "comment": "",
+      "command": "echo",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6796853f-cca9-4913-86b9-f776e5ef11f0",
+      "comment": "",
+      "command": "times",
+      "target": "5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57025486-d139-409c-9760-2d14f5b21c9d",
+      "comment": "",
+      "command": "echo",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5300a0e-bc57-42d7-a455-ca723daf662e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eefde04e-d052-4b11-9425-54b1c3850208",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22fd310f-834b-4812-9f00-6c7053561a74",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fed3ecc6-fa63-496a-9312-aad89e299f39",
+    "name": "times_nested_inside",
+    "commands": [{
+      "id": "3f73bc3a-3d48-4639-ab9c-fe164633f6bc",
+      "comment": "",
+      "command": "times",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1fd4c60-a6c4-49a5-b41e-68c4affd7e97",
+      "comment": "",
+      "command": "echo",
+      "target": "1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3b1338e-21d9-4ca2-a6b5-71c730e5d6e3",
+      "comment": "",
+      "command": "times",
+      "target": "4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72df8fc7-65a2-433d-a1a9-834fbc5b92a2",
+      "comment": "",
+      "command": "echo",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45eace97-b383-474a-8e21-f953affb0174",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f0b0e80-407a-4081-8f23-8306b6ebe611",
+      "comment": "",
+      "command": "times",
+      "target": "5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "292958e4-1a3e-4778-b510-52fd2c12ba65",
+      "comment": "",
+      "command": "echo",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8f2e212-4dde-4f4b-876e-9e5f8dc3a91c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2accedcd-cff2-41f5-8ea4-baf9eeca4345",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "343ad98b-e662-47ce-864b-66a5a08ec6a1",
+    "name": "times_nested2",
+    "commands": [{
+      "id": "17bcc03f-2390-4874-b14b-422e691e1bba",
+      "comment": "",
+      "command": "times",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04f8d3ef-b496-4e67-affc-234122f77c32",
+      "comment": "",
+      "command": "echo",
+      "target": "1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6f6ee24-3d68-46b9-87d2-4d2fca3ff75e",
+      "comment": "",
+      "command": "times",
+      "target": "5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9351bab-3bea-49c4-bd36-90fab0411a5c",
+      "comment": "",
+      "command": "echo",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36efafcd-3aad-48f0-a5d3-259369eff40a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d089c7b-92fe-4b5e-80a1-dac107520cd4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "356ea81f-6c04-4921-89ae-518fe54af0a3",
@@ -639,7 +886,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["d757a304-91aa-4bc7-b9ad-074cbfaaa5a3"]
+    "tests": ["d757a304-91aa-4bc7-b9ad-074cbfaaa5a3", "343ad98b-e662-47ce-864b-66a5a08ec6a1", "80e042a0-68c4-402a-b978-290356863bab", "6ee38a57-b3a5-48a4-b01f-5755e88c9ff1", "fed3ecc6-fa63-496a-9312-aad89e299f39"]
   }, {
     "id": "f91e7e32-99ea-4d59-a8d5-313c4c096d3d",
     "name": "foreach_test",
