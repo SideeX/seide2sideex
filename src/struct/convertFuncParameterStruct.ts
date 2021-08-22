@@ -31,4 +31,6 @@ export interface ConvertFuncParameter {
     };
     suitesName: string[];
     testSuiteDetail: { [testName: string]: string[] };
+    arrayStoreForTimes: string[];
+    countTimesCommand: number;
 }
