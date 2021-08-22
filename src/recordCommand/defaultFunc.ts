@@ -4,7 +4,7 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function defaultFunc(parameters: ConvertFuncParameter): Record | null {
     console.log(
-        `Warning: This command (${parameters.command.command}) haven't convert`,
+        `Warning: This command (${parameters.command.command}) haven't convert\n`,
     );
     return null;
     // const sideexRecord: Record = {
