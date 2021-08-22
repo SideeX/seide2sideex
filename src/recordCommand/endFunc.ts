@@ -9,7 +9,7 @@ export function endFunc(parameters: ConvertFuncParameter): Record[] {
     const isCommandComment = parameters.isCommandComment;
     const commandIndex = parameters.commandIndex;
     const commands = parameters.commands;
-    
+
     const sideexRecord: Record = {
         name: 'END',
         target: {

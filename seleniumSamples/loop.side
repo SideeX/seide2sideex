@@ -9,8 +9,36 @@
     "commands": []
   }, {
     "id": "cbef845d-3e03-489e-8c80-d1b18bae6f1a",
-    "name": "foreach",
-    "commands": []
+    "name": "foreach_basic",
+    "commands": [{
+      "id": "8e8419e3-2031-4aae-a492-9f587843507e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [0,1,2,3,4,5,6,7,8,9,10]",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "cf82ee27-5bf8-421f-96a3-f8d0c1a08d35",
+      "comment": "",
+      "command": "forEach",
+      "target": "test",
+      "targets": [],
+      "value": "iter"
+    }, {
+      "id": "1d6951dc-8f47-4f53-ba86-7eeb9b4e7d9a",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebac4bbe-9bf7-47a2-80f9-27df3243b35c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }, {
     "id": "dce492f3-d184-4027-a11b-2b75d5fe08c8",
     "name": "while",
@@ -308,6 +336,302 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "073baa3b-058e-4bc0-a3cb-5d25405c2df8",
+    "name": "foreach_nest2",
+    "commands": [{
+      "id": "86862bfd-7e45-457c-a97c-1a2b173fda8a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [0,1,2,3,4,5,6,7,8,9,10]",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "c04fd460-b482-46df-8458-ba474294e05c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['tyler', 'angry', 'me', 'he']",
+      "targets": [],
+      "value": "test2"
+    }, {
+      "id": "ac3c0969-ab0e-486b-8a23-48bac179ba7c",
+      "comment": "",
+      "command": "forEach",
+      "target": "test",
+      "targets": [],
+      "value": "iter"
+    }, {
+      "id": "23e74e92-c60a-43c6-980f-9a3a5d169291",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fc30a96-d5fd-47bf-a042-3f256625f210",
+      "comment": "",
+      "command": "forEach",
+      "target": "test2",
+      "targets": [],
+      "value": "iter2"
+    }, {
+      "id": "0f5ef7f2-09d9-41f2-ad64-f42db0af0fcf",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdf9d361-2d26-42d4-b762-37b00cbcf285",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a066b49-79bb-457c-b66d-021f12fc15a3",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6a6305d5-534f-458e-a023-5b03506335b9",
+    "name": "foreach_nest3",
+    "commands": [{
+      "id": "bd7f5605-9e57-4d3b-a1f1-19def9e51d1c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [0,1,2]",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "6dcff6be-3f85-476e-83cc-4c65357efa79",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['she', 'he', 'me']",
+      "targets": [],
+      "value": "test2"
+    }, {
+      "id": "075e6499-2618-4144-9246-44f0b2860e64",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [true, false, undefined]",
+      "targets": [],
+      "value": "test3"
+    }, {
+      "id": "89ddc5f5-01f4-4efc-bd21-9a9e511f4604",
+      "comment": "",
+      "command": "forEach",
+      "target": "test",
+      "targets": [],
+      "value": "iter"
+    }, {
+      "id": "44e5b594-1a5e-4268-98d5-5ad79c7e6b46",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8488f21d-b0d5-495d-97d0-0fb08ae353aa",
+      "comment": "",
+      "command": "forEach",
+      "target": "test2",
+      "targets": [],
+      "value": "iter2"
+    }, {
+      "id": "1c585ce3-d4a1-4042-bf93-7d98a5a67eaa",
+      "comment": "",
+      "command": "forEach",
+      "target": "test3",
+      "targets": [],
+      "value": "iter3"
+    }, {
+      "id": "c7317cdb-cec5-4113-918b-4f3bbc0aa04b",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter3}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d38be2c9-75f1-4f7e-aa30-6b5bbd49fcbd",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "141e8fe8-468d-42be-beb0-d762083103b6",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00fea898-c437-4401-ad92-54380ca03b33",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87d933e0-cc4b-45c7-a677-de2905861f18",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7a7dd11d-b249-4cb3-ae96-7ef347eb72e2",
+    "name": "foreach_nest2+",
+    "commands": [{
+      "id": "db0f1fe5-61bf-4049-851e-8b3382f74f5d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [0,1,2,3,4,5,6,7,8,9,10]",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "27a8fb2a-a8c9-4168-9e70-5f55986af865",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['tyler', 'angry', 'me', 'he']",
+      "targets": [],
+      "value": "test2"
+    }, {
+      "id": "de7e646d-48ae-4f50-96ad-32ef891f2418",
+      "comment": "",
+      "command": "forEach",
+      "target": "test",
+      "targets": [],
+      "value": "iter"
+    }, {
+      "id": "e8163430-46ec-4ef5-8c42-fed71ee7f90a",
+      "comment": "",
+      "command": "forEach",
+      "target": "test2",
+      "targets": [],
+      "value": "iter2"
+    }, {
+      "id": "7ac2e5bf-da2a-4607-bcc5-0d44207563f9",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83358c73-c59d-4e56-ab49-80372bd07176",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "509fb15e-d8c0-4544-baa9-9e4015666de6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b3ae8b5-8e2a-4fc3-a2b8-be0c6132021e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "38372438-fd06-41de-953f-ca8f347eb4b2",
+    "name": "foreach_nest_inside",
+    "commands": [{
+      "id": "db5517cb-28b8-49fe-b5a7-5c4ec75845dc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [0,1,2]",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "44d4b779-7c32-47c1-aed1-350ef55be9ca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['she', 'he', 'me']",
+      "targets": [],
+      "value": "test2"
+    }, {
+      "id": "cfabda4e-2ed1-403e-94f5-cc64f802d5ef",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [true, false, undefined]",
+      "targets": [],
+      "value": "test3"
+    }, {
+      "id": "5e78d62e-e13c-4e57-b105-67422e9f1178",
+      "comment": "",
+      "command": "forEach",
+      "target": "test",
+      "targets": [],
+      "value": "iter"
+    }, {
+      "id": "e82ba143-24eb-4596-8aff-91a1fd04785e",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fca10da-159f-454c-9ead-c7ba221c32c2",
+      "comment": "",
+      "command": "forEach",
+      "target": "test2",
+      "targets": [],
+      "value": "iter2"
+    }, {
+      "id": "a7dbfd43-3672-4983-be11-89dd77c010c8",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c60cf883-f757-4a84-87c6-77da83d1c047",
+      "comment": "",
+      "command": "forEach",
+      "target": "test3",
+      "targets": [],
+      "value": "iter3"
+    }, {
+      "id": "c48cc44f-a687-456e-a861-44258a41d0c7",
+      "comment": "",
+      "command": "echo",
+      "target": "${iter3}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00249741-4131-4eea-a7f6-38a97f4fa08a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82c6cdfa-846c-4ce4-97fc-7c79e6d17672",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee98209f-7f4c-4896-b458-9d07c06f3014",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "356ea81f-6c04-4921-89ae-518fe54af0a3",
@@ -322,7 +646,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["cbef845d-3e03-489e-8c80-d1b18bae6f1a", "073baa3b-058e-4bc0-a3cb-5d25405c2df8", "7a7dd11d-b249-4cb3-ae96-7ef347eb72e2", "6a6305d5-534f-458e-a023-5b03506335b9", "38372438-fd06-41de-953f-ca8f347eb4b2"]
   }, {
     "id": "55930b13-ec11-4ad0-b8c7-6ab2a55c3281",
     "name": "do_repeatIf",
