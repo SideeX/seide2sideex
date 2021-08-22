@@ -7,7 +7,7 @@ export function ifFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
     var targetstr = targetStr(seleniumCommand.target);
-
+    parameters.countNum.IF += 1;
     const sideexRecord: Record = {
         name: 'IF',
         target: {
@@ -43,17 +43,17 @@ export function ifFunc(parameters: ConvertFuncParameter): Record {
     return sideexRecord;
 }
 
-export function targetStr(str: string): string{
+export function targetStr(str: string): string {
     //解決參數type為string時，需要在該參數兩邊加上雙引號 ex. "${myVar}"
-    try{
+    try {
         //拆分parameter 和 parameter判斷值
         var temp = str;
-        var commas = ["===","==",">=","<=","!=","&&","||",">","<"];
+        var commas = ['===', '==', '>=', '<=', '!=', '&&', '||', '>', '<'];
         commas.forEach((comma) => {
             temp = temp.replaceAll(comma, '@@@');
         });
-        var str_split = temp.split("@@@");
-        if(str_split.length <= 1){
+        var str_split = temp.split('@@@');
+        if (str_split.length <= 1) {
             return str;
         }
 
@@ -61,82 +61,82 @@ export function targetStr(str: string): string{
         //console.log(str_split);
         var str_type = [];
         var right_flag = 0;
-        for(let i = 0; i < str_split.length; i++){
-            for(let j = 0; j < str_split[i].length; j++){
-                if(str_split[i][j] == " "){
+        for (let i = 0; i < str_split.length; i++) {
+            for (let j = 0; j < str_split[i].length; j++) {
+                if (str_split[i][j] == ' ') {
                     continue;
-                }else if(right_flag == 0){
-                    if(str_split[i][j] == '$'){
+                } else if (right_flag == 0) {
+                    if (str_split[i][j] == '$') {
                         right_flag = 1;
                         break;
-                    }else if(str_split[i][j] == '!'){
-                        str_type.push("other");
+                    } else if (str_split[i][j] == '!') {
+                        str_type.push('other');
                         break;
                     }
-                }else{
-                    if(str_split[i][j] == "\"" || str_split[i][j] == '\''){
-                        str_type.push("string");
+                } else {
+                    if (str_split[i][j] == '"' || str_split[i][j] == "'") {
+                        str_type.push('string');
                         right_flag = 0;
                         break;
-                    }else if(str_split[i][j] == '$'){
-                        str_type.push("other");
+                    } else if (str_split[i][j] == '$') {
+                        str_type.push('other');
                         right_flag = 1;
                         break;
-                    }else if(str_split[i][j] == "!"){
-                        str_type.push("other");
-                        str_type.push("other");
+                    } else if (str_split[i][j] == '!') {
+                        str_type.push('other');
+                        str_type.push('other');
                         right_flag = 0;
                         break;
-                    }else{
-                        str_type.push("other");
+                    } else {
+                        str_type.push('other');
                         right_flag = 0;
                         break;
                     }
                 }
             }
         }
-        if (right_flag == 1){
+        if (right_flag == 1) {
             right_flag = 0;
-            str_type.push("other");
+            str_type.push('other');
         }
-
 
         //type為string時，加雙引號
         //console.log(str_type);
         var str_index = 0;
-        for (let i = 0; i< str_type.length; i++){
-            if (str_index >= str.length){
+        for (let i = 0; i < str_type.length; i++) {
+            if (str_index >= str.length) {
                 break;
-            }else if (str_type[i] == 'other'){
-                for (let j = str_index; j < str.length; j++){
-                    if (str[j] == "}"){
-                        str_index = j+1;
+            } else if (str_type[i] == 'other') {
+                for (let j = str_index; j < str.length; j++) {
+                    if (str[j] == '}') {
+                        str_index = j + 1;
                         break;
                     }
                 }
-            }else{
-                for (let j = str_index; j < str.length; j++){
-                    if (str[j] == "$"){
-                        str = str.substring(0,j)+"\""+str.substring(j,str.length);
+            } else {
+                for (let j = str_index; j < str.length; j++) {
+                    if (str[j] == '$') {
+                        str =
+                            str.substring(0, j) +
+                            '"' +
+                            str.substring(j, str.length);
                         j++; //若雙引號加在前頭，會一直重複加上去
-                    }else if (str[j] == "}"){
-                        str = str.substring(0,j+1)+"\""+str.substring(j+1,str.length);
-                        str_index = j+1;
+                    } else if (str[j] == '}') {
+                        str =
+                            str.substring(0, j + 1) +
+                            '"' +
+                            str.substring(j + 1, str.length);
+                        str_index = j + 1;
                         break;
                     }
                 }
             }
         }
-    }catch(e){
+    } catch (e) {
         console.log(`${e.name}: ${e.message}`);
         console.log("Error: Please modify ifCommand's target manually!!!");
-    }finally{
+    } finally {
         //console.log(str);
-        console.log(
-            "Warning: IF command maybe still have some problems. Please check your IF command's target.\n"+
-            "         If your parameters' type are string, you need to add \" on both sides of the parameters.\n"+
-            "         ex. \"${myVar}\""
-        );
         return str;
     }
 }

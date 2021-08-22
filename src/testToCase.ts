@@ -50,6 +50,7 @@ export function testToCase(
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
     //mouseCoordinate for mouseMove
+    console.log(`TestName: ${seleniumTest.name}\n`);
     var commandIndex = -1;
     var mouseCord = {
         StartPoint: { X: -999, Y: -999 },
@@ -62,7 +63,7 @@ export function testToCase(
         currentDo: -1,
         doRecords: tempRecords,
     };
-    var countNum = { forEach: 0 };
+    var countNum = { forEach: 0, IF: 0, executeScript: 0 };
 
     seleniumTest.commands.forEach((command) => {
         //Check if comman is comment
@@ -117,6 +118,20 @@ export function testToCase(
     //     console.log(doRepeat.doRecords[i]);
     // }
     // console.log('---------------------------------------');
+    if (countNum.executeScript) {
+        console.log(
+            "Warning: executeScript command maybe still have some problems. Please check your executeScript command's target.\n" +
+                '         Somewhere still need to plus "return", but we delete all of "return" in target.\n' +
+                '         Please add "return" manually.\n',
+        );
+    }
+    if (countNum.IF) {
+        console.log(
+            "Warning: IF command maybe still have some problems. Please check your IF command's target.\n" +
+                '         If your parameters\' type are string, you need to add " on both sides of the parameters.\n' +
+                '         ex. "${myVar}"\n',
+        );
+    }
 
     return sideexCase;
 }

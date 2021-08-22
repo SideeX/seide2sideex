@@ -7,12 +7,7 @@ export function executeScriptFunc(parameters: ConvertFuncParameter): Record {
 
     let targetStr = seleniumCommand.target;
     targetStr = targetStr.replaceAll('return', '');
-
-    console.log(
-        "Warning: executeScript command maybe still have some problems. Please check your executeScript command's target.\n" +
-            '         Somewhere still need to plus "return", but we delete all of "return" in target.\n' +
-            '         Please add "return" manually.',
-    );
+    parameters.countNum.executeScript += 1;
 
     const sideexRecord: Record = {
         name: 'storeEval',

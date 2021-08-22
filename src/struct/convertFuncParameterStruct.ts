@@ -9,7 +9,7 @@ export interface ConvertFuncParameter {
     commandIndex: number;
     isElseIfCommand: boolean;
     isCommandComment: boolean;
-    countNum?: { forEach: number };
+    countNum: { forEach: number; IF: number; executeScript: number };
     suiteName: string;
     libWindowHandle?: string[];
     urlArr?: string[] | undefined;
