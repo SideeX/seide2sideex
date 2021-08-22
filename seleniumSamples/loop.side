@@ -62,8 +62,29 @@
     }]
   }, {
     "id": "dce492f3-d184-4027-a11b-2b75d5fe08c8",
-    "name": "while",
-    "commands": []
+    "name": "while_basic",
+    "commands": [{
+      "id": "44a4ec20-e092-4b55-aa5f-1e9d613b7c93",
+      "comment": "",
+      "command": "while",
+      "target": "1==1",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "61af1879-d7bd-4832-b233-01a6261cfbfb",
+      "comment": "",
+      "command": "echo",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4f75149-43c5-4bfc-969b-e659bbe5df6b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }, {
     "id": "1b40975f-c1aa-4fcd-9b26-fa100921924b",
     "name": "do_repeatIf_basic",
@@ -879,6 +900,344 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "3f5e5947-a2d3-4f56-af34-990d84f0bf22",
+    "name": "while_basic2",
+    "commands": [{
+      "id": "77ecef1b-19b5-46bc-8aff-587c9151ec07",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "818a45bf-9ac2-49d1-a836-2a2af5f21c24",
+      "comment": "",
+      "command": "while",
+      "target": "${count} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e98e6878-2baf-4a4e-a191-340be463fa1c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "4d69ba09-d8c4-4338-adad-174100aa99be",
+      "comment": "",
+      "command": "echo",
+      "target": "${count}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e613cad-6030-4793-8de0-ed831c1319a6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "06f1ee6b-68d3-42dd-b787-c5963b622153",
+    "name": "while_nest2",
+    "commands": [{
+      "id": "5cf182b2-00f9-4573-91d0-09c2793f95d6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "count1"
+    }, {
+      "id": "7b38d097-4b37-4ca9-afef-46b49675aebd",
+      "comment": "",
+      "command": "while",
+      "target": "${count1} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17203e11-2e1c-422b-800d-02e2973fa853",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 10",
+      "targets": [],
+      "value": "count2"
+    }, {
+      "id": "29cbb2a3-3c34-4705-8fa0-6777580ae016",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count1} + 1",
+      "targets": [],
+      "value": "count1"
+    }, {
+      "id": "56dddbcc-5f54-45d3-b7e6-6915a8a4e148",
+      "comment": "",
+      "command": "echo",
+      "target": "${count1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32d7bda0-9e76-482e-9aef-fbed9c1d0e28",
+      "comment": "",
+      "command": "while",
+      "target": "${count2} >5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5cae399-c678-4469-b386-75bb38846337",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count2} - 1",
+      "targets": [],
+      "value": "count2"
+    }, {
+      "id": "3badc9ad-7575-40b4-8404-3704675fa328",
+      "comment": "",
+      "command": "echo",
+      "target": "${count1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be51a8d5-4a46-46e8-8aa9-ec8c9b095f1d",
+      "comment": "",
+      "command": "echo",
+      "target": "${count2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbc77956-81c4-470d-93c5-7b9b5bf430d7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ab62f0d-ba49-4d71-a1fd-badf00c9691e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1703d257-0f63-48a6-8950-ad06b39a73e6",
+    "name": "while_nest3",
+    "commands": [{
+      "id": "204cea92-2172-4f27-8015-f5806e686020",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "count1"
+    }, {
+      "id": "692b8d7f-a72e-4efd-ab77-9bee04cd46e8",
+      "comment": "",
+      "command": "while",
+      "target": "${count1} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cc2fd82-723c-4c47-a41e-4b1b0b7fefc7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 10",
+      "targets": [],
+      "value": "count2"
+    }, {
+      "id": "56f5a131-272a-4433-8232-ed26142ff89c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count1} + 1",
+      "targets": [],
+      "value": "count1"
+    }, {
+      "id": "f37b0f88-cd7d-454a-acda-6d6d47de8746",
+      "comment": "",
+      "command": "while",
+      "target": "${count2} >5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77f0940f-7930-4304-8a13-ebc45410f286",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "count3"
+    }, {
+      "id": "893731e9-e59e-4832-9047-6c9debb2610f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count2} - 1",
+      "targets": [],
+      "value": "count2"
+    }, {
+      "id": "8290d96c-6a65-4e47-9ac5-c8e75af16bfc",
+      "comment": "",
+      "command": "while",
+      "target": "${count3} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39016c73-d83e-4dff-ac1d-64f1bf257144",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count3} - 1",
+      "targets": [],
+      "value": "count3"
+    }, {
+      "id": "46e6c8d5-62fa-4996-865c-fe4df806ac07",
+      "comment": "",
+      "command": "echo",
+      "target": "${count1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "274f9fc7-e848-4a61-ba45-ed850db56a2c",
+      "comment": "",
+      "command": "echo",
+      "target": "${count2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17a6e851-b9e7-4fe9-986c-e38e6ab3f453",
+      "comment": "",
+      "command": "echo",
+      "target": "${count3}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "156113fe-7cc1-4d9b-8d2c-51a79f259745",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0e54856-b5dc-4bfb-9675-549e898a10a2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64f4bf88-7ab8-4579-b61f-e425e25d2ca8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "48cb34ea-74fa-49fc-91b9-c306885799da",
+    "name": "while_nest3_insides",
+    "commands": [{
+      "id": "87167ffd-7142-486b-8b80-f176e403b386",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "count1"
+    }, {
+      "id": "30a5d463-a9a6-4af9-a854-5cc525a4e7a5",
+      "comment": "",
+      "command": "while",
+      "target": "${count1} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b70a932-1686-49b4-9b9e-45652d1c21fa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 10",
+      "targets": [],
+      "value": "count2"
+    }, {
+      "id": "75c07933-1571-4279-b146-befa1baeb3ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count1} + 1",
+      "targets": [],
+      "value": "count1"
+    }, {
+      "id": "35edabe3-d1f1-4036-b5dc-77292d0be676",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return -1",
+      "targets": [],
+      "value": "count3"
+    }, {
+      "id": "00c8748e-142c-45ba-a978-d99d2fa43b59",
+      "comment": "",
+      "command": "while",
+      "target": "${count3} < 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3368fc6c-370e-4b40-b9f5-81d484d2c2ff",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count3} +1",
+      "targets": [],
+      "value": "count3"
+    }, {
+      "id": "432725e8-82bb-42c2-a59e-8ec17dd7b3c0",
+      "comment": "",
+      "command": "echo",
+      "target": "${count3}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d98dc4c-0bf2-44ee-9dd3-337b5be3875f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee7c8b48-8254-49ba-8492-a178d9dad17a",
+      "comment": "",
+      "command": "while",
+      "target": "${count2} >5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00ccf809-4ffd-4291-b4f0-0992bf32ab27",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count2} - 1",
+      "targets": [],
+      "value": "count2"
+    }, {
+      "id": "6b0e76e2-dd7d-48ce-ba80-2f8a16aa6d11",
+      "comment": "",
+      "command": "echo",
+      "target": "${count1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "853f8b46-46a0-4f36-b85b-0f915799bac4",
+      "comment": "",
+      "command": "echo",
+      "target": "${count2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adc2089d-2a1d-4a59-a763-66777bd17ed9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d4c04e7-9e40-4741-9c08-22ec47ecd0e1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "356ea81f-6c04-4921-89ae-518fe54af0a3",
@@ -907,7 +1266,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["dce492f3-d184-4027-a11b-2b75d5fe08c8", "3f5e5947-a2d3-4f56-af34-990d84f0bf22", "06f1ee6b-68d3-42dd-b787-c5963b622153", "1703d257-0f63-48a6-8950-ad06b39a73e6", "48cb34ea-74fa-49fc-91b9-c306885799da"]
   }],
   "urls": ["https://sideex.github.io/"],
   "plugins": []
