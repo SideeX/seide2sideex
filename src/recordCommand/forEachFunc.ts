@@ -1,6 +1,7 @@
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
+import { endCount } from './endFunc';
 
 export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
     const seleniumCommand = parameters.command;
@@ -176,6 +177,6 @@ export function forEachFunc(parameters: ConvertFuncParameter): Record[] {
             comment: isCommandComment,
         },
     ];
-
+    endCount(parameters.isElseIfCommand);
     return sideexRecords;
 }
