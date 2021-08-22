@@ -11,7 +11,7 @@ import { libWindowHandleFunc } from './libWindowHandleFunc';
 import fse from 'fs-extra';
 import { readFileSync } from 'fs';
 
-export function mainFunc(filePath: string) {
+export function mainFunc(filePath: string): void {
     const file = readFileSync(filePath, 'utf-8');
     const seleniumFile: SeleniumSide = JSON.parse(file);
     //const seleniumFile: SeleniumSide = getSample('if_else');
@@ -58,6 +58,21 @@ export function mainFunc(filePath: string) {
     } else {
         doConvert(seleniumSuites[0], objDoConvert);
     }
+}
+/**
+ * return Array who save store Variable use by 'times'
+ * @returns {storeVarArray}
+ */
+function countTimes(seleniumTest: Test): string[] {
+    const storeVarArray: string[] = [];
+    seleniumTest.commands.forEach((command) => {
+        if (command.command == 'times') {
+            const storeVariableName =
+                'timesTemp' + Math.floor(Math.random() * (999 + 1));
+            storeVarArray.push(storeVariableName);
+        }
+    });
+    return storeVarArray;
 }
 
 /**
@@ -138,6 +153,7 @@ function doConvert(suite: SeleniumSuite, objDoConvert: structDoConvert) {
         const testId = testOfSuite[i];
         const testIndex = objDoConvert.dictforSeleniumTests[testId];
         const seleniumTest = objDoConvert.seleniumTests[testIndex];
+        const arrayStoreForTimes = countTimes(seleniumTest);
         const libWindowHandle = libWindowHandleFunc(seleniumTest);
         // console.log('libWindowHandle: ', libWindowHandle);
         const sideexCase: Case = testToCase(
@@ -147,6 +163,7 @@ function doConvert(suite: SeleniumSuite, objDoConvert: structDoConvert) {
             suiteName,
             objDoConvert.suitesName,
             objDoConvert.testSuiteDetail,
+            arrayStoreForTimes,
         );
         // push the sideex case
         sideexSuite.cases.push(sideexCase);
