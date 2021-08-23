@@ -12,32 +12,6 @@ const timesCommand: Command = {
     value: '',
 };
 
-const timesExpected: Record = {
-    name: 'WHILE',
-    target: {
-        usedIndex: 0,
-        options: [
-            {
-                type: 'other',
-                value: '1==1',
-            },
-        ],
-        tac: '',
-    },
-    value: {
-        usedIndex: 0,
-        options: [
-            {
-                type: 'other',
-                value: timesCommand.target,
-            },
-        ],
-        tac: '',
-    },
-    pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
-    comment: false,
-};
-
 const timesParameters: ConvertFuncParameter = {
     command: timesCommand,
     commands: [],
@@ -50,7 +24,82 @@ const timesParameters: ConvertFuncParameter = {
         currentDo: 0,
         doRecords: [],
     },
+    countNum: {
+        forEach: 0,
+        IF: 0,
+        executeScript: 0,
+    },
+    suitesName: [],
+    testSuiteDetail: {},
+    arrayStoreForTimes: ['varTemp'],
+    countTimesCommand: 0,
 };
+
+const storeVariableName = timesParameters.arrayStoreForTimes[0];
+
+const timesExpected: Record[] = [
+    {
+        name: 'WHILE',
+        target: {
+            usedIndex: 0,
+            options: [
+                {
+                    type: 'others',
+                    value:
+                        '$' + `{${storeVariableName}} < ${timesCommand.target}`,
+                },
+            ],
+            tac: '',
+        },
+        value: {
+            usedIndex: 0,
+            options: [
+                {
+                    type: 'other',
+                    value: '',
+                },
+            ],
+            tac: '',
+        },
+        pwt: {
+            pbw: 0,
+            paw: 0,
+            prw: 0,
+            pdw: 0,
+        },
+        comment: false,
+    },
+    {
+        name: 'storeEval',
+        target: {
+            usedIndex: 0,
+            options: [
+                {
+                    type: 'others',
+                    value: '$' + `{${storeVariableName}} + 1`,
+                },
+            ],
+            tac: '',
+        },
+        value: {
+            usedIndex: 0,
+            options: [
+                {
+                    type: 'other',
+                    value: storeVariableName,
+                },
+            ],
+            tac: '',
+        },
+        pwt: {
+            pbw: 0,
+            paw: 0,
+            prw: 0,
+            pdw: 0,
+        },
+        comment: false,
+    },
+];
 
 const timesActual = timesFunc(timesParameters);
 

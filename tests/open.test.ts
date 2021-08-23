@@ -125,6 +125,15 @@ const openHttpsParameters: ConvertFuncParameter = {
         currentDo: 0,
         doRecords: [],
     },
+    countNum: {
+        forEach: 0,
+        IF: 0,
+        executeScript: 0,
+    },
+    suitesName: [],
+    testSuiteDetail: {},
+    arrayStoreForTimes: [],
+    countTimesCommand: 0,
 };
 
 const openHttpParameters: ConvertFuncParameter = {
@@ -140,6 +149,15 @@ const openHttpParameters: ConvertFuncParameter = {
         currentDo: 0,
         doRecords: [],
     },
+    countNum: {
+        forEach: 0,
+        IF: 0,
+        executeScript: 0,
+    },
+    suitesName: [],
+    testSuiteDetail: {},
+    arrayStoreForTimes: [],
+    countTimesCommand: 0,
 };
 
 const openSlashParameters: ConvertFuncParameter = {
@@ -155,6 +173,15 @@ const openSlashParameters: ConvertFuncParameter = {
         currentDo: 0,
         doRecords: [],
     },
+    countNum: {
+        forEach: 0,
+        IF: 0,
+        executeScript: 0,
+    },
+    suitesName: [],
+    testSuiteDetail: {},
+    arrayStoreForTimes: [],
+    countTimesCommand: 0,
 };
 
 // test

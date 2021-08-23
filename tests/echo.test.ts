@@ -10,7 +10,7 @@ const echoCommand: Command = {
     target: 'Hello world',
     targets: [],
     value: '',
-}
+};
 
 const echoExpected: Record = {
     name: echoCommand.command,
@@ -36,7 +36,7 @@ const echoExpected: Record = {
     },
     pwt: { pbw: 0, paw: 0, prw: 0, pdw: 0 },
     comment: false,
-}
+};
 
 const echoParameters: ConvertFuncParameter = {
     command: echoCommand,
@@ -48,9 +48,18 @@ const echoParameters: ConvertFuncParameter = {
     doRepeat: {
         doCount: 0,
         currentDo: 0,
-        doRecords: []
-    }
-}
+        doRecords: [],
+    },
+    countNum: {
+        forEach: 0,
+        IF: 0,
+        executeScript: 0,
+    },
+    suitesName: [],
+    testSuiteDetail: {},
+    arrayStoreForTimes: [],
+    countTimesCommand: 0,
+};
 
 const echoActual = echoFunc(echoParameters);
 
