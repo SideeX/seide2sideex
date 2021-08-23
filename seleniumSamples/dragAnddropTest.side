@@ -1,0 +1,42 @@
+{
+  "id": "ed746b5b-ad33-44e1-8d6f-72c3e44b5fb3",
+  "version": "2.0",
+  "name": "dragAnddropTest",
+  "url": "https://www.w3schools.com",
+  "tests": [{
+    "id": "dd5b5ce7-9af7-4d05-a531-1649e2da3e4c",
+    "name": "Untitled",
+    "commands": [{
+      "id": "3beefcd2-0ac0-4316-87eb-4a03f760755e",
+      "comment": "",
+      "command": "open",
+      "target": "/html/html5_draganddrop.asp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b00266cf-d86f-491d-9d95-e3fe7d55a3f3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93030378-1997-45fb-af4b-cd029f5a50e8",
+      "comment": "",
+      "command": "dragAndDropToObject",
+      "target": "id=drag1",
+      "targets": [],
+      "value": "id=div2"
+    }]
+  }],
+  "suites": [{
+    "id": "0ca9502b-22e8-4ed8-9f3f-6d2f71854cd2",
+    "name": "dragAndDropTest",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dd5b5ce7-9af7-4d05-a531-1649e2da3e4c"]
+  }],
+  "urls": ["https://www.w3schools.com/"],
+  "plugins": []
+}

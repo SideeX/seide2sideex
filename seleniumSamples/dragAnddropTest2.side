@@ -1,0 +1,42 @@
+{
+  "id": "59c86cb0-4546-4055-951b-f795e250718d",
+  "version": "2.0",
+  "name": "dragAnddropTest2",
+  "url": "https://www.seleniumeasy.com",
+  "tests": [{
+    "id": "230bf706-88d7-47f2-a9a2-5e97e3d3a13a",
+    "name": "Untitled",
+    "commands": [{
+      "id": "3ba52327-e810-4046-b36b-0c3b18ca445c",
+      "comment": "",
+      "command": "open",
+      "target": "/test/drag-and-drop-demo.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "513bd57f-7f6d-4eff-929c-2e2bca59b1be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x803",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76a139d5-20e3-4adf-90e5-ad622753c973",
+      "comment": "",
+      "command": "dragAndDropToObject",
+      "target": "css=#todrag > span:nth-child(2)",
+      "targets": [],
+      "value": "id=mydropzone"
+    }]
+  }],
+  "suites": [{
+    "id": "4cffb551-b510-44ad-8c5a-dcc061ce4e3a",
+    "name": "dragAndDropTest2",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["230bf706-88d7-47f2-a9a2-5e97e3d3a13a"]
+  }],
+  "urls": ["https://www.seleniumeasy.com/"],
+  "plugins": []
+}
