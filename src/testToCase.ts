@@ -53,7 +53,7 @@ export function testToCase(
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
     //mouseCoordinate for mouseMove
-    console.log(`TestName: ${seleniumTest.name}\n`);
+    console.log(`TestSuiteName: ${seleniumTest.name}\n`);
     var commandIndex = -1;
     var mouseCord = {
         StartPoint: { X: -999, Y: -999 },
@@ -146,6 +146,7 @@ export function testToCase(
                 '         ex. "${myVar}"\n',
         );
     }
+    console.log(`Finishing convert testSuite: ${seleniumTest.name}\n`);
 
     return sideexCase;
 }
