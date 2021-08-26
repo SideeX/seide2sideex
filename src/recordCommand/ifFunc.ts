@@ -1,4 +1,3 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 import { endCount } from './endFunc';
@@ -6,7 +5,7 @@ import { endCount } from './endFunc';
 export function ifFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-    var targetstr = targetStr(seleniumCommand.target);
+    const targetstr = targetStr(seleniumCommand.target);
     parameters.countNum.IF += 1;
     const sideexRecord: Record = {
         name: 'IF',
@@ -47,20 +46,20 @@ export function targetStr(str: string): string {
     //解決參數type為string時，需要在該參數兩邊加上雙引號 ex. "${myVar}"
     try {
         //拆分parameter 和 parameter判斷值
-        var temp = str;
-        var commas = ['===', '==', '>=', '<=', '!=', '&&', '||', '>', '<'];
+        let temp = str;
+        const commas = ['===', '==', '>=', '<=', '!=', '&&', '||', '>', '<'];
         commas.forEach((comma) => {
             temp = temp.replaceAll(comma, '@@@');
         });
-        var str_split = temp.split('@@@');
+        const str_split = temp.split('@@@');
         if (str_split.length <= 1) {
             return str;
         }
 
         //判別參數type
         //console.log(str_split);
-        var str_type = [];
-        var right_flag = 0;
+        const str_type = [];
+        let right_flag = 0;
         for (let i = 0; i < str_split.length; i++) {
             for (let j = 0; j < str_split[i].length; j++) {
                 if (str_split[i][j] == ' ') {
@@ -102,7 +101,7 @@ export function targetStr(str: string): string {
 
         //type為string時，加雙引號
         //console.log(str_type);
-        var str_index = 0;
+        let str_index = 0;
         for (let i = 0; i < str_type.length; i++) {
             if (str_index >= str.length) {
                 break;

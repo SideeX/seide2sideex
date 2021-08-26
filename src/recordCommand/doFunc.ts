@@ -1,5 +1,3 @@
-import { Record, Option } from '../struct/sideexStruct';
-
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function doFunc(parameters: ConvertFuncParameter): null {

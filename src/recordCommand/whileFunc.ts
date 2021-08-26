@@ -1,4 +1,4 @@
-//import { Command } from '../struct/seleniumStruct';
+//
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 import { endCount } from './endFunc';

@@ -1,4 +1,3 @@
-import { Command } from '../struct/seleniumStruct';
 import { Record, Option } from '../struct/sideexStruct';
 import { targetOptionFunc } from './targetOption';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';

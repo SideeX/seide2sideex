@@ -10,7 +10,7 @@ export function runFunc(parameters: ConvertFuncParameter): Record {
     );
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-    let suiteNameNow: string = '';
+    let suiteNameNow = '';
     for (const [key, value] of Object.entries(parameters.testSuiteDetail)) {
         // find the suite name of this test
         if (value.includes(seleniumCommand.target)) {

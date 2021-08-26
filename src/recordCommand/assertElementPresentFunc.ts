@@ -6,7 +6,7 @@ export function assertElementPresentFunc(
 ): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-    let options: Option[] = [];
+    const options: Option[] = [];
 
     options.push({
         type: 'other',

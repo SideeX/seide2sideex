@@ -1,5 +1,4 @@
-import { Command } from '../struct/seleniumStruct';
-import { Record, Option } from '../struct/sideexStruct';
+import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function chooseOkOnNextConfirmationFunc(

@@ -4,8 +4,8 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function setSpeedFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-    var number = Number(seleniumCommand.target);
-    var value;
+    const number = Number(seleniumCommand.target);
+    let value;
     if (number > 2400) {
         value = '1';
     } else if (number > 1800) {

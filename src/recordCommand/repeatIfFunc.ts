@@ -1,4 +1,4 @@
-import { Record, Option } from '../struct/sideexStruct';
+import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function repeatIfFunc(

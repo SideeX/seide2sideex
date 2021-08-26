@@ -53,20 +53,20 @@ export function testToCase(
     const sideexCase: Case = createSideexCase(seleniumTest.name);
     //Convert each commands to records
     //mouseCoordinate for mouseMove
-    console.log(`TestSuiteName: ${seleniumTest.name}\n`);
-    var commandIndex = -1;
-    var mouseCord = {
+    console.log(`TestCaseName: ${seleniumTest.name}\n`);
+    let commandIndex = -1;
+    const mouseCord = {
         StartPoint: { X: -999, Y: -999 },
         PrevPoint: { X: -999, Y: -999 },
         Movements: [],
     };
-    var tempRecords: Record[][] = [];
-    var doRepeat = {
+    const tempRecords: Record[][] = [];
+    const doRepeat = {
         doCount: -1,
         currentDo: -1,
         doRecords: tempRecords,
     };
-    var countNum = { forEach: 0, IF: 0, executeScript: 0 };
+    const countNum = { forEach: 0, IF: 0, executeScript: 0 };
     let countTimesCommand = -1; // use for 'times' command
     const storeRecordsForTimes = storeVarForTimesFunc(arrayStoreForTimes);
     // Will push to sideexCase.records, when suite have 'times' command
@@ -146,7 +146,7 @@ export function testToCase(
                 '         ex. "${myVar}"\n',
         );
     }
-    console.log(`Finishing convert testSuite: ${seleniumTest.name}\n`);
+    console.log(`Finishing convert testCase: ${seleniumTest.name}\n`);
 
     return sideexCase;
 }

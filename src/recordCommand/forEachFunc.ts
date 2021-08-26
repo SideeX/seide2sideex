@@ -1,5 +1,4 @@
-import { Record, Option } from '../struct/sideexStruct';
-import { targetOptionFunc } from './targetOption';
+import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 import { endCount } from './endFunc';
 

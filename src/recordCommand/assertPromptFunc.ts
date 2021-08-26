@@ -1,9 +1,7 @@
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function assertPromptFunc(
-    parameters: ConvertFuncParameter,
-): Record {
+export function assertPromptFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
 

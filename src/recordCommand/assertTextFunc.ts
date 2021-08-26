@@ -4,7 +4,7 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function assertTextFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-    let options: Option[] = [];
+    const options: Option[] = [];
 
     options.push({
         type: 'other',

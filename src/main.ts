@@ -1,10 +1,5 @@
-import {
-    SeleniumSide,
-    SeleniumSuite,
-    Test,
-    Command,
-} from './struct/seleniumStruct';
-import { SideexJson, SideexSuite, Case, Record } from './struct/sideexStruct';
+import { SeleniumSide, SeleniumSuite, Test } from './struct/seleniumStruct';
+import { SideexJson, SideexSuite, Case } from './struct/sideexStruct';
 //import { getSample } from './getSample/getSampleFunc';
 import { testToCase } from './testToCase';
 import { libWindowHandleFunc } from './libWindowHandleFunc';

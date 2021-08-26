@@ -1,16 +1,18 @@
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function executeAsyncScriptFunc(parameters: ConvertFuncParameter): Record {
+export function executeAsyncScriptFunc(
+    parameters: ConvertFuncParameter,
+): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
 
     let targetStr = seleniumCommand.target;
     targetStr = targetStr.replaceAll('return', '');
     console.log(
-        "Warning: executeAsyncScript command maybe still have some problems. Please check your executeAsyncScript command's target.\n"+
-        "         Somewhere still need to plus \"return\", but we delete all of \"return\" in target.\n"+
-        "         Please add \"return\" manually."
+        "Warning: executeAsyncScript command maybe still have some problems. Please check your executeAsyncScript command's target.\n" +
+            '         Somewhere still need to plus "return", but we delete all of "return" in target.\n' +
+            '         Please add "return" manually.',
     );
 
     const sideexRecord: Record = {

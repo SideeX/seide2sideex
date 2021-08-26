@@ -1,6 +1,5 @@
-import { IndexType } from 'typescript';
 import { Record } from './sideexStruct';
-import { Command, Test } from './seleniumStruct';
+import { Command } from './seleniumStruct';
 
 //parameters for convertFunc
 export interface ConvertFuncParameter {
