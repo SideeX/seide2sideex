@@ -13,7 +13,6 @@ import { assertTitleFunc } from './recordCommand/assertTitleFunc';
 import { assertValueFunc } from './recordCommand/assertValueFunc';
 import { defaultFunc } from './recordCommand/defaultFunc';
 import { Record } from './struct/sideexStruct';
-import { Command } from './struct/seleniumStruct';
 import { clickAtFunc } from './recordCommand/clickAtFunc';
 import { echoFunc } from './recordCommand/echoFunc';
 import { storeFunc } from './recordCommand/storeFunc';
@@ -49,7 +48,6 @@ import { elseIfFunc } from './recordCommand/elseIfFunc';
 import { whileFunc } from './recordCommand/whileFunc';
 import { editContentFunc } from './recordCommand/editContentFunc';
 import { forEachFunc } from './recordCommand/forEachFunc';
-import { tempEndFunc } from './recordCommand/tempEndFunc';
 import { selectFunc } from './recordCommand/selectFunc';
 import { verifyElementPresentFunc } from './recordCommand/verifyElementPresentFunc';
 import { uncheckFunc } from './recordCommand/uncheckFunc';
@@ -64,6 +62,7 @@ import { timesFunc } from './recordCommand/timesFunc';
 import { doFunc } from './recordCommand/doFunc';
 import { repeatIfFunc } from './recordCommand/repeatIfFunc';
 import { submitFunc } from './recordCommand/submitFunc';
+import { assertChecked_and_notCheckedFunc } from './recordCommand/assertChecked_and_notCheckedFunc';
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
@@ -75,12 +74,12 @@ export const commandFunc: {
     answerOnNextPrompt: answerOnNextPromptCommandFunc,
     assert: defaultFunc,
     assertAlert: assertAlertFunc,
-    assertChecked: verifyChecked_and_notCheckedFunc,
+    assertChecked: assertChecked_and_notCheckedFunc,
     assertConfirmation: assertConfirmationFunc,
     assertEditable: defaultFunc,
     assertElementPresent: assertElementPresentFunc,
     assertElementNotPresent: defaultFunc,
-    assertNotChecked: verifyChecked_and_notCheckedFunc,
+    assertNotChecked: assertChecked_and_notCheckedFunc,
     assertNotSelectedValue: defaultFunc,
     assertPrompt: assertPromptFunc,
     assertSelectedValue: defaultFunc,

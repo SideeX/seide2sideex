@@ -1,14 +1,14 @@
 import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
-export function verifyChecked_and_notCheckedFunc(
+export function assertChecked_and_notCheckedFunc(
     parameters: ConvertFuncParameter,
 ): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
 
     const sideexRecord: Record = {
-        name: 'verifyValue',
+        name: 'assertValue',
         target: {
             usedIndex: 0,
             options: [
@@ -28,7 +28,7 @@ export function verifyChecked_and_notCheckedFunc(
                 {
                     type: 'other',
                     value:
-                        seleniumCommand.command === 'verifyChecked'
+                        seleniumCommand.command === 'assertChecked'
                             ? 'on'
                             : 'off',
                 },
