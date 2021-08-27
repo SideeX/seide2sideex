@@ -1,5 +1,5 @@
 {
-    "name": "seide2sideex",
+    "name": "@sideex/seide2sideex",
     "version": "1.0.0",
     "description": "",
     "main": "cli.js",
@@ -47,5 +47,10 @@
     ],
     "bin": {
         "seide2sideex-cli": "./bin/cli.js"
-    }
+    },
+    "keywords": [
+        "Sideex",
+        "SeleniumIDE",
+        "cli"
+    ]
 }
