@@ -7,7 +7,7 @@ SeleniumIDE2SideeX is a tool for converting Selenium IDE test case files to Side
 
 ## Install via npm
 ```
-npm i @sideex/seide2sideex
+npm i --global @sideex/seide2sideex
 ```
 
 ## Usage
