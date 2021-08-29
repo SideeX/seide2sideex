@@ -134,6 +134,45 @@
       "targets": [],
       "value": "5000"
     }]
+  }, {
+    "id": "18893a4b-50df-45bb-9ba4-c8c3aeab8fe9",
+    "name": "waitForText",
+    "commands": [{
+      "id": "321a6486-f529-4a7a-bbd7-f8206d113130",
+      "comment": "",
+      "command": "open",
+      "target": "/example/webpage_under_test/delay-and-change-text.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96639b4c-25ed-4e5a-8195-3f82ce4e67d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=Button",
+      "targets": [
+        ["id=Button", "id"],
+        ["css=#Button", "css:finder"],
+        ["xpath=//button[@id='Button']", "xpath:attributes"],
+        ["xpath=//div[@id='dragAndDropDiv']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me to change text.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9789fcc8-dd63-47c8-9a6c-cc32d42206dd",
+      "comment": "",
+      "command": "waitForText",
+      "target": "id=text",
+      "targets": [
+        ["id=text", "id"],
+        ["css=#text", "css:finder"],
+        ["xpath=//p[@id='text']", "xpath:attributes"],
+        ["xpath=//div[@id='dragAndDropDiv']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Hello World!!!')]", "xpath:innerText"]
+      ],
+      "value": "Hello World!!!"
+    }]
   }],
   "suites": [{
     "id": "ec18a33c-4100-4e96-a64f-96640e461a9b",
@@ -163,6 +202,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["98725b20-a238-474e-b5d2-489f04b7f1d0"]
+  }, {
+    "id": "d36a6d94-7cf6-4df3-adf4-f19a79c02a8a",
+    "name": "waitForText",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["18893a4b-50df-45bb-9ba4-c8c3aeab8fe9"]
   }],
   "urls": ["https://sideex.github.io/"],
   "plugins": []

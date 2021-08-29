@@ -63,6 +63,8 @@ import { doFunc } from './recordCommand/doFunc';
 import { repeatIfFunc } from './recordCommand/repeatIfFunc';
 import { submitFunc } from './recordCommand/submitFunc';
 import { assertChecked_and_notCheckedFunc } from './recordCommand/assertChecked_and_notCheckedFunc';
+import { waitForTextFunc } from './recordCommand/waitForTextFunc';
+
 //add different function to different command
 export const commandFunc: {
     [key: string]: (
@@ -158,7 +160,7 @@ export const commandFunc: {
     waitForElementNotVisible: waitForElementNotVisibleFunc,
     waitForElementPresent: waitForElementPresentFunc,
     waitForElementVisible: waitForElementVisibleFunc,
-    waitForTextLocatorText: defaultFunc,
+    waitForText: waitForTextFunc,
     webdriverAnswerOnVisiblePrompt: defaultFunc,
     webdriverChooseCancelOnVisibleConfirmation: defaultFunc,
     webdriverChooseCancelOnVisiblePrompt: defaultFunc,
