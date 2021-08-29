@@ -10,7 +10,7 @@ export interface ConvertFuncParameter {
     isCommandComment: boolean;
     countNum: { forEach: number; IF: number; executeScript: number };
     suiteName: string;
-    libWindowHandle?: string[];
+    libWindowHandle?: (string | string[] | undefined)[][];
     urlArr?: string[] | undefined;
     mouseCord?: {
         StartPoint: {

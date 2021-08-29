@@ -44,7 +44,7 @@ function checkIfComment(command: Command) {
 export function testToCase(
     seleniumTest: Test,
     urlArr: string[],
-    libWindowHandle: string[],
+    libWindowHandle: (string | string[] | undefined)[][],
     suiteName: string,
     suitesName: string[],
     testSuiteDetail: { [testName: string]: string[] },
