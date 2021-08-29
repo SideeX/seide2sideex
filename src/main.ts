@@ -19,7 +19,7 @@ export function mainFunc(filePath: string): void {
     const seleniumTests = seleniumFile.tests;
     const seleniumTestsLength: number = seleniumTests.length;
     console.log('seleniumTestsLength: ', seleniumTestsLength);
-    console.log();
+
     //Dictionary for saving selenium tests
     const dictforSeleniumTests: { [testId: string]: number } = {};
     for (let i = 0; i < seleniumTestsLength; i++) {

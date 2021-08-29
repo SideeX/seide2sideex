@@ -64,6 +64,7 @@ import { repeatIfFunc } from './recordCommand/repeatIfFunc';
 import { submitFunc } from './recordCommand/submitFunc';
 import { assertChecked_and_notCheckedFunc } from './recordCommand/assertChecked_and_notCheckedFunc';
 import { waitForTextFunc } from './recordCommand/waitForTextFunc';
+import { storeWindowHandleFunc } from './recordCommand/storeWindowHandleFunc';
 
 //add different function to different command
 export const commandFunc: {
@@ -134,7 +135,7 @@ export const commandFunc: {
     storeText: storeTextFunc,
     storeTitle: storeTitleFunc,
     storeValue: storeTextFunc, //same as storeTextFunc
-    storeWindowHandle: defaultFunc,
+    storeWindowHandle: storeWindowHandleFunc,
     storeXpathCount: defaultFunc,
     submit: submitFunc,
     times: timesFunc,
