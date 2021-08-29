@@ -7,9 +7,7 @@ export function openCommandFunc(parameters: ConvertFuncParameter): Record {
     const isCommandComment = parameters.isCommandComment;
     if (urlArr !== undefined) {
         console.log(
-            `Warning: if you want to convert open command, make sure that base URL is correct. 
-            Only the first index of 'urls' will be selected.
-            At this case, the selected base URL will be: ${urlArr[0]}\n`,
+            `Warning: open command may still have some problems. Please make sure the URL is correct.`,
         );
     }
 

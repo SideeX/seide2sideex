@@ -9,19 +9,19 @@ export function setWindowSizeFunc(parameters: ConvertFuncParameter): Record {
         const size = seleniumCommand.target.split('x');
         if (parseInt(size[0]) < 500) {
             console.log(
-                'Warning: the minimum window width is 500, so the window width would be set as 500',
+                'Warning: The minimum window width is 500, so the window width will be set as 500',
             );
             size[0] = '500';
         } else if (parseInt(size[1]) < 375) {
             console.log(
-                'Warning: the minimum window height is 375, so the window height would be set as 375',
+                'Warning: The minimum window height is 375, so the window height will be set as 375',
             );
             size[1] = '375';
         }
         target = `${size[0]},${size[1]}`;
     } else {
         console.log(
-            'Warning: there is wrong value for setWindowSize command, so it would be converted to default value',
+            'Error: Wrong value for setWindowSize command, so it will be converted to default value',
         );
         target = '';
     }

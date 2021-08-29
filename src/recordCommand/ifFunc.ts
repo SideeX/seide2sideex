@@ -133,7 +133,9 @@ export function targetStr(str: string): string {
         }
     } catch (e) {
         console.log(`${e.name}: ${e.message}`);
-        console.log("Error: Please modify ifCommand's target manually!!!");
+        console.log(
+            'Error: IF command may still have some problems. Please modify command target manually!!!',
+        );
     } finally {
         //console.log(str);
         return str;

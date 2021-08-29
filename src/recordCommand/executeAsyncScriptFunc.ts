@@ -10,9 +10,9 @@ export function executeAsyncScriptFunc(
     let targetStr = seleniumCommand.target;
     targetStr = targetStr.replaceAll('return', '');
     console.log(
-        "Warning: executeAsyncScript command maybe still have some problems. Please check your executeAsyncScript command's target.\n" +
-            '         Somewhere still need to plus "return", but we delete all of "return" in target.\n' +
-            '         Please add "return" manually.',
+        `Warning: executeAsyncScript command may still have some problems. Please check your command target.\n
+            We delete all of the "return" in target. So it might get some problems if "return" is needed.\n
+            Please add "return" manually.`,
     );
 
     const sideexRecord: Record = {

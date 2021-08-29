@@ -3,10 +3,8 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function runFunc(parameters: ConvertFuncParameter): Record {
     console.log(
-        `Warning: if you want to convert 'run' command, make sure that add the test case to your 'Test suite'. 
-        Also, remember to open 'Test suite' that have 'test case' you need to 'run/INCLUDE'.
-        Note that the format is 'TestSuiteName.TestCaseName',
-        TestSuiteName maybe will be '${parameters.suitesName}'`,
+        `Warning: run command may still have some problems. Please make sure that the test case is added to your test suite.
+            Also, remember to open the test suite that have test case you need to run/INCLUDE.`,
     );
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;

@@ -6,8 +6,7 @@ export function submitFunc(parameters: ConvertFuncParameter): Record {
     const isCommandComment = parameters.isCommandComment;
 
     console.log(
-        `Warning: if you want to convert submit command, you need to select send_key target as xpath=//form..... in targets on selenium IDE first and change command to submit. 
-         Only target is xpath=//form..... can be converted`,
+        `Warning: submit command may still have some problems. Only the target that is xpath can be converted.`,
     );
     const sideexRecord: Record = {
         name: seleniumCommand.command,
