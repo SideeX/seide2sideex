@@ -4,10 +4,7 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function submitFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-
-    console.log(
-        `Warning: submit command may still have some problems. Only the target that is xpath can be converted.`,
-    );
+    parameters.countNum.submit += 1;
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {

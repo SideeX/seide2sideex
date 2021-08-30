@@ -66,7 +66,14 @@ export function testToCase(
         currentDo: -1,
         doRecords: tempRecords,
     };
-    const countNum = { forEach: 0, IF: 0, executeScript: 0 };
+    const countNum = {
+        forEach: 0,
+        IF: 0,
+        executeScript: 0,
+        executeAsyncScript: 0,
+        submit: 0,
+        run: 0,
+    };
     let countTimesCommand = -1; // use for 'times' command
     const storeRecordsForTimes = storeVarForTimesFunc(arrayStoreForTimes);
     // Will push to sideexCase.records, when suite have 'times' command
@@ -132,18 +139,31 @@ export function testToCase(
     //     console.log(doRepeat.doRecords[i]);
     // }
     // console.log('---------------------------------------');
+    if (countNum.submit) {
+        console.log(
+            `Warning: submit command may still have some problems. Only the target that is xpath can be converted.`,
+        );
+    }
+    if (countNum.run) {
+        console.log(
+            `Warning: run command may still have some problems. Please make sure that the test case is added to your test suite.
+                Also, remember to open the test suite that have test case you need to run/INCLUDE.`,
+        );
+    }
+    if (countNum.executeAsyncScript) {
+        console.log(
+            `Warning: executeAsyncScript currently does not support “return” in the command's target, please add your "return" statements manually.`,
+        );
+    }
     if (countNum.executeScript) {
         console.log(
-            "Warning: executeScript command maybe still have some problems. Please check your executeScript command's target.\n" +
-                '         Somewhere still need to plus "return", but we delete all of "return" in target.\n' +
-                '         Please add "return" manually.\n',
+            `Warning: executeScript currently does not support “return” in the command's target, please add your "return" statements manually.`,
         );
     }
     if (countNum.IF) {
         console.log(
             "Warning: IF command maybe still have some problems. Please check your IF command's target.\n" +
-                '         If your parameters\' type are string, you need to add " on both sides of the parameters.\n' +
-                '         ex. "${myVar}"\n',
+                'If your parameters\' type are string, you need to add " on both sides of the parameters. For example, "${myVar}"',
         );
     }
     console.log(`Finishing convert testCase: ${seleniumTest.name}\n`);

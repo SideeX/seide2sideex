@@ -13,7 +13,7 @@ export function timesFunc(parameters: ConvertFuncParameter): Record[] {
     // SeleniumIDE will block if timesOfLoop bigger than loopLimit
     if (timesOfLoop >= loopLimit && seleniumCommand.value != '') {
         console.log(
-            'Warning: max retry limit exceeded, now using value instead target\n',
+            "Warning: max retry limit have exceeded, the command's value will be used instead of the target.\n",
         );
         finalValue = String(loopLimit);
     }

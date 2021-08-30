@@ -6,14 +6,10 @@ export function executeAsyncScriptFunc(
 ): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
+    parameters.countNum.executeAsyncScript += 1;
 
     let targetStr = seleniumCommand.target;
     targetStr = targetStr.replaceAll('return', '');
-    console.log(
-        `Warning: executeAsyncScript command may still have some problems. Please check your command target.\n
-            We delete all of the "return" in target. So it might get some problems if "return" is needed.\n
-            Please add "return" manually.`,
-    );
 
     const sideexRecord: Record = {
         name: 'storeEval',

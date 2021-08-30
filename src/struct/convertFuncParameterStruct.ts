@@ -8,7 +8,14 @@ export interface ConvertFuncParameter {
     commandIndex: number;
     isElseIfCommand: boolean;
     isCommandComment: boolean;
-    countNum: { forEach: number; IF: number; executeScript: number };
+    countNum: {
+        forEach: number;
+        IF: number;
+        executeScript: number;
+        executeAsyncScript: number;
+        submit: number;
+        run: number;
+    };
     suiteName: string;
     libWindowHandle?: (string | string[] | undefined)[][];
     urlArr?: string[] | undefined;

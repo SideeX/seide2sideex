@@ -2,10 +2,7 @@ import { Record } from '../struct/sideexStruct';
 import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 
 export function runFunc(parameters: ConvertFuncParameter): Record {
-    console.log(
-        `Warning: run command may still have some problems. Please make sure that the test case is added to your test suite.
-            Also, remember to open the test suite that have test case you need to run/INCLUDE.`,
-    );
+    parameters.countNum.run += 1;
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
     let suiteNameNow = '';
