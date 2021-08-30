@@ -1,5 +1,5 @@
 {
-    "name": "@sideex/seide2sideex",
+    "name": "seide2sideex_test",
     "version": "1.0.0",
     "description": "",
     "main": "cli.js",
