@@ -20,3 +20,5 @@ seide2sideex-cli -p seleniumSamples/clickAt.side
 or
 seide2sideex-cli --path seleniumSamples/clickAt.side
 ```
+## Document
+[seide2sideeX Document](https://hackmd.io/@qwe661234/seide2sideeXDocs)
