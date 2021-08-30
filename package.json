@@ -1,5 +1,5 @@
 {
-    "name": "seide2sideex_test",
+    "name": "seide2sideex_test2",
     "version": "1.0.0",
     "description": "",
     "main": "cli.js",
@@ -10,8 +10,7 @@
         "start": "npm run build && npm run doconvert",
         "prepare": "npm run build",
         "test": "jest",
-        "coverage": "jest --coverage",
-        "webpack": "webpack --mode production"
+        "coverage": "jest --coverage"
     },
     "author": "",
     "license": "Apache-2.0",
@@ -38,9 +37,7 @@
         "path": "^0.12.7",
         "prettier": "^2.3.2",
         "ts-jest": "^27.0.4",
-        "ts-loader": "^9.2.5",
-        "webpack": "^5.51.1",
-        "webpack-cli": "^4.8.0"
+        "ts-loader": "^9.2.5"
     },
     "files": [
         "build/**/*"
