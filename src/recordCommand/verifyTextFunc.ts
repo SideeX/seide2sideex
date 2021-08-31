@@ -4,18 +4,16 @@ import { ConvertFuncParameter } from '../struct/convertFuncParameterStruct';
 export function verifyTextFunc(parameters: ConvertFuncParameter): Record {
     const seleniumCommand = parameters.command;
     const isCommandComment = parameters.isCommandComment;
-
+    const seleniumTarget = seleniumCommand.target;
+    const finalTarget = seleniumTarget.replace('linkText', 'link');
     const sideexRecord: Record = {
         name: seleniumCommand.command,
         target: {
             usedIndex: 0,
             options: [
                 {
-                    type: seleniumCommand.target.slice(
-                        0,
-                        seleniumCommand.target.indexOf('='),
-                    ),
-                    value: seleniumCommand.target,
+                    type: finalTarget.slice(0, finalTarget.indexOf('=')),
+                    value: finalTarget,
                 },
             ],
             tac: '',
