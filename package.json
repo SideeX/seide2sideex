@@ -43,7 +43,7 @@
         "build/**/*"
     ],
     "bin": {
-        "seide2sideex-cli": "./bin/cli.js"
+        "seide2sideex": "./bin/cli.js"
     },
     "repository": {
         "type": "git",

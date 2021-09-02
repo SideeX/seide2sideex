@@ -10,8 +10,8 @@ program.addHelpText(
     'after',
     `
 Example usage:
-  $ seide2sideex-cli -p path-of-the-(.side)
-  $ seide2sideex-cli -p seleniumFile/open.side`,
+  $ seide2sideex -p path-of-the-(.side)
+  $ seide2sideex -p seleniumFile/open.side`,
 );
 
 program.parse();

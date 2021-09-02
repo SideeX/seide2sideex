@@ -1,4 +1,4 @@
-# seide2sideex-cli
+# seide2sideex
 
 [![npm-version](https://img.shields.io/npm/v/seide2sideex_test2)](https://www.npmjs.com/package/seide2sideex_test2) [![npm-download](https://img.shields.io/npm/dw/seide2sideex_test2)](https://www.npmjs.com/package/seide2sideex_test2)[![License](https://img.shields.io/badge/License-Apache%202.0-g.svg)](https://opensource.org/licenses/Apache-2.0) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-red)](https://github.com/SideeX/seide2sideex)
 
@@ -13,12 +13,14 @@ npm i --global @sideex/seide2sideex
 ## Usage
 
 ```bash
-seide2sideex-cli -p path-to-side
+seide2sideex -p path-to-side
 
 // Example
-seide2sideex-cli -p seleniumSamples/clickAt.side
+seide2sideex -p seleniumSamples/clickAt.side
 or
-seide2sideex-cli --path seleniumSamples/clickAt.side
+seide2sideex --path seleniumSamples/clickAt.side
 ```
+
 ## Document
+
 [seide2sideeX Document](https://hackmd.io/@qwe661234/seide2sideeXDocs)
