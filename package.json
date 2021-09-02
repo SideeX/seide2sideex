@@ -1,8 +1,8 @@
 {
     "name": "seide2sideex_test2",
-    "version": "1.0.1",
+    "version": "0.0.9",
     "author": "SideeX Team <feedback@sideex.io>",
-    "description": "seide2sideex is a tool for converting Selenium IDE files to SideeX 3 JSON files.",
+    "description": "SeleniumIDE2SideeX is a tool for converting Selenium IDE test case files to SideeX 3 test case files. This project is still undergoing and welcome pull requests.",
     "main": "cli.js",
     "scripts": {
         "build": "tsc",
