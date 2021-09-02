@@ -23,4 +23,4 @@ seide2sideex --path seleniumSamples/clickAt.side
 
 ## Document
 
-[seide2sideeX Document](https://hackmd.io/@qwe661234/seide2sideeXDocs)
+[seide2sideeX Document](https://hackmd.io/@sideex/seide2sideeXDocs)

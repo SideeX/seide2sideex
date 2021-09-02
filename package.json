@@ -1,5 +1,5 @@
 {
-    "name": "seide2sideex_test2",
+    "name": "@sideex/seide2sideex",
     "version": "0.9.0",
     "author": "SideeX Team <feedback@sideex.io>",
     "description": "SeleniumIDE2SideeX is a tool for converting Selenium IDE test case files to SideeX 3 test case files. This project is still undergoing and welcome pull requests.",
